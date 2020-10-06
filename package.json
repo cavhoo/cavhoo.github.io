@@ -1,0 +1,25 @@
+{
+  "name": "hemuroweb",
+  "version": "1.0.0",
+  "description": "Website build around PIXI.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
+  },
+  "author": "Hendrik Mueller-Roehr",
+  "license": "MIT",
+  "dependencies": {
+    "pixi.js": "^5.3.3",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@types/webfontloader": "^1.6.32",
+    "ts-loader": "^8.0.4",
+    "typescript": "^4.0.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
