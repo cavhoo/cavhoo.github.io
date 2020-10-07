@@ -1,10 +1,12 @@
 import { Container, Text, TextStyle } from "pixi.js";
 import { Sections } from "../models/Sections.model";
+import { Section } from "./Section";
 
 const onHover = (label: Text, text:string) => () => label.text = `${text}`
 
 
 export class Menu extends Container {
+  private currentSection: Section
   private menuFontConfig = {
     item: {
       fontFamily: 'Press Start 2P',

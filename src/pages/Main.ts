@@ -3,10 +3,12 @@ import { Menu } from "../components/Menu";
 import { PageContainer } from "../models/PageContainer.model";
 import { Sections } from "../models/Sections.model";
 import { About } from "./About";
+import { Experience } from "./Experience";
 
 export class Main extends PageContainer {
   private currentSelected: Sections
   private sections: {[key:string]: Container}
+  private menu: Menu
   private sectionTitle: Text
   constructor() {
     super()
@@ -24,18 +26,18 @@ export class Main extends PageContainer {
     this.addChild(this.sectionTitle)
 
 
-    const menu = new Menu()
-    menu.onSelect = this.onChangeSection
-    menu.position.set(20, 100)
-    this.addChild(menu)
+    this.menu = new Menu()
+    this.menu.onSelect = this.onChangeSection
+    this.menu.position.set(20, 100)
+    this.addChild(this.menu)
 
     const content = new Container()
-    content.position.set(menu.width + menu.x + 35, 100)
+    content.position.set(this.menu.width + this.menu.x + 35, 100)
     this.addChild(content)
 
     this.sections = {}
     this.sections[Sections.ABOUT] = new About()
-    this.sections[Sections.EXPERIENCE] = new Container()
+    this.sections[Sections.EXPERIENCE] = new Experience()
     this.sections[Sections.HOBBIES] = new Container()
     this.sections[Sections.PROJECTS] =  new Container()
 
