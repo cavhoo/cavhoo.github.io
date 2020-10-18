@@ -34,8 +34,16 @@ export class Menu extends Container {
 
 
   init() {
+    const blog = new Text(" Blog ", this.menuFontConfig.item)
+    blog.position.set(0,0)
+    blog.interactive = true
+    blog.buttonMode = true
+    blog.on("pointerover", onHover(blog, "<Blog>"))
+    blog.on("pointerout", onHover(blog, " Blog "))
+    blog.on("pointerdown", this.handleSelect(Sections.BLOG))
+   
     const about = new Text(" About me ", this.menuFontConfig.item)
-    about.position.set(0, 0)
+    about.position.set(0, 30)
     about.interactive = true
     about.buttonMode = true
     about.on("pointerover", onHover(about, "<About me>"))
@@ -44,7 +52,7 @@ export class Menu extends Container {
 
 
     const experience = new Text(" Experience ", this.menuFontConfig.item)
-    experience.position.set(0, 30)
+    experience.position.set(0, 60)
     experience.interactive = true
     experience.buttonMode = true
     experience.on('pointerover', onHover(experience, '<Experience>'))
@@ -52,7 +60,7 @@ export class Menu extends Container {
     experience.on("pointerdown", this.handleSelect(Sections.EXPERIENCE))
 
     const projects = new Text(" Projects ", this.menuFontConfig.item)
-    projects.position.set(0, 60)
+    projects.position.set(0, 90)
     projects.interactive = true
     projects.buttonMode = true
     projects.on('pointerover', onHover(projects, '<Projects>'))
@@ -60,13 +68,14 @@ export class Menu extends Container {
     projects.on('pointerdown', this.handleSelect(Sections.PROJECTS))
 
     const hobbies = new Text(" Hobbies ", this.menuFontConfig.item)
-    hobbies.position.set(0, 90)
+    hobbies.position.set(0, 120)
     hobbies.interactive = true
     hobbies.buttonMode = true
     hobbies.on('pointerover', onHover(hobbies, '<Hobbies>'))
     hobbies.on('pointerout', onHover(hobbies, ' Hobbies '))
     hobbies.on('pointerdown', this.handleSelect(Sections.HOBBIES))
 
+    this.addChild(blog)
     this.addChild(experience)
     this.addChild(about)
     this.addChild(projects)
