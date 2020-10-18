@@ -33,4 +33,12 @@ export class Router extends Container {
       }
     }
   }
+
+  public update(delta:number) {
+    this.children.forEach((child) => {
+      if ((child as any).update) {
+        (child as any).update(delta)
+      }
+    })
+  }
 }

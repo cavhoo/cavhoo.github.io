@@ -1,4 +1,5 @@
 import { Container, Text, TextStyle } from "pixi.js";
+import { SizeableText } from "./SizeableText";
 
 export class ExperienceItem extends Container {
   constructor(company: string, years: string, location: string, content: string) {
@@ -32,9 +33,8 @@ export class ExperienceItem extends Container {
     const locationText = new Text(location, fontSyle)
     locationText.position.set(0, yearText.y + yearText.height + 13)
 
-    const contentText = new Text(content, fontSyle)
+    const contentText = new SizeableText(content, fontSyle, 900)
     contentText.position.set(0, locationText.y + locationText.height + 30)
-
 
     this.addChild(companyText)
     this.addChild(yearText)

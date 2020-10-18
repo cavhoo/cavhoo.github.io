@@ -1,4 +1,5 @@
-import { Container, Text, TextStyle } from "pixi.js";
+import { Container, Graphics, Text, TextStyle } from "pixi.js";
+import { Background } from "../components/Background";
 import { Menu } from "../components/Menu";
 import { PageContainer } from "../models/PageContainer.model";
 import { Sections } from "../models/Sections.model";
@@ -10,6 +11,7 @@ export class Main extends PageContainer {
   private sections: {[key:string]: Container}
   private menu: Menu
   private sectionTitle: Text
+  private background: Background
   constructor() {
     super()
     this.currentSelected = Sections.ABOUT
@@ -23,6 +25,10 @@ export class Main extends PageContainer {
       fill: "white",
       align: "center"
     } as TextStyle)
+
+    this.background = new Background()
+    //background.position.set(1280 / 2, 720 / 2)
+    this.addChild(this.background)
     this.addChild(this.sectionTitle)
 
 
@@ -32,12 +38,18 @@ export class Main extends PageContainer {
     this.addChild(this.menu)
 
     const content = new Container()
+
     content.position.set(this.menu.width + this.menu.x + 35, 100)
     this.addChild(content)
+    const contentMask = new Graphics()
+    contentMask.beginFill()
+    contentMask.drawRect(content.x, content.y, 1280 - content.x, 900)
+    contentMask.endFill()
+    content.mask = contentMask
 
     this.sections = {}
     this.sections[Sections.ABOUT] = new About()
-    this.sections[Sections.EXPERIENCE] = new Experience()
+    this.sections[Sections.EXPERIENCE] = new Experience(600)
     this.sections[Sections.HOBBIES] = new Container()
     this.sections[Sections.PROJECTS] =  new Container()
 
@@ -108,4 +120,7 @@ export class Main extends PageContainer {
     }
   }
 
+  public update(delta: number) {
+    this.background.update(delta)
+  }
 }

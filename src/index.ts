@@ -44,6 +44,11 @@ const start = () => {
 
     app.stage.addChild(router)
 
+    app.ticker.add((delta: number) => {
+      router.update(delta)
+    })
+
+
   } else {
     console.error("Unable to attach app to body! Reason: Body not found")
   }
