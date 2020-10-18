@@ -1,4 +1,5 @@
 import { Container, Text, TextStyle } from "pixi.js";
+import { FONT } from "../constants/Styles";
 import { SizeableText } from "./SizeableText";
 
 export class ExperienceItem extends Container {
@@ -33,7 +34,7 @@ export class ExperienceItem extends Container {
     const locationText = new Text(location, fontSyle)
     locationText.position.set(0, yearText.y + yearText.height + 13)
 
-    const contentText = new SizeableText(content, fontSyle, 900)
+    const contentText = new SizeableText(content, {...fontSyle, lineHeight: FONT.LINE_SPACING_CONTENT}, 900)
     contentText.position.set(0, locationText.y + locationText.height + 30)
 
     this.addChild(companyText)

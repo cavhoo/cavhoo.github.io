@@ -1,5 +1,6 @@
 import { Container, Graphics, Text } from "pixi.js";
 import { ExperienceItem } from "../components/ExperienceItem";
+import EventListener, { EVENT } from "../utils/EventListener";
 
 const experiences = [
   {
@@ -71,9 +72,7 @@ export class Experience extends Container {
       lastItem = item
       this.addChild(item)
     }
-
-    window.onwheel = this.onScroll
-
+    EventListener.addListener(EVENT.ONSCROLL, this.onScroll)
   }
 
   private onScroll = (event: WheelEvent) => {

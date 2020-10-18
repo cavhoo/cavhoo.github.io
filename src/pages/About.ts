@@ -26,7 +26,7 @@ export class About extends Container {
       fontSize: 20,
       fontFamily: "Press Start 2P",
       align: "center",
-      fill: "white"
+      fill: "white",
     } as TextStyle)
     this.addChild(title)
 
@@ -34,7 +34,8 @@ export class About extends Container {
       fontSize: 20,
       fontFamily: "Press Start 2P",
       align: "left",
-      fill: "white"
+      fill: "white",
+      lineHeight: 30
     }, 900)
    
     content.position.set(0, 25)

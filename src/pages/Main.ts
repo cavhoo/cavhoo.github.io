@@ -5,6 +5,8 @@ import { PageContainer } from "../models/PageContainer.model";
 import { Sections } from "../models/Sections.model";
 import { About } from "./About";
 import { Experience } from "./Experience";
+import { Hobbies } from "./Hobbies";
+import { Projects } from "./Projects";
 
 export class Main extends PageContainer {
   private currentSelected: Sections
@@ -50,8 +52,8 @@ export class Main extends PageContainer {
     this.sections = {}
     this.sections[Sections.ABOUT] = new About()
     this.sections[Sections.EXPERIENCE] = new Experience(600)
-    this.sections[Sections.HOBBIES] = new Container()
-    this.sections[Sections.PROJECTS] =  new Container()
+    this.sections[Sections.HOBBIES] = new Hobbies()
+    this.sections[Sections.PROJECTS] =  new Projects()
 
     this.sections[Sections.ABOUT].visible = true;
     this.sections[Sections.EXPERIENCE].visible = false;
