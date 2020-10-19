@@ -46,9 +46,11 @@ export class Main extends PageContainer {
     this.addChild(content)
     const contentMask = new Graphics()
     contentMask.beginFill()
-    contentMask.drawRect(content.x, content.y, 1280 - content.x, 900)
+    contentMask.drawRect(0, 0, 1280 - content.x, 600)
     contentMask.endFill()
     content.mask = contentMask
+    content.addChild(contentMask)
+
 
     this.sections = {}
     this.sections[Sections.BLOG] = new Blog()

@@ -1,4 +1,4 @@
-import { Container, Geometry, Mesh, MeshMaterial, Shader } from "pixi.js"
+import { Container, Geometry, Graphics, Mesh, MeshMaterial, Shader } from "pixi.js"
 
 export class Background extends Container {
   private mesh: Mesh
@@ -22,8 +22,7 @@ export class Background extends Container {
                    1280, 720,
                    0, 720
                  ], 2)
-    .addAttribute('aColor',
-                  [
+    .addAttribute('aColor', [
       1, 1, 0,
       0, 1, 0,
       0, 0, 1
@@ -38,8 +37,14 @@ export class Background extends Container {
     const shader = Shader.from(vertexSource, fragmentSource, uniforms)
 
     this.mesh = new Mesh(geom, shader as MeshMaterial)
-    // TODO: Make shader to show background
-    //this.addChild(this.mesh)
+    this.addChild(this.mesh)
+
+    const readLayer = new Graphics()
+    readLayer.beginFill(0x3B3B3B, .75)
+    readLayer.drawRect(15, 15, 1250, 690)
+    readLayer.endFill()
+ 
+    this.addChild(readLayer)
   }
 
   public update(delta: number) {

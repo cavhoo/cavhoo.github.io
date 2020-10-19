@@ -3,6 +3,7 @@ import { SizeableText } from "../components/SizeableText";
 import { FONT } from "../constants/Styles";
 
 import Posts from "../posts"
+import EventListener, { EVENT } from "../utils/EventListener";
 
 interface Post {
   title: string,
@@ -11,6 +12,7 @@ interface Post {
 }
 
 export class Blog extends Container {
+  private _maxHeight: number = 600
   constructor() {
     super()
     this.init()
@@ -18,6 +20,9 @@ export class Blog extends Container {
 
   public init() {
     let lastY = 15
+
+    Posts.reverse()
+   
     Posts.forEach((post) => {
       const {title, date, content} = post
 
@@ -33,8 +38,26 @@ export class Blog extends Container {
       postContainer.addChild(postContent)
       postContainer.position.set(0, lastY)
       this.addChild(postContainer)
-      lastY += postContainer.y + 30
+      lastY += postContainer.y + postContainer.height + 30
     })
+
+    EventListener.addListener(EVENT.ONSCROLL, this.onScroll)
   }
 
+  private onScroll = (event: WheelEvent) => {
+    if (this.visible) {
+      const {
+        deltaY
+      } = event
+      if (deltaY > 0) {
+        if (this.position.y >= (this._maxHeight - this.height)) {
+          this.position.y -= Math.abs(deltaY)
+        }
+      } else {
+        if (this.position.y < 0) {
+          this.position.y += Math.abs(deltaY)
+        }
+      }
+    }
+  }
 }
