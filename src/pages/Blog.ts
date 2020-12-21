@@ -38,7 +38,8 @@ export class Blog extends Container {
       postContainer.addChild(postContent)
       postContainer.position.set(0, lastY)
       this.addChild(postContainer)
-      lastY += postContainer.y + postContainer.height + 30
+      lastY += postContainer.height + 30
+      console.log(lastY)
     })
 
     EventListener.addListener(EVENT.ONSCROLL, this.onScroll)

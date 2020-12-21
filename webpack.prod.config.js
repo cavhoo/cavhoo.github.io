@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
-const TerserPlugin = require('terser-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin');
+const copyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
  mode: 'production',
@@ -26,6 +27,14 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js' ]
   },
   plugins: [
+    new copyWebpackPlugin({
+      patterns: [
+        { from: "static" }
+      ],
+      options: {
+        concurrency: 100
+      }
+    }),
     new webpack.ProvidePlugin({
       PIXI: 'pixi.js'
     })
