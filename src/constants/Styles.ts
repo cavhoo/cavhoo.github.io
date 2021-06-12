@@ -1,7 +1,0 @@
-export const FONT = {
-	FONT_SIZE_TITLE: 20,
-	FONT_SIZE_CONTENT: 18,
-	LINE_SPACING_CONTENT: 30,
-	FONT_FAMILY: "Fira Code",
-	COLOR_DEFAULT: "white",
-};
