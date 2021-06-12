@@ -26,19 +26,19 @@ export class ExperienceItem extends Container {
       fill: "white"
     } as TextStyle
 
-    const companyText = new Text(company, {...fontSyle, fontSize: 24})
-    companyText.position.set(0, 5)
     const yearText = new Text(years, fontSyle)
-    yearText.position.set(companyText.x + companyText.width + 15, 9)
+    yearText.position.set(0, 5)
+    const companyText = new Text(company, {...fontSyle, fontSize: 24})
+    companyText.position.set(0, yearText.height + 10)
 
     const locationText = new Text(location, fontSyle)
-    locationText.position.set(0, yearText.y + yearText.height + 13)
+    locationText.position.set(0, companyText.y + companyText.height + 13)
 
     const contentText = new SizeableText(content, {...fontSyle, lineHeight: FONT.LINE_SPACING_CONTENT}, 900)
     contentText.position.set(0, locationText.y + locationText.height + 30)
 
-    this.addChild(companyText)
     this.addChild(yearText)
+    this.addChild(companyText)
     this.addChild(locationText)
     this.addChild(contentText)
   }

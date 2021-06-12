@@ -4,9 +4,19 @@ import EventListener, { EVENT } from "../utils/EventListener";
 
 const experiences = [
   {
+    company: "Gamomat Development GmbH",
+    location: "Berlin, Germany",
+    years:"2021 - today",
+    content: [
+      "Creating and maintaining the next generation in house framework for slot-games.",
+      "Resposible for the End-To-End Testing, and localization parts of the framework, plus general architecture and tooling."
+    ].join(''),
+    techStack: "ReactJS, Pixi.js, WebGL, Webpack, Typescript, NodeJS"
+  },
+  {
     company: "Fitogram GmbH",
     location: "Cologne, Germany",
-    years: "2018 - today",
+    years: "2018 - 2021",
     content: [
       "Lead developer for new frontend that is going to replace the old SaaS software called Fitogram Pro.",
       "It is build completely with functional ReactJS component, and utilizes Redux for global state management.",

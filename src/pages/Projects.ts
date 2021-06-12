@@ -5,22 +5,21 @@ import EventListener, { EVENT } from "../utils/EventListener";
 
 const projects = [
   {
+    title: "GTA 5 RP Project",
+    content: [
+      "A FiveM based Role Playing framework written in C#, and some ReactJS/Pixi.js for the client.",
+      "It's using a PostgresSQL database to store the user information, and uses MVC development pattern,",
+      "for backend and frontend alike."
+    ].join(" "),
+    link: ""
+  },
+  {
     title: "CityGenerator",
     content: [
       "A C++/OpenGL based procedural generation of a city scape. A few years ago I read a blog post about something",
       "in a blog post where someone did the same. So last year or so I started the same, it's a project I spend sometime",
       "in every now and then as it requires a lot of focus and learning from my side. So I am mostly working on it when I",
       "can afford a whole day to spend in from of my PC"
-    ].join(" "),
-    link: ""
-  },
-  {
-    title: "react-project-graph",
-    content: [
-      "A utility that allows you to generate a DOT String from your react project to view in GraphViz or some",
-      "or some other visualization tool for DOT string. Currently it only supports the generation of the string, and",
-      "has been abandoned by me a bit since I am currently relearning shaders, and c++/rust. Maybe I continue working",
-      "on a UI at somepoint so that it is completly hostable"
     ].join(" "),
     link: ""
   },
