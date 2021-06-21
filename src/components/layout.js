@@ -16,11 +16,8 @@ const DefaultLayout = ({ children }) => (
             author
             description
             social {
-              twitter
-              facebook
               linkedin
               github
-              email
             }
           }
         }
