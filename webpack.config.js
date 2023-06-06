@@ -22,11 +22,11 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ]
+    extensions: ['.tsx', '.ts', '.js']
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist',
+    static: './dist',
     port: 8080
   },
   plugins: [

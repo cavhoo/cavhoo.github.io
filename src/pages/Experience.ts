@@ -6,10 +6,12 @@ const experiences = [
   {
     company: "Gamomat Development GmbH",
     location: "Berlin, Germany",
-    years:"2021 - today",
+    years: "2021 - today",
     content: [
       "Creating and maintaining the next generation in house framework for slot-games.",
-      "Resposible for the End-To-End Testing, and localization parts of the framework, plus general architecture and tooling."
+      "Resposible for the End-To-End Testing, and localization parts of the framework, plus general architecture and tooling.",
+      "Designing and implementing new features as they are planned by game design.",
+      "Pushing for the use of GLSL shaders in the near future."
     ].join(''),
     techStack: "ReactJS, Pixi.js, WebGL, Webpack, Typescript, NodeJS"
   },
@@ -30,7 +32,7 @@ const experiences = [
     company: "Quickspin AB",
     location: "Stockholm, Sweden",
     years: "2016 - 2018",
-    content:[
+    content: [
       "Working on slot game features and mini games that run next to the main game, and focus on customer retention on casino platform.",
       "First project involved developing a frontend for an achievement system that tracks certain occurances inside the slot, and progresses",
       " towards specific rewards. These rewards could be used to toggle freespins inside the games. Another project I have worked on was a tournament",

@@ -8,6 +8,7 @@ import { Blog } from "./Blog";
 import { Experience } from "./Experience";
 import { Hobbies } from "./Hobbies";
 import { Projects } from "./Projects";
+import { FONT } from "../constants/Styles";
 
 export class Main extends PageContainer {
 	private currentSelected: Sections;
@@ -24,7 +25,7 @@ export class Main extends PageContainer {
 	private init() {
 		this.sectionTitle = new Text("", {
 			fontSize: 48,
-			fontFamily: "Fira Code",
+			fontFamily: FONT.FONT_FAMILY,
 			fill: "white",
 			align: "center",
 		} as TextStyle);
