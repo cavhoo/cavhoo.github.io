@@ -18,7 +18,11 @@ const start = async (): Promise<void> => {
     console.error("Unable to attach app to body! Reason: Body not found");
   }
 
-  const floorTileTexture = await Assets.load("/assets/websitetiles_floor.png");
+  Assets.add({ alias: "floortile", src: "/assets/websitetiles_floor.png" });
+  Assets.add({ alias: "wallleft", src: "/assets/wallleft.png" });
+  Assets.add({ alias: "wallright", src: "/assets/rightwall.png" });
+
+  const textures = await Assets.load(["floortile", "wallleft", "wallright"]);
 
   const canvas = document.querySelector("canvas");
 
@@ -40,6 +44,7 @@ const start = async (): Promise<void> => {
 
 
   const room = new Container();
+  const floorTileTexture = textures.floortile;
   // Floor
   const floor = new Floor(64, floorTileTexture);
 
@@ -50,7 +55,10 @@ const start = async (): Promise<void> => {
 
 
   // Walls 
-  const leftWall = new Graphics().poly([
+  const leftWall = new Sprite(textures.wallleft);
+  leftWall.anchor.set(1, 1);
+  leftWall.position.set(floor.position.x, floor.position.y + 5)
+  /** const leftWall = new Graphics().poly([
     floor.position.x - floor.width / 2,
     floor.position.y,
 
@@ -62,23 +70,26 @@ const start = async (): Promise<void> => {
 
     floor.position.x - floor.width / 2,
     floor.position.y - 150,
-  ]).fill({ color: "beige" });
+  ]).fill({ color: "beige" }); */
 
-  const rightWall = new Graphics().poly([
-    floor.position.x + floor.width / 2,
-    floor.position.y,
+  const rightWall = new Sprite(textures.wallright);
+  rightWall.anchor.set(0, 1);
+  rightWall.position.set(floor.position.x - 8, floor.position.y)
+  /** const rightWall = new Graphics().poly([
+     floor.position.x + floor.width / 2,
+     floor.position.y,
+ 
+     floor.position.x,
+     floor.position.y - floor.height / 2,
+ 
+     floor.position.x,
+     floor.position.y - floor.height / 2 - 150,
+ 
+     floor.position.x + floor.width / 2,
+     floor.position.y - 150,
+   ]).fill({ color: "beige" }); */
 
-    floor.position.x,
-    floor.position.y - floor.height / 2,
-
-    floor.position.x,
-    floor.position.y - floor.height / 2 - 150,
-
-    floor.position.x + floor.width / 2,
-    floor.position.y - 150,
-  ]).fill({ color: "beige" });
-
-  app.stage.addChild(leftWall, rightWall)
+  app.stage.addChild(rightWall, leftWall)
 };
 
 start();
