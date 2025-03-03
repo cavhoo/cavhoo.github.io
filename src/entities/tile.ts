@@ -1,12 +1,10 @@
 import { Assets, Container, Sprite } from "pixi.js";
 
 export enum TileType {
-  Grass = "grass",
-  Road = "road",
-  RoadAlternate = "roadAlt",
-  RoadCross = "roadCross",
-  RoadCurve = "roadCurve",
-  RoadCurveUp = "roadCurveUp",
+  Grass = "grass", // 0
+  Road = "road", // 1
+  RoadCross = "roadCross", // 2
+  RoadCurve = "roadCurve", // 3
 }
 
 export enum Direction {
@@ -39,23 +37,26 @@ export class Tile extends Container {
   }
 
   protected updateDirection(): void {
+    this.sprite.anchor.set(0.5, 0.5);
     switch (this._tileDirection) {
       case Direction.Left:
         {
-          this.sprite.pivot.set(this.sprite.width, 0);
-          this.sprite.scale.x = -1;
+          this.sprite.rotation = Math.PI / 2;
+        }
+        break;
+      case Direction.Right:
+        {
+          this.sprite.rotation = (Math.PI * 3) / 2;
         }
         break;
       case Direction.Up:
         {
-          this.sprite.pivot.set(0, 0);
-          this.sprite.scale.y = 1;
+          this.sprite.rotation = 0;
         }
         break;
       case Direction.Down:
         {
-          this.sprite.pivot.set(0, this.sprite.height);
-          this.sprite.scale.y = -1;
+          this.sprite.rotation = Math.PI;
         }
         break;
     }

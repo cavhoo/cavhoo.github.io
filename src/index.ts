@@ -7,15 +7,12 @@ const start = async (): Promise<void> => {
     height: 720,
   };
 
+  TextureStyle.defaultOptions.scaleMode = "nearest";
+
   // Create new PIXI Canvas App
   const app = new Application();
   const container = document.querySelector("#app");
-
   // Ugly hack to set nearest neighbour scaling globally;
-  (TextureStyle as any).defaultOptions = {
-    addressMode: "clamp-to-edge",
-    scaleMode: "nearest",
-  };
   await app.init({ background: "black", width: SCENE_DIMENSIONS.width, height: SCENE_DIMENSIONS.height });
   globalThis.__PIXI_APP__ = app;
   if (container) {
@@ -30,12 +27,14 @@ const start = async (): Promise<void> => {
         {
           name: "city",
           assets: [
-            { alias: "road", src: "/assets/road.png" },
-            { alias: "roadAlt", src: "/assets/road.png" },
+            { alias: "road", src: "/assets/road.png", },
             { alias: "roadCurve", src: "/assets/roadcurve.png" },
-            { alias: "roadCurveUp", src: "/assets/roadcurveup.png" },
             { alias: "roadCross", src: "/assets/roadcross.png" },
             { alias: "grass", src: "/assets/grass.png" },
+            { alias: "concrete", src: "/assets/concrete.png" },
+            { alias: "dirt", src: "/assets/dirt.png" },
+            { alias: "slab", src: "/assets/slab.png" },
+            { alias: "concrete", src: "/assets/concrete.png", },
           ],
         },
       ],
@@ -54,9 +53,8 @@ const start = async (): Promise<void> => {
   const scrollText = new Text({ text: `Scroll: ${0}` });
   scrollText.position.set(text.x, text.y + text.height);
 
-  const city = new City(30, 30);
-  city.pivot.set(city.width / 2, 0);
-  city.position.set(SCENE_DIMENSIONS.width / 2, SCENE_DIMENSIONS.height / 2);
+  const city = new City(40, 22);
+  city.scale.set(0.5)
 
   app.stage.addChild(city);
   app.stage.eventMode = "static";
