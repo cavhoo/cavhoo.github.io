@@ -40,9 +40,10 @@ export class TileLayer extends Container {
     for (let y = 0; y < height; y++) {
       for (let x = 0; x < width; x++) {
         const tileIndex = y * width + x;
-        const tileSpriteId = data[tileIndex];
-        if (tileSpriteId === 0) {
-          continue;
+        let tileSpriteId = data[tileIndex];
+        console.log(tileSpriteId);
+        if (tileSpriteId !== 0) {
+          tileSpriteId = tileSpriteId - this.firstTileIndex;
         }
         const tile = this.createTile(tileSpriteId);
 

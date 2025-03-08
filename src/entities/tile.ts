@@ -23,6 +23,16 @@ export class Tile extends Container {
     this.initialize();
   }
 
+  protected set clickable(clickable: boolean) {
+    if (clickable) {
+      this.cursor = "pointer";
+      this.eventMode = "dynamic";
+    } else {
+      this.cursor = "none";
+      this.eventMode = "none";
+    }
+  }
+
   protected initialize(): void {
     const texture = Assets.get(`${this._tileType}`);
     this.sprite = Sprite.from(texture);
