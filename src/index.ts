@@ -1,4 +1,4 @@
-import { Application, Assets, Text, TextureStyle } from "pixi.js";
+import { Application, Assets, Text, TextureStyle, Sprite } from "pixi.js";
 import { City } from "./city/citymap";
 
 const start = async (): Promise<void> => {
@@ -27,14 +27,7 @@ const start = async (): Promise<void> => {
         {
           name: "city",
           assets: [
-            { alias: "road", src: "/assets/road.png", },
-            { alias: "roadCurve", src: "/assets/roadcurve.png" },
-            { alias: "roadCross", src: "/assets/roadcross.png" },
-            { alias: "grass", src: "/assets/grass.png" },
-            { alias: "concrete", src: "/assets/concrete.png" },
-            { alias: "dirt", src: "/assets/dirt.png" },
-            { alias: "slab", src: "/assets/slab.png" },
-            { alias: "concrete", src: "/assets/concrete.png", },
+            { alias: "cubes", src: "/assets/isometric.json" },
           ],
         },
       ],
@@ -53,8 +46,9 @@ const start = async (): Promise<void> => {
   const scrollText = new Text({ text: `Scroll: ${0}` });
   scrollText.position.set(text.x, text.y + text.height);
 
+
   const city = new City(40, 22);
-  city.scale.set(0.5)
+	city.position.set(SCENE_DIMENSIONS.width / 2, SCENE_DIMENSIONS.height / 2)
 
   app.stage.addChild(city);
   app.stage.eventMode = "static";

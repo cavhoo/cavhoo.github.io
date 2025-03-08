@@ -1,6 +1,7 @@
 import { Assets, Container, Sprite } from "pixi.js";
-import { cityLayout } from "./layout";
+import { cityLayout } from "../maps/cityLayout";
 import { Direction, Tile, TileType } from "../entities/tile";
+import { TileLayer } from "../entities/tilelayer";
 
 export class City extends Container {
   protected baseLayer: Container;
@@ -13,32 +14,14 @@ export class City extends Container {
     this.buildingLayer = new Container();
     this.addChild(this.baseLayer, this.roadLayer, this.buildingLayer);
     this.createTileMap();
-    this.createLayout();
+    //this.createLayout();
     //this.placeBuilding();
   }
 
   protected createTileMap(): void {
-    for (let y = 0; y < this.mapSizeY; y++) {
-      for (let x = 0; x < this.mapSizeX; x++) {
-        const tile = new Tile(TileType.Grass, Direction.Up);
-        tile.position.set((tile.width) * x + tile.width * 0.5, tile.height * y + tile.height * 0.5);
-        this.baseLayer.addChild(tile);
-      }
-    }
-
-    //this.baseLayer.cacheAsTexture(true);
-  }
-
-  protected createLayout(): void {
-    cityLayout.forEach((row, y) => {
-      row.forEach((tile, x) => {
-        if (tile !== 0) {
-          const [tileType, tileDirection] = this.getTileTypeFromTileId(tile);
-          const tileSprite = new Tile(tileType, tileDirection);
-          tileSprite.position.set(tileSprite.width * x + tileSprite.width * 0.5, tileSprite.height * y + tileSprite.width * 0.5);
-          this.roadLayer.addChild(tileSprite);
-        }
-      });
+    cityLayout.layers.forEach((layerdata) => {
+      const layer = new TileLayer(layerdata, cityLayout.tilewidth, cityLayout.tileheight);
+      this.baseLayer.addChild(layer);
     });
   }
 
