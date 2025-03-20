@@ -1,9 +1,10 @@
 import { Application, Assets, Text, TextureStyle, Sprite } from "pixi.js";
 import { City } from "./city/citymap";
+import { LoadingScene } from "./scenes/loading";
 
 const start = async (): Promise<void> => {
   const SCENE_DIMENSIONS = {
-    width: 1280,
+    width: 1366,
     height: 720,
   };
 
@@ -26,9 +27,7 @@ const start = async (): Promise<void> => {
       bundles: [
         {
           name: "city",
-          assets: [
-            { alias: "cubes", src: "/assets/isometric.json" },
-          ],
+          assets: [{ alias: "cubes", src: "/assets/isometric.json" }],
         },
       ],
     },
@@ -46,15 +45,25 @@ const start = async (): Promise<void> => {
   const scrollText = new Text({ text: `Scroll: ${0}` });
   scrollText.position.set(text.x, text.y + text.height);
 
-
-  const city = new City(40, 22);
-	city.position.set(SCENE_DIMENSIONS.width / 2, SCENE_DIMENSIONS.height / 2)
-
-  app.stage.addChild(city);
-  app.stage.eventMode = "static";
+  const loadingScene = new LoadingScene();
+  loadingScene.position.set(
+    (SCENE_DIMENSIONS.width - loadingScene.width) / 2,
+    (SCENE_DIMENSIONS.height - loadingScene.height) / 2
+  );
+  app.stage.addChild(loadingScene);
 
   // Make sure the whole canvas area is interactive, not just the circle.
   app.stage.hitArea = app.screen;
+  const target = 5000;
+  let time = 0;
+  app.ticker.add(() => {
+    time += app.ticker.elapsedMS;
+    if (time >= target) {
+      time = 0;
+    }
+
+    loadingScene.updateProgress(time / target);
+  });
 };
 
 start();

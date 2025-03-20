@@ -1,25 +1,13 @@
 import { Container } from "pixi.js";
 import { Tile } from "./tile";
-
-export interface TileLayerData {
-  data: number[];
-  height: number;
-  id: number;
-  name: string;
-  opacity: number;
-  type: string;
-  visible: boolean;
-  width: number;
-  x: number;
-  y: number;
-}
+import { Layer } from "../types/layout";
 
 export class TileLayer extends Container {
-  protected layerData: TileLayerData;
+  protected layerData: Layer;
   protected tileWidth: number;
   protected tileHeight: number;
   protected firstTileIndex: number;
-  constructor(layerData: TileLayerData, tileWidth: number, tileHeight: number, firstTileIndex: number) {
+  constructor(layerData: Layer, tileWidth: number, tileHeight: number, firstTileIndex: number) {
     super();
     this.layerData = layerData;
     this.tileHeight = tileHeight;
@@ -41,7 +29,6 @@ export class TileLayer extends Container {
       for (let x = 0; x < width; x++) {
         const tileIndex = y * width + x;
         let tileSpriteId = data[tileIndex];
-        console.log(tileSpriteId);
         if (tileSpriteId !== 0) {
           tileSpriteId = tileSpriteId - this.firstTileIndex;
         }
