@@ -1,6 +1,8 @@
 import { Application, Assets, Text, TextureStyle, Sprite } from "pixi.js";
 import { City } from "./city/citymap";
 import { LoadingScene } from "./scenes/loading";
+import { SceneManager } from "./scenes/sceneManager";
+import { LandingScene } from "./scenes/landing";
 
 const start = async (): Promise<void> => {
   const SCENE_DIMENSIONS = {
@@ -26,14 +28,22 @@ const start = async (): Promise<void> => {
     manifest: {
       bundles: [
         {
+          name: "base",
+          assets: [
+            {
+              alias: "Jersey10",
+              src: "/assets/Jersey10-Regular.ttf",
+            },
+          ],
+        },
+        {
           name: "city",
           assets: [{ alias: "cubes", src: "/assets/isometric.json" }],
         },
       ],
     },
   });
-
-  await Assets.loadBundle(["city"]);
+  await Assets.loadBundle("base");
 
   const canvas = document.querySelector("canvas");
 
@@ -45,25 +55,21 @@ const start = async (): Promise<void> => {
   const scrollText = new Text({ text: `Scroll: ${0}` });
   scrollText.position.set(text.x, text.y + text.height);
 
-  const loadingScene = new LoadingScene();
-  loadingScene.position.set(
-    (SCENE_DIMENSIONS.width - loadingScene.width) / 2,
-    (SCENE_DIMENSIONS.height - loadingScene.height) / 2
-  );
-  app.stage.addChild(loadingScene);
+  const scenemanager = new SceneManager();
 
+  const loadingScene = new LoadingScene();
+  const landingScene = new LandingScene();
+  scenemanager.addScene(loadingScene);
+  scenemanager.addScene(landingScene);
+  app.stage.addChild(scenemanager);
+
+  await Assets.loadBundle(["city"], (progress: number) => {
+    scenemanager.setSceneActive(loadingScene);
+    loadingScene.updateProgress(progress);
+    loadingScene.onSceneComplete = () => scenemanager.setSceneActive(landingScene);
+  });
   // Make sure the whole canvas area is interactive, not just the circle.
   app.stage.hitArea = app.screen;
-  const target = 5000;
-  let time = 0;
-  app.ticker.add(() => {
-    time += app.ticker.elapsedMS;
-    if (time >= target) {
-      time = 0;
-    }
-
-    loadingScene.updateProgress(time / target);
-  });
 };
 
 start();

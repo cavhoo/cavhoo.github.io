@@ -1,3 +1,10 @@
 import { Container } from "pixi.js";
 
-export abstract class Scene extends Container {}
+export abstract class Scene extends Container {
+  public onSceneComplete?: () => void;
+  protected sceneComplete(): void {
+    if (this.onSceneComplete) {
+      this.onSceneComplete();
+    }
+  }
+}
