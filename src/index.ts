@@ -1,5 +1,4 @@
-import { Application, Assets, Text, TextureStyle, Sprite } from "pixi.js";
-import { City } from "./city/citymap";
+import { Application, Assets, Text, TextureStyle } from "pixi.js";
 import { LoadingScene } from "./scenes/loading";
 import { SceneManager } from "./scenes/sceneManager";
 import { LandingScene } from "./scenes/landing";
