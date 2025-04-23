@@ -2,6 +2,7 @@ import { Assets, Sprite, Text } from "pixi.js";
 import { Scene } from "./scene";
 import { FONT, HEIGHT, WIDTH } from "../types/constants";
 import { GrassTileMap } from "../data/tilesets/grassTiles";
+import { Sign } from "../entities/props/sign";
 
 const landingMap: number[][] = [
   [1, 5, 5, 5, 5, 10, 11, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 2],
@@ -32,7 +33,8 @@ const landingMap: number[][] = [
 export class LandingScene extends Scene {
   constructor() {
     super();
-
+    this.setBackgroundColor("#479757");
+    this.label = "LandingScene";
     const text = new Text({
       text: "Under Construction",
       style: {
@@ -55,7 +57,18 @@ export class LandingScene extends Scene {
       }
     }
 
-    this.addChild(text);
-    this.setBackgroundColor("#479757");
+    const signRight = new Sign("Sign_1.png");
+    signRight.scale = 2;
+    signRight.position.set(WIDTH - signRight.width * 2, HEIGHT / 2);
+
+    const signLeft = new Sign("Sign_3.png");
+    signLeft.scale = 2;
+    signLeft.position.set(signLeft.width, 200);
+
+    const tree1 = new Sprite(Assets.get("Tree_159.png"));
+    tree1.scale = 1.5;
+    tree1.position.set(WIDTH / 2, HEIGHT / 2);
+
+    this.addChild(signRight, signLeft, tree1, text);
   }
 }

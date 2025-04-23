@@ -44,6 +44,16 @@ const start = async (): Promise<void> => {
             },
           ],
         },
+        {
+          name: "props",
+          assets: [
+            {
+              alias: "props",
+              src: "/assets/textures/props.json",
+              data: { scaleMode: "nearest" },
+            },
+          ],
+        },
       ],
     },
   });
@@ -61,8 +71,8 @@ const start = async (): Promise<void> => {
   scenemanager.addScene(loadingScene);
   app.stage.addChild(scenemanager);
 
-  await Assets.loadBundle(["grass"], (progress: number) => {
-    scenemanager.setSceneActive(loadingScene);
+  scenemanager.setSceneActive(loadingScene);
+  await Assets.loadBundle(["grass", "props"], (progress: number) => {
     loadingScene.updateProgress(progress);
     loadingScene.onSceneComplete = () => {
       const landingScene = new LandingScene();

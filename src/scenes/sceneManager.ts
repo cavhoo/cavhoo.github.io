@@ -18,6 +18,7 @@ export class SceneManager extends Container {
 
   constructor() {
     super();
+    this.name = "SceneManager";
     Ticker.shared.add(this.update, this);
   }
 

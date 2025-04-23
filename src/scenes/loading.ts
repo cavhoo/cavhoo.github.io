@@ -9,6 +9,8 @@ export class LoadingScene extends Scene {
   protected enterButton: Button;
   constructor() {
     super();
+
+    this.label = "LoadingScene";
     this.loadingBar = new LoadingBar(483, 60);
     this.loadingBar.position.set((1366 - this.loadingBar.width) / 2, (720 - this.loadingBar.height) / 2);
 
@@ -33,7 +35,7 @@ export class LoadingScene extends Scene {
     jobTitle.position.set((1366 - jobTitle.width) / 2, 270);
 
     this.enterButton = new Button({
-      text: "ENTER",
+      text: "START",
       width: 483,
       height: 60,
       style: {
