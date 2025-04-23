@@ -7,4 +7,8 @@ export abstract class Scene extends Container {
       this.onSceneComplete();
     }
   }
+
+  protected setBackgroundColor(color: string): void {
+    document.body.style.backgroundColor = color;
+  }
 }

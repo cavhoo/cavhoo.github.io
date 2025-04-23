@@ -13,7 +13,7 @@ export class LoadingScene extends Scene {
     this.loadingBar.position.set((1366 - this.loadingBar.width) / 2, (720 - this.loadingBar.height) / 2);
 
     const name = new Text({
-      text: "Hendrik Mueller-Roehr",
+      text: "Hendrik Müller-Röhr",
       style: {
         fill: "white",
         fontFamily: FONT,
