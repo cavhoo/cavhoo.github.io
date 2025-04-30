@@ -63,29 +63,17 @@ export class LandingScene extends Scene {
       }
     }
 
-    const signRight = new Sign("Sign_1.png");
-    signRight.scale = 2;
-    signRight.position.set(WIDTH - signRight.width * 2, HEIGHT / 2);
-
-    const signLeft = new Sign("Sign_3.png");
-    signLeft.scale = 2;
-    signLeft.position.set(signLeft.width, 200);
-
     const tree1 = new Sprite(Assets.get("Tree_159.png"));
     tree1.scale = 1.5;
     tree1.position.set(WIDTH / 2, HEIGHT / 2);
 
-    const signText1 = new Text({
-      text: "PROJECTS",
-      style: {
-        fontSize: 15,
-        fontFamily: "Tiny5 Regular",
-        fill: "#4d3114",
-      },
-    });
+    const tree2 = new Sprite(Assets.get("Tree_159.png"));
+    tree2.scale = 1.5;
+    tree2.position.set(100, 100);
 
-    signText1.anchor.set(0.5, 0.25);
-    signText1.position.set(signLeft.position.x + signLeft.width / 2, signLeft.position.y + signLeft.height / 2);
+    const tree3 = new Sprite(Assets.get("Tree_159.png"));
+    tree3.scale = 1.5;
+    tree3.position.set(800, 100);
 
     const npc1 = new NPC([
       [NPCState.IdleRight, new AnimatedSprite([1, 2, 3, 4, 5, 6].map((frame) => Texture.from(`scout1idle_${`${frame}`.padStart(2, "0")}.png`)))],
@@ -137,6 +125,6 @@ export class LandingScene extends Scene {
     npc1.walkOnPath(paths[Math.floor(Math.random() * 4)], 2);
     npc1.play(NPCState.WalkingLeft);
 
-    this.addChild(signRight, signLeft, tree1, text, signText1, npc1);
+    this.addChild(npc1, tree1, tree2, tree3, text);
   }
 }

@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx webpack-cli serve --config webpack.config.js",
-    "prebuild": "assetpack",
     "build": "webpack --config webpack.prod.config.js",
     "deploy": "gh-pages -d dist",
     "release": "npm run build && npm run deploy"
