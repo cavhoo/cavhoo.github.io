@@ -20,11 +20,13 @@
     "gh-pages": "^6.3.0",
     "pixi.js": "^8.8.0",
     "typescript-eslint": "^8.24.0",
+    "victor": "^1.1.0",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@assetpack/core": "^1.4.0",
     "@types/axios": "^0.14.0",
+    "@types/victor": "^1.1.5",
     "@types/webfontloader": "^1.6.35",
     "copy-webpack-plugin": "^11.0.0",
     "prettier": "^2.8.8",

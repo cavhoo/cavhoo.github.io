@@ -48,7 +48,7 @@ export class LoadingScene extends Scene {
     this.enterButton.visible = false;
     this.enterButton.eventMode = "static";
     this.enterButton.cursor = "pointer";
-    this.enterButton.on("click", () => {
+    this.enterButton.on("pointerdown", () => {
       this.sceneComplete();
     });
     this.enterButton.position.set((1366 - this.enterButton.width) / 2, this.loadingBar.position.y);

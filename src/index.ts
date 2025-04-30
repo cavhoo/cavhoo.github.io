@@ -1,4 +1,4 @@
-import { AbstractRenderer, Application, Assets, Text, TextureStyle } from "pixi.js";
+import { AbstractRenderer, Application, Assets, TextureStyle } from "pixi.js";
 import { LoadingScene } from "./scenes/loading";
 import { SceneManager } from "./scenes/sceneManager";
 import { LandingScene } from "./scenes/landing";
@@ -32,6 +32,11 @@ const start = async (): Promise<void> => {
               src: "/assets/fonts/Jersey10-Regular.woff2",
               data: { scaleMode: "nearest" },
             },
+            {
+              alias: "Tiny5",
+              src: "/assets/fonts/Tiny5-Regular.woff2",
+              data: { scaleMode: "nearest" },
+            },
           ],
         },
         {
@@ -54,17 +59,46 @@ const start = async (): Promise<void> => {
             },
           ],
         },
+        {
+          name: "characters",
+          assets: [
+            {
+              alias: "scout1standing",
+              src: "/assets/animations/scout1standing.json",
+              data: { scaleMode: "nearest" },
+            },
+            {
+              alias: "scout1idle",
+              src: "/assets/animations/scout1idle.json",
+              data: { scaleMode: "nearest" },
+            },
+            {
+              alias: "scout1walking",
+              src: "/assets/animations/scout1walking.json",
+              data: { scaleMode: "nearest" },
+            },
+          ],
+        },
       ],
     },
   });
   await Assets.loadBundle("base");
-
   const canvas = document.querySelector("canvas");
 
-  // Stretch canvass onto the window size
-  const aspectRatio = window.innerHeight / (HEIGHT * AbstractRenderer.defaultOptions.resolution);
-  canvas.style.transform = `matrix3d(calc(1*calc(${aspectRatio})),0,0,0, 0,calc(1*calc(${aspectRatio})),0,0, 0,0,1,0, 0,0,1,1)`;
+  const resizeCanvas = () => {
+    const canvasWidth = WIDTH * AbstractRenderer.defaultOptions.resolution;
+    const canvasHeight = HEIGHT * AbstractRenderer.defaultOptions.resolution;
+    let scale = window.innerWidth / canvasWidth;
+    if (scale * canvasHeight > window.innerHeight) {
+      scale = window.innerHeight / canvasHeight;
+    }
+    canvas.style.transform = `matrix3d(calc(1*calc(${scale})),0,0,0, 0,calc(1*calc(${scale})),0,0, 0,0,1,0, 0,0,1,1)`;
+  };
 
+  window.addEventListener("resize", () => resizeCanvas());
+
+  // Stretch canvass onto the window size
+  resizeCanvas();
   const scenemanager = new SceneManager();
 
   const loadingScene = new LoadingScene();
@@ -72,7 +106,7 @@ const start = async (): Promise<void> => {
   app.stage.addChild(scenemanager);
 
   scenemanager.setSceneActive(loadingScene);
-  await Assets.loadBundle(["grass", "props"], (progress: number) => {
+  await Assets.loadBundle(["grass", "props", "characters"], (progress: number) => {
     loadingScene.updateProgress(progress);
     loadingScene.onSceneComplete = () => {
       const landingScene = new LandingScene();
