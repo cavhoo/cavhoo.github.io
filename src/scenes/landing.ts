@@ -1,42 +1,16 @@
-import { AnimatedSprite, Assets, Sprite, Text, Texture } from "pixi.js";
+import { Application, Assets, Container, Shader, Sprite, Text } from "pixi.js";
 import { Scene } from "./scene";
 import { FONT, HEIGHT, WIDTH } from "../types/constants";
 import { GrassTileMap } from "../data/tilesets/grassTiles";
-import { Sign } from "../entities/props/sign";
-import { NPC, NPCState } from "../entities/characters/npc";
+import { NPC } from "../entities/characters/npc";
 import { Waypoint } from "../types/path";
-import { Vector } from "../utilities/vector";
-import { formatRFC3339 } from "date-fns";
-
-const landingMap: number[][] = [
-  [1, 5, 5, 5, 5, 10, 11, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 2],
-  [7, 12, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 13, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8],
-  [7, 11, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 8],
-  [3, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 13, 12, 6, 6, 4],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 0, 0, 0],
-];
-
-const PATHS = [];
+import { landingMap, landingPaths } from "../maps/landing";
+import { Scout } from "../entities/characters/scout";
 
 export class LandingScene extends Scene {
+  protected _paths: Waypoint[] = [];
+  protected _npcs: NPC[] = [];
+  protected _tiles: Container;
   constructor() {
     super();
     this.setBackgroundColor("#479757");
@@ -49,8 +23,15 @@ export class LandingScene extends Scene {
         fill: "white",
       },
     });
+
+    this._tiles = new Container();
+
     text.resolution = 2;
     text.position.set((WIDTH - text.width) / 2, (HEIGHT - text.height) / 2);
+
+    text.eventMode = "static";
+    text.cursor = "pointer";
+    text.addEventListener("pointerdown", () => this.sceneComplete());
 
     const getTileName = (tileId: number) => GrassTileMap.get(tileId) ?? GrassTileMap.get(22);
 
@@ -59,72 +40,107 @@ export class LandingScene extends Scene {
       for (let x = 0; x < row.length; x++) {
         const tile = new Sprite(Assets.get(getTileName(row[x])));
         tile.position.set(x * 32, y * 32);
-        this.addChild(tile);
+        this._tiles.addChild(tile);
       }
     }
 
+    // Trees
     const tree1 = new Sprite(Assets.get("Tree_159.png"));
+    tree1.label = "Tree1";
     tree1.scale = 1.5;
-    tree1.position.set(WIDTH / 2, HEIGHT / 2);
+    tree1.position.set(WIDTH / 2 - 5, HEIGHT / 2);
 
     const tree2 = new Sprite(Assets.get("Tree_159.png"));
+    tree2.label = "Tree2";
     tree2.scale = 1.5;
-    tree2.position.set(100, 100);
+    tree2.position.set(64, 320);
 
     const tree3 = new Sprite(Assets.get("Tree_159.png"));
+    tree3.label = "Tree3";
     tree3.scale = 1.5;
     tree3.position.set(800, 100);
 
-    const npc1 = new NPC([
-      [NPCState.IdleRight, new AnimatedSprite([1, 2, 3, 4, 5, 6].map((frame) => Texture.from(`scout1idle_${`${frame}`.padStart(2, "0")}.png`)))],
-      [NPCState.IdleUp, new AnimatedSprite([7, 8, 9, 10, 11, 12].map((frame) => Texture.from(`scout1idle_${`${frame}`.padStart(2, "0")}.png`)))],
-      [NPCState.IdleLeft, new AnimatedSprite([13, 14, 15, 16, 17, 18].map((frame) => Texture.from(`scout1idle_${`${frame}`.padStart(2, "0")}.png`)))],
-      [NPCState.IdleDown, new AnimatedSprite([19, 20, 21, 22, 23, 24].map((frame) => Texture.from(`scout1idle_${`${frame}`.padStart(2, "0")}.png`)))],
-      [NPCState.WalkingRight, new AnimatedSprite([1, 2, 3, 4, 5, 6].map((frame) => Texture.from(`scout1_${`${frame}`.padStart(2, "0")}.png`)))],
-      [NPCState.WalkingUp, new AnimatedSprite([7, 8, 9, 10, 11, 12].map((frame) => Texture.from(`scout1_${`${frame}`.padStart(2, "0")}.png`)))],
-      [NPCState.WalkingLeft, new AnimatedSprite([13, 14, 15, 16, 17, 18].map((frame) => Texture.from(`scout1_${`${frame}`.padStart(2, "0")}.png`)))],
-      [NPCState.WalkingDown, new AnimatedSprite([19, 20, 21, 22, 23, 24].map((frame) => Texture.from(`scout1_${`${frame}`.padStart(2, "0")}.png`)))],
-    ]);
+    // Houses
+    const villa1 = new Sprite(Assets.get("Villa_1.png"));
+    villa1.label = "Villa1";
+    villa1.position.set(64, 32);
 
-    const path = new Waypoint(Vector.from([6 * 32 - 16, -64]));
-    path
-      .addNext(new Waypoint(Vector.from([6 * 32 - 16, 0])))
-      .addNext(new Waypoint(Vector.from([1 * 32 - 16, 0])))
-      .addNext(new Waypoint(Vector.from([1 * 32 - 16, 20 * 32])))
-      .addNext(new Waypoint(Vector.from([36 * 32 - 16, 20 * 32])))
-      .addNext(new Waypoint(Vector.from([36 * 32 - 16, 25 * 32])));
+    // Add 'Projects' text on the roof of villa1
+    const projectsText = new Text(
+      "Projects",
+      {
+        fontFamily: FONT,
+        fontSize: 24,
+        fill: "#fff",
+        fontWeight: "bold",
+        stroke: "#222",
+        dropShadow: {
+          color: "#000",
+          blur: 4,
+          distance: 2,
+          alpha: 0.7,
+          angle: 45,
+        },
+      }
+    );
+    projectsText.anchor.set(0.5, 0.3); // Center horizontally and vertically on the roof
+    // Place text centered horizontally on the roof of villa1, but shifted left by half its width
+    projectsText.position.set(villa1.position.x + villa1.width / 2 - projectsText.width / 2, villa1.position.y + villa1.height * 0.22);
 
-    const path2 = new Waypoint(Vector.from([6 * 32 - 16, -64]));
-    path2
-      .addNext(new Waypoint(Vector.from([6 * 32 - 16, 0])))
-      .addNext(new Waypoint(Vector.from([39 * 32 - 16, 0])))
-      .addNext(new Waypoint(Vector.from([39 * 32 - 16, 20 * 32])))
-      .addNext(new Waypoint(Vector.from([36 * 32 - 16, 20 * 32])))
-      .addNext(new Waypoint(Vector.from([36 * 32 - 16, 25 * 32])));
+    const villa2 = new Sprite(Assets.get("Villa_3.png"));
+    villa2.label = "Villa2";
+    villa2.position.set(964, 231);
 
-    const path3 = new Waypoint(Vector.from([36 * 32 - 16, 25 * 32]));
-    path3
-      .addNext(new Waypoint(Vector.from([36 * 32 - 16, 20 * 32])))
-      .addNext(new Waypoint(Vector.from([1 * 32 - 16, 20 * 32])))
-      .addNext(new Waypoint(Vector.from([1 * 32 - 16, 0])))
-      .addNext(new Waypoint(Vector.from([6 * 32 - 16, 0])))
-      .addNext(new Waypoint(Vector.from([6 * 32 - 16, -64])));
+    // Add 'About Me' text on the roof of villa2
+    const aboutMeText = new Text(
+      "About Me",
+      {
+        fontFamily: FONT,
+        fontSize: 24,
+        fill: "#fff",
+        fontWeight: "bold",
+        stroke: "#222",
+        dropShadow: {
+          color: "#000",
+          blur: 4,
+          distance: 2,
+          alpha: 0.7,
+          angle: 45,
+        },
+      }
+    );
+    aboutMeText.anchor.set(0.5, 0.3); // Center horizontally and vertically on the roof
+    // Place text centered horizontally on the roof of villa2, but shifted left by half its width
+    aboutMeText.position.set(villa2.position.x + villa2.width / 2 - aboutMeText.width / 2, villa2.position.y + villa2.height * 0.22);
 
-    const path4 = new Waypoint(Vector.from([36 * 32 - 16, 25 * 32]));
-    path4
-      .addNext(new Waypoint(Vector.from([36 * 32 - 16, 20 * 32])))
-      .addNext(new Waypoint(Vector.from([39 * 32 - 16, 20 * 32])))
-      .addNext(new Waypoint(Vector.from([39 * 32 - 16, 0])))
-      .addNext(new Waypoint(Vector.from([6 * 32 - 16, 0])))
-      .addNext(new Waypoint(Vector.from([6 * 32 - 16, -64])));
+    // Character
+    const npc1 = new Scout();
+    npc1.position.set(32, 32);
+    this._npcs.push(npc1);
 
-    const paths = [path, path2, path3, path4];
-    npc1.onWalkingComplete(() => {
-      npc1.walkOnPath(paths[Math.floor(Math.random() * 4)], 2);
+    this.addChild(this._tiles, tree1, tree3, villa1, projectsText, villa2, aboutMeText, npc1, tree2, text);
+  }
+
+  public override onAdded(app: Application): void {
+    super.onAdded(app);
+    void this.createBackgroundImage(new Sprite(Assets.get(GrassTileMap.get(22))));
+  }
+
+  public sceneDeactivated(): void {
+    this._npcs.forEach((npc) => npc.stop());
+  }
+
+  public sceneActivated(): void {
+    this.setBackgroundImage();
+    this._npcs.forEach((npc) => {
+      npc.onWalkingComplete(() => {
+        const path = landingPaths[Math.floor(Math.random() * landingPaths.length)];
+        path.reset();
+        npc.walkOnPath(path, 2);
+      });
+      const path = landingPaths[Math.floor(Math.random() * landingPaths.length)];
+      path.reset();
+      npc.walkOnPath(path, 2);
     });
-    npc1.walkOnPath(paths[Math.floor(Math.random() * 4)], 2);
-    npc1.play(NPCState.WalkingLeft);
-
-    this.addChild(npc1, tree1, tree2, tree3, text);
   }
 }

@@ -1,4 +1,4 @@
-import { Container, Ticker } from "pixi.js";
+import { Application, Container, Ticker } from "pixi.js";
 import { Scene } from "./scene";
 
 enum TransitionState {
@@ -8,29 +8,39 @@ enum TransitionState {
 
 export class SceneManager extends Container {
   protected static FADE_TIME: number = 250;
-  protected _sceneList: Set<Scene> = new Set();
+  protected _sceneList: Map<string, Scene> = new Map();
   protected _activeScene: Scene;
   protected _nextScene: Scene | null = null;
 
   protected transitionState: TransitionState = TransitionState.Idle;
-
+  protected _app: Application;
   protected _time: number = 0;
 
-  constructor() {
+  constructor(app: Application) {
     super();
-    this.name = "SceneManager";
+    this.label = "SceneManager";
+    this._app = app;
     Ticker.shared.add(this.update, this);
   }
 
-  public addScene(scene: Scene): void {
-    this._sceneList.add(scene);
+  public addScene(sceneName: string, scene: Scene): void {
+    this._sceneList.set(sceneName, scene);
     scene.visible = false;
     scene.alpha = 0;
+    scene.onAdded(this._app);
     this.addChild(scene);
   }
 
-  public setSceneActive(scene: Scene): void {
-    if (this._sceneList.has(scene)) {
+  public addScenes(...scenes: [string, Scene][]): void {
+    scenes.forEach(([name, scene]) => {
+      scene.onAdded(this._app);
+      this._sceneList.set(name, scene);
+    });
+  }
+
+  public setSceneActive(sceneName: string): void {
+    if (this._sceneList.has(sceneName)) {
+      const scene = this._sceneList.get(sceneName);
       if (!this._activeScene) {
         scene.visible = true;
         scene.alpha = 1;
@@ -60,8 +70,10 @@ export class SceneManager extends Container {
             this.transitionState = TransitionState.Idle;
             this._time = 0;
             this._activeScene.visible = false;
+            this._activeScene.sceneDeactivated?.();
             this._activeScene = this._nextScene;
             this._activeScene.alpha = 1;
+            this._activeScene.sceneActivated?.();
             this._nextScene = null;
           }
           break;

@@ -25,6 +25,16 @@ export enum GrassTileIds {
   BottomLeftPatch = 12,
   BottomRightPatch = 13,
   GrassPatch = 22,
+
+  WaterPatch = 30,
+  WaterCornerTopLeft = 31,
+  WaterCornerTopRight = 32,
+  WaterCornerBottomLeft = 33,
+  WaterCornerBottomRight = 34,
+  WaterHorizontalTop = 35,
+  WaterHorizontalBottom = 36,
+  WaterVerticalLeft = 37,
+  WaterVerticalRight = 38,
 }
 
 export const generateGrassTileFileAlias = (prefix: string, groupId: number, tileId: number): string => {
@@ -50,4 +60,15 @@ export const GrassTileMap = new Map<number, string>([
   [GrassTileIds.BottomStraightOutside, generateGrassTileFileAlias(GrassTilePrefixes.Grass, 4, 6)],
   [GrassTileIds.LeftStraightOutside, generateGrassTileFileAlias(GrassTilePrefixes.Grass, 4, 8)],
   [GrassTileIds.RightStraightOutside, generateGrassTileFileAlias(GrassTilePrefixes.Grass, 4, 4)],
+
+  // Water Tiles
+  [GrassTileIds.WaterPatch, generateGrassTileFileAlias(GrassTilePrefixes.GrassWater, 4, 21)],
+  [GrassTileIds.WaterCornerBottomRight, generateGrassTileFileAlias(GrassTilePrefixes.GrassWater, 4, 5)],
+  [GrassTileIds.WaterCornerBottomLeft, generateGrassTileFileAlias(GrassTilePrefixes.GrassWater, 4, 7)],
+  [GrassTileIds.WaterCornerTopLeft, generateGrassTileFileAlias(GrassTilePrefixes.GrassWater, 4, 1)],
+  [GrassTileIds.WaterCornerTopRight, generateGrassTileFileAlias(GrassTilePrefixes.GrassWater, 4, 3)],
+  [GrassTileIds.WaterHorizontalBottom, generateGrassTileFileAlias(GrassTilePrefixes.GrassWater, 4, 6)],
+  [GrassTileIds.WaterHorizontalTop, generateGrassTileFileAlias(GrassTilePrefixes.GrassWater, 4, 2)],
+  [GrassTileIds.WaterVerticalLeft, generateGrassTileFileAlias(GrassTilePrefixes.GrassWater, 4, 8)],
+  [GrassTileIds.WaterVerticalRight, generateGrassTileFileAlias(GrassTilePrefixes.GrassWater, 4, 4)],
 ]);

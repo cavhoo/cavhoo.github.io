@@ -1,8 +1,9 @@
 import { AbstractRenderer, Application, Assets, TextureStyle } from "pixi.js";
 import { LoadingScene } from "./scenes/loading";
 import { SceneManager } from "./scenes/sceneManager";
-import { LandingScene } from "./scenes/landing";
 import { HEIGHT, WIDTH } from "./types/constants";
+import { SceneNames, sceneSetup } from "./sceneSetup";
+import { assetManifest } from "./data/assets/manifest";
 
 const start = async (): Promise<void> => {
   TextureStyle.defaultOptions.scaleMode = "nearest";
@@ -22,65 +23,7 @@ const start = async (): Promise<void> => {
   }
 
   await Assets.init({
-    manifest: {
-      bundles: [
-        {
-          name: "base",
-          assets: [
-            {
-              alias: "Jersey10",
-              src: "/assets/fonts/Jersey10-Regular.woff2",
-              data: { scaleMode: "nearest" },
-            },
-            {
-              alias: "Tiny5",
-              src: "/assets/fonts/Tiny5-Regular.woff2",
-              data: { scaleMode: "nearest" },
-            },
-          ],
-        },
-        {
-          name: "grass",
-          assets: [
-            {
-              alias: "grass_tiles",
-              src: "/assets/textures/grass.json",
-              data: { scaleMode: "nearest" },
-            },
-          ],
-        },
-        {
-          name: "props",
-          assets: [
-            {
-              alias: "props",
-              src: "/assets/textures/props.json",
-              data: { scaleMode: "nearest" },
-            },
-          ],
-        },
-        {
-          name: "characters",
-          assets: [
-            {
-              alias: "scout1standing",
-              src: "/assets/animations/scout1standing.json",
-              data: { scaleMode: "nearest" },
-            },
-            {
-              alias: "scout1idle",
-              src: "/assets/animations/scout1idle.json",
-              data: { scaleMode: "nearest" },
-            },
-            {
-              alias: "scout1walking",
-              src: "/assets/animations/scout1walking.json",
-              data: { scaleMode: "nearest" },
-            },
-          ],
-        },
-      ],
-    },
+    manifest: assetManifest,
   });
   await Assets.loadBundle("base");
   const canvas = document.querySelector("canvas");
@@ -92,6 +35,7 @@ const start = async (): Promise<void> => {
     if (scale * canvasHeight > window.innerHeight) {
       scale = window.innerHeight / canvasHeight;
     }
+    document.body.style.backgroundSize = `${64 * scale}px ${64 * scale}px`;
     canvas.style.transform = `matrix3d(calc(1*calc(${scale})),0,0,0, 0,calc(1*calc(${scale})),0,0, 0,0,1,0, 0,0,1,1)`;
   };
 
@@ -99,20 +43,16 @@ const start = async (): Promise<void> => {
 
   // Stretch canvass onto the window size
   resizeCanvas();
-  const scenemanager = new SceneManager();
+  const scenemanager = new SceneManager(app);
 
   const loadingScene = new LoadingScene();
-  scenemanager.addScene(loadingScene);
+  scenemanager.addScene(SceneNames.Loading, loadingScene);
   app.stage.addChild(scenemanager);
 
-  scenemanager.setSceneActive(loadingScene);
-  await Assets.loadBundle(["grass", "props", "characters"], (progress: number) => {
+  scenemanager.setSceneActive(SceneNames.Loading);
+  await Assets.loadBundle(["tiles", "props", "characters"], (progress: number) => {
     loadingScene.updateProgress(progress);
-    loadingScene.onSceneComplete = () => {
-      const landingScene = new LandingScene();
-      scenemanager.addScene(landingScene);
-      scenemanager.setSceneActive(landingScene);
-    };
+    loadingScene.onSceneComplete = () => sceneSetup(scenemanager);
   });
   // Make sure the whole canvas area is interactive, not just the circle.
   app.stage.hitArea = app.screen;

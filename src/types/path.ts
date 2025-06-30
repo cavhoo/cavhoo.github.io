@@ -14,7 +14,6 @@ export class Waypoint {
   }
 
   public get next(): Waypoint | null {
-    console.log("Next waypoint: ", this._next);
     return this._next;
   }
 
@@ -24,5 +23,49 @@ export class Waypoint {
 
   public get target(): Vector {
     return this._target;
+  }
+}
+
+export class Path {
+  protected waypoints: Waypoint[] = [];
+  protected _currentWaypoint: Waypoint;
+  protected prevWaypoint: Waypoint;
+
+  constructor(start: Waypoint) {
+    this.waypoints.push(start);
+    this._currentWaypoint = start;
+  }
+
+  public reset(): void {
+    this._currentWaypoint = this.waypoints[0];
+  }
+
+  public addWaypoint(point: Waypoint): this {
+    this.waypoints.push(this.waypoints[this.waypoints.length - 1].addNext(point));
+    return this;
+  }
+
+  public get currentWaypoint(): Waypoint | null {
+    return this._currentWaypoint;
+  }
+
+  public nextWaypoint(): Waypoint | null {
+    const point = this.currentWaypoint.next;
+    if (point === null) {
+      return point;
+    }
+    this._currentWaypoint = point;
+    return point;
+  }
+
+  public reverseClone(): Path {
+    const reversedWaypoints = [...this.waypoints];
+    const reversePath = new Path(reversedWaypoints.pop());
+
+    reversedWaypoints.reverse().forEach((point) => {
+      reversePath.addWaypoint(new Waypoint(Vector.from([point.target.x, point.target.y])));
+    });
+
+    return reversePath;
   }
 }

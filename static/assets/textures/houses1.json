@@ -1,0 +1,116 @@
+{
+  "frames": {
+    "Villa_5.png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 288,
+        "h": 416
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 288,
+        "h": 416
+      },
+      "sourceSize": {
+        "w": 288,
+        "h": 416
+      }
+    },
+    "Villa_4.png": {
+      "frame": {
+        "x": 292,
+        "y": 2,
+        "w": 288,
+        "h": 416
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 288,
+        "h": 416
+      },
+      "sourceSize": {
+        "w": 288,
+        "h": 416
+      }
+    },
+    "Villa_3.png": {
+      "frame": {
+        "x": 2,
+        "y": 420,
+        "w": 288,
+        "h": 416
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 288,
+        "h": 416
+      },
+      "sourceSize": {
+        "w": 288,
+        "h": 416
+      }
+    },
+    "Villa_2.png": {
+      "frame": {
+        "x": 420,
+        "y": 420,
+        "w": 288,
+        "h": 416
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 288,
+        "h": 416
+      },
+      "sourceSize": {
+        "w": 288,
+        "h": 416
+      }
+    },
+    "Villa_1.png": {
+      "frame": {
+        "x": 582,
+        "y": 2,
+        "w": 288,
+        "h": 416
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 288,
+        "h": 416
+      },
+      "sourceSize": {
+        "w": 288,
+        "h": 416
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/pixijs/assetpack",
+    "version": "1.0",
+    "image": "houses1.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 872,
+      "h": 710
+    },
+    "scale": 1,
+    "related_multi_packs": []
+  }
+}
