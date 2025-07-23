@@ -5,7 +5,7 @@ import { NPC } from "../entities/characters/npc";
 import { Scout } from "../entities/characters/scout";
 import { CityTileMap } from "../data/tilesets/cityTiles";
 
-export class Projects extends Scene {
+export class WorkshopDistrict extends Scene {
   protected _npcs: NPC[] = [];
   constructor() {
     super();

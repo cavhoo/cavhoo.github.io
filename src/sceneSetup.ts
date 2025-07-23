@@ -1,33 +1,28 @@
-import { About } from "./scenes/about";
-import { LandingScene } from "./scenes/landing";
-import { Projects } from "./scenes/projects";
 import { SceneManager } from "./scenes/sceneManager";
+import { TownSquare } from "./scenes/townsquare";
+import { WorkshopDistrict } from "./scenes/workshopdistrict";
 
 export enum SceneNames {
   Loading = "loading",
-  Landing = "landing",
+  TownSquare = "townSquare",
+  WorkshopDistrict = "workshopDistrict",
   About = "about",
   Projects = "projects",
   Imprint = "imprint",
 }
 
 export const sceneSetup = (sceneManager: SceneManager) => {
-  const landingScene = new LandingScene();
-  landingScene.onSceneComplete = () => {
-    sceneManager.setSceneActive(SceneNames.Projects);
+  const townSquareScene = new TownSquare();
+  townSquareScene.onSceneComplete = () => {
+    sceneManager.setSceneActive(SceneNames.WorkshopDistrict);
   };
-  const aboutScene = new About();
-  aboutScene.onSceneComplete = () => {
-    sceneManager.setSceneActive(SceneNames.Landing);
-  };
-  const projectsScene = new Projects();
+  const workshopDistrictScene = new WorkshopDistrict();
 
-  sceneManager.addScene(SceneNames.Landing, landingScene);
-  sceneManager.addScene(SceneNames.About, aboutScene);
-  sceneManager.addScene(SceneNames.Projects, projectsScene);
-  projectsScene.onSceneComplete = () => {
-    sceneManager.setSceneActive(SceneNames.Landing);
+  sceneManager.addScene(SceneNames.TownSquare, townSquareScene);
+  sceneManager.addScene(SceneNames.WorkshopDistrict, workshopDistrictScene);
+  workshopDistrictScene.onSceneComplete = () => {
+    sceneManager.setSceneActive(SceneNames.TownSquare);
   };
 
-  sceneManager.setSceneActive(SceneNames.Landing);
+  sceneManager.setSceneActive(SceneNames.TownSquare);
 };
