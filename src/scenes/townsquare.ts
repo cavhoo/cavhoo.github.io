@@ -1,4 +1,4 @@
-import { Application, Assets, Container, Sprite, Text } from "pixi.js";
+import { Application, Assets, Container, Sprite, Text, Ticker } from "pixi.js";
 import { Scene } from "./scene";
 import { FONT, HEIGHT, WIDTH } from "../types/constants";
 import { GrassTileMap } from "../data/tilesets/grassTiles";
@@ -6,6 +6,7 @@ import { NPC } from "../entities/characters/npc";
 import { Waypoint } from "../types/path";
 import { landingMap, landingPaths } from "../maps/landing";
 import { Scout } from "../entities/characters/scout";
+import { TreeShader } from "../shader/tree/treeshader";
 
 export class TownSquare extends Scene {
   protected _paths: Waypoint[] = [];
@@ -37,8 +38,6 @@ export class TownSquare extends Scene {
 
     const {
       terrain: { layers },
-      width,
-      height,
     } = landingMap;
 
     layers.forEach((layer) => {
@@ -54,20 +53,17 @@ export class TownSquare extends Scene {
         });
       });
     });
-    // for (let y = 0; y < landingMap.length; y++) {
-    //   const row = landingMap[y];
-    //   for (let x = 0; x < row.length; x++) {
-    //     const tile = new Sprite(Assets.get(getTileName(row[x])));
-    //     tile.position.set(x * 32, y * 32);
-    //     this._tiles.addChild(tile);
-    //   }
-    // }
 
+    const shader = TreeShader.buildShader();
+    Ticker.shared.add(() => {
+      shader.resources.shaderUniforms.uniforms.uTime += 0.1;
+    });
     // Trees
     const tree1 = new Sprite(Assets.get("Tree_159.png"));
     tree1.label = "Tree1";
-    tree1.scale = 1.5;
+    tree1.scale = 1;
     tree1.position.set(WIDTH / 2 - 5, HEIGHT / 2);
+    tree1.filters = [shader];
 
     const tree2 = new Sprite(Assets.get("Tree_159.png"));
     tree2.label = "Tree2";
