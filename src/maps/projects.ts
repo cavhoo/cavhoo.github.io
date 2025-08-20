@@ -1,3 +1,4 @@
+import { Layer, Map } from "../types/map";
 import { Path, Waypoint } from "../types/path";
 import { Vector } from "../utilities/vector";
 
@@ -54,3 +55,14 @@ export const projectsPath: Path[] = [
   //   .addWaypoint(new Waypoint(Vector.from([6 * 32 - 16, 0])))
   //   .addWaypoint(new Waypoint(Vector.from([6 * 32 - 16, -64]))),
 ];
+
+export const workshopsMap: Map = {
+  width: 30,
+  height: 30,
+  terrain: {
+    layers: [],
+  },
+  buildings: [],
+  props: [],
+  paths: [],
+};

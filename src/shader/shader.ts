@@ -9,7 +9,7 @@ export enum ShaderUniformTypes {
 export class ShaderBuilder {
   protected glProgram: { vertex: string; fragment: string };
   protected gpuProgram: GpuProgram;
-  protected resources?: Record<string, unknown> = {};
+  protected resources?: Record<string, { [key: string]: { value: unknown; type: ShaderUniformTypes } }> = {};
 
   protected constructor() {}
 
@@ -28,7 +28,7 @@ export class ShaderBuilder {
   }
 
   public addResource(key: string, value: unknown, type: ShaderUniformTypes): this {
-    this.resources["shaderUniforms"] = { [key]: { value, type } };
+    this.resources["shaderUniforms"] = { ...this.resources["shaderUniforms"], [key]: { value, type } };
     return this;
   }
 

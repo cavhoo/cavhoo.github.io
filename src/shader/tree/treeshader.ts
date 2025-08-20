@@ -3,7 +3,6 @@ const vertexShader = `
 in vec2 aPosition;
 out vec2 vTextureCoord;
 
-uniform float uTime;
 uniform vec4 uInputSize;
 uniform vec4 uOutputFrame;
 uniform vec4 uOutputTexture;
@@ -36,7 +35,8 @@ out vec4 finalColor;
 
 // Custom uniforms
 uniform float uTime;
-float amplitude = 0.01;
+uniform float uScale;
+float amplitude = 0.012;
 float frequency = 2.0;
 float speed = 0.2;
 float baseStability = 0.64;
@@ -48,7 +48,7 @@ void main()
 {
     vec2 uvs = vTextureCoord.xy;
 
-    float swayAmount = amplitude * (1.0 - smoothstep(0.6, 0.63, vTextureCoord.y));
+    float swayAmount = amplitude * (1.0 / uScale - smoothstep(0.6, 0.63, vTextureCoord.y) / uScale);
     float wave = sin(vTextureCoord.y * frequency + uTime * speed);
     wave += 0.3 * sin(vTextureCoord.y * frequency * 1.5 + uTime * speed * 0.8);
     uvs.x += wave * swayAmount;
@@ -56,11 +56,10 @@ void main()
 
     uvs.x = mod(uvs.x, 1.0);
 
-    vec4 fg = texture2D(uTexture, uvs);
-
-    //fg.r = uvs.y + sin(uTime);
-
-    finalColor =  fg;
+    finalColor = texture2D(uTexture, uvs);
 }`;
 
-export const TreeShader = ShaderBuilder.create().addGLProgram(fragmentShader, vertexShader).addResource("uTime", 0.0, ShaderUniformTypes.f32);
+export const TreeShader = ShaderBuilder.create()
+  .addGLProgram(fragmentShader, vertexShader)
+  .addResource("uTime", 0.0, ShaderUniformTypes.f32)
+  .addResource("uScale", 1.0, ShaderUniformTypes.f32);

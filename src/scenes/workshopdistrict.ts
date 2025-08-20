@@ -24,11 +24,6 @@ export class WorkshopDistrict extends Scene {
 
     this.eventMode = "static";
     this.addEventListener("pointerdown", () => this.sceneComplete());
-
-    const npc1 = new Scout();
-    npc1.position.set(-100, -100);
-    this._npcs.push(npc1);
-    this.addChild(npc1);
   }
 
   public override onAdded(app: Application): void {

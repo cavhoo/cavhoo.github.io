@@ -8,7 +8,7 @@ import { assetManifest } from "./data/assets/manifest";
 const start = async (): Promise<void> => {
   TextureStyle.defaultOptions.scaleMode = "nearest";
   AbstractRenderer.defaultOptions.roundPixels = false;
-  AbstractRenderer.defaultOptions.resolution = 2;
+  AbstractRenderer.defaultOptions.resolution = 1;
 
   // Create new PIXI Canvas App
   const app = new Application();

@@ -18,13 +18,13 @@ export abstract class Scene extends Container {
     }
   }
 
-  protected setBackgroundColor(color: string): void {
-    document.body.style.backgroundColor = color;
+  protected setBackgroundColor(_color: string): void {
+    //document.body.style.backgroundColor = color;
   }
 
   protected async setBackgroundImage(): Promise<void> {
     if (this.backgroundImage !== undefined) {
-      document.body.style.backgroundImage = `url(${this.backgroundImage.src})`;
+      //document.body.style.backgroundImage = `url(${this.backgroundImage.src})`;
     }
   }
 
