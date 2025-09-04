@@ -2,7 +2,7 @@ import { Text } from "pixi.js";
 import { LoadingBar } from "../entities/ui/loadingBar";
 import { Scene } from "./scene";
 import { Button } from "../entities/ui/button";
-import { FONT } from "../types/constants";
+import { FONT, HEIGHT, WIDTH } from "../types/constants";
 
 export class LoadingScene extends Scene {
   protected loadingBar: LoadingBar;
@@ -12,7 +12,7 @@ export class LoadingScene extends Scene {
 
     this.label = "LoadingScene";
     this.loadingBar = new LoadingBar(483, 60);
-    this.loadingBar.position.set((1366 - this.loadingBar.width) / 2, (720 - this.loadingBar.height) / 2);
+    this.loadingBar.position.set((WIDTH - this.loadingBar.width) / 2, (HEIGHT - this.loadingBar.height) / 2);
 
     const name = new Text({
       text: "Hendrik (Excyl)",
@@ -22,7 +22,7 @@ export class LoadingScene extends Scene {
         fontSize: 80,
       },
     });
-    name.position.set((1366 - name.width) / 2, 200);
+    name.position.set((WIDTH - name.width) / 2, 200);
 
     const jobTitle = new Text({
       text: "game developer",
@@ -32,7 +32,7 @@ export class LoadingScene extends Scene {
         fontSize: 40,
       },
     });
-    jobTitle.position.set((1366 - jobTitle.width) / 2, 270);
+    jobTitle.position.set((WIDTH - jobTitle.width) / 2, 270);
 
     this.enterButton = new Button({
       text: "START",
@@ -51,7 +51,7 @@ export class LoadingScene extends Scene {
     this.enterButton.on("pointerdown", () => {
       this.sceneComplete();
     });
-    this.enterButton.position.set((1366 - this.enterButton.width) / 2, this.loadingBar.position.y);
+    this.enterButton.position.set((WIDTH - this.enterButton.width) / 2, this.loadingBar.position.y);
 
     this.addChild(this.loadingBar, name, jobTitle, this.enterButton);
   }

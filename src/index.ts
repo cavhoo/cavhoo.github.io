@@ -4,12 +4,14 @@ import { SceneManager } from "./scenes/sceneManager";
 import { HEIGHT, WIDTH } from "./types/constants";
 import { SceneNames, sceneSetup } from "./sceneSetup";
 import { assetManifest } from "./data/assets/manifest";
+import { registerGSAP } from "./utilities/gsap";
 
 const start = async (): Promise<void> => {
   TextureStyle.defaultOptions.scaleMode = "nearest";
   AbstractRenderer.defaultOptions.roundPixels = false;
   AbstractRenderer.defaultOptions.resolution = 1;
 
+  registerGSAP();
   // Create new PIXI Canvas App
   const app = new Application();
   const container = document.querySelector("#app");
@@ -46,7 +48,7 @@ const start = async (): Promise<void> => {
   const scenemanager = new SceneManager(app);
 
   const loadingScene = new LoadingScene();
-  scenemanager.addScene(SceneNames.Loading, loadingScene);
+  scenemanager.addScene(SceneNames.Loading, loadingScene, 0);
   app.stage.addChild(scenemanager);
 
   scenemanager.setSceneActive(SceneNames.Loading);

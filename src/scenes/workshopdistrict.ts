@@ -1,29 +1,34 @@
-import { Application, Assets, Sprite } from "pixi.js";
-import { projectsMap, projectsPath } from "../maps/projects";
-import { Scene } from "./scene";
-import { NPC } from "../entities/characters/npc";
-import { Scout } from "../entities/characters/scout";
+import { Application, Assets, Sprite, Text } from "pixi.js";
 import { CityTileMap } from "../data/tilesets/cityTiles";
+import { BlockBuilding } from "../entities/blockBuilding";
+import { BlockLayer } from "../entities/blockLayer";
+import { NPC } from "../entities/characters/npc";
+import { workshopsMap } from "../maps/projects";
+import { FONT, HEIGHT, WIDTH } from "../types/constants";
+import { Scene } from "./scene";
 
 export class WorkshopDistrict extends Scene {
   protected _npcs: NPC[] = [];
   constructor() {
     super();
-    this.setBackgroundColor("#479757");
+    const text = new Text({
+      text: "Projects",
+      style: {
+        fontFamily: FONT,
+        fontSize: 80,
+        fill: "white",
+      },
+    });
+    text.resolution = 2;
+    text.position.set((WIDTH - text.width) / 2, 15);
 
-    const getTileName = (tileId: number) => CityTileMap.get(tileId) ?? CityTileMap.get(1);
-
-    for (let y = 0; y < projectsMap.length; y++) {
-      const row = projectsMap[y];
-      for (let x = 0; x < row.length; x++) {
-        const tile = new Sprite(Assets.get(getTileName(row[x])));
-        tile.position.set(x * 32, y * 32);
-        this.addChild(tile);
-      }
-    }
-
-    this.eventMode = "static";
-    this.addEventListener("pointerdown", () => this.sceneComplete());
+    const layer = new BlockLayer(workshopsMap.terrain.layers[0]);
+    workshopsMap.buildings.forEach((building) => {
+      const b = new BlockBuilding(building, (label) => console.log("Building clicked", label));
+      layer.addBuilding(b, building.position.x, building.position.y);
+    });
+    layer.position.set(WIDTH / 2, HEIGHT);
+    this.addChild(layer, text);
   }
 
   public override onAdded(app: Application): void {
@@ -31,22 +36,7 @@ export class WorkshopDistrict extends Scene {
     void this.createBackgroundImage(new Sprite(Assets.get(CityTileMap.get(1))));
   }
 
-  public sceneActivated(): void {
-    this.setBackgroundImage();
-    this._npcs.forEach((npc) => {
-      npc.onWalkingComplete(() => {
-        const path = projectsPath[Math.floor(Math.random() * projectsPath.length)];
-        path.reset();
-        npc.walkOnPath(path, 2);
-      });
+  public sceneActivated(): void {}
 
-      const path = projectsPath[Math.floor(Math.random() * projectsPath.length)];
-      path.reset();
-      npc.walkOnPath(path, 2);
-    });
-  }
-
-  public sceneDeactivated(): void {
-    this._npcs.forEach((npc) => npc.stop());
-  }
+  public sceneDeactivated(): void {}
 }

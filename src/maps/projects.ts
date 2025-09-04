@@ -1,33 +1,7 @@
-import { Layer, Map } from "../types/map";
+import { BlockIndex } from "../data/blocks/blocks";
+import { Building, Layer, Map } from "../types/map";
 import { Path, Waypoint } from "../types/path";
 import { Vector } from "../utilities/vector";
-
-// prettier-ignore
-export const projectsMap: number[][] = [
-	[0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
-	[13, 0, 6,  6,  6,  6,  6,  6,  0,  12, 6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  6,  0,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  7,  8,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  7,  8,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  7,  8,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  7,  8,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  7,  8,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  13,  0],
-	[13, 0, 5,  5,  5,  5,  5,  5,  10, 8,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,   0,  13,  0],
-	[13, 0, 6,  6,  6,  6,  6,  6,  6,  4,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,   0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  5,  5,  5,  5,  5,  5,  0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  7,  12, 6,  6,  6,  6,  6,  0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  7,  8,  0,  0,  0,  0,  0,  0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  7,  8,  0,  0,  0,  0,  0,  0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  7,  8,  0,  0,  0,  0,  0,  0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  7,  8,  0,  0,  0,  0,  0,  0,  13,  0],
-	[13, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  7,  8,  0,  0,  0,  0,  0,  0,  13,  0],
-	[13, 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0,	 0],
-	[13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 0],
-	[0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  13, 13, 0,  0,  0	],
-];
 
 export const projectsPath: Path[] = [
   new Path(new Waypoint(Vector.from([6 * 32 - 16, -32])))
@@ -36,33 +10,36 @@ export const projectsPath: Path[] = [
     .addWaypoint(new Waypoint(Vector.from([1 * 32 - 16, 22 * 32])))
     .addWaypoint(new Waypoint(Vector.from([36 * 32 - 16, 22 * 32])))
     .addWaypoint(new Waypoint(Vector.from([36 * 32 - 16, 25 * 32]))),
-  // new Path(new Waypoint(Vector.from([6 * 32 - 16, -64])))
-  //   .addWaypoint(new Waypoint(Vector.from([6 * 32 - 16, 0])))
-  //   .addWaypoint(new Waypoint(Vector.from([39 * 32 - 16, 0])))
-  //   .addWaypoint(new Waypoint(Vector.from([39 * 32 - 16, 22 * 32])))
-  //   .addWaypoint(new Waypoint(Vector.from([36 * 32 - 16, 22 * 32])))
-  //   .addWaypoint(new Waypoint(Vector.from([36 * 32 - 16, 25 * 32]))),
-  // new Path(new Waypoint(Vector.from([36 * 32 - 16, 25 * 32])))
-  //   .addWaypoint(new Waypoint(Vector.from([36 * 32 - 16, 22 * 32])))
-  //   .addWaypoint(new Waypoint(Vector.from([1 * 32 - 16, 22 * 32])))
-  //   .addWaypoint(new Waypoint(Vector.from([1 * 32 - 16, 0])))
-  //   .addWaypoint(new Waypoint(Vector.from([6 * 32 - 16, 0])))
-  //   .addWaypoint(new Waypoint(Vector.from([6 * 32 - 16, -64]))),
-  // new Path(new Waypoint(Vector.from([36 * 32 - 16, 25 * 32])))
-  //   .addWaypoint(new Waypoint(Vector.from([36 * 32 - 16, 22 * 32])))
-  //   .addWaypoint(new Waypoint(Vector.from([39 * 32 - 16, 22 * 32])))
-  //   .addWaypoint(new Waypoint(Vector.from([39 * 32 - 16, 0])))
-  //   .addWaypoint(new Waypoint(Vector.from([6 * 32 - 16, 0])))
-  //   .addWaypoint(new Waypoint(Vector.from([6 * 32 - 16, -64]))),
 ];
+
+const baseLayer: Layer = {
+  width: 30,
+  height: 30,
+  tileIds: [BlockIndex.Dirt],
+  data: Array.from({ length: 30 }, () => Array.from({ length: 30 }, () => 0)),
+};
+
+const buildingPixiDust: Building = {
+  blockIds: [BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
+  buildingName: "Rust SCSS",
+  position: Vector.from([16, 4]),
+  data: Array.from({ length: 5 }, () => Array.from({ length: 4 }, () => Array.from({ length: 4 }, () => Math.floor(Math.random() * 2)))),
+};
+
+const buildingRustTsScss: Building = {
+  blockIds: [BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
+  buildingName: "Pixi Dust",
+  position: Vector.from([7, 23]),
+  data: Array.from({ length: 5 }, () => Array.from({ length: 4 }, () => Array.from({ length: 4 }, () => Math.floor(Math.random() * 2)))),
+};
 
 export const workshopsMap: Map = {
   width: 30,
   height: 30,
   terrain: {
-    layers: [],
+    layers: [baseLayer],
   },
-  buildings: [],
+  buildings: [buildingPixiDust, buildingRustTsScss],
   props: [],
   paths: [],
 };

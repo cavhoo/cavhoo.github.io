@@ -17,7 +17,7 @@ export class TownSquare extends Scene {
     this.setBackgroundColor("#479757");
     this.label = "LandingScene";
     const text = new Text({
-      text: "Welcome to Excylonia",
+      text: "Landing",
       style: {
         fontFamily: FONT,
         fontSize: 80,
@@ -30,43 +30,13 @@ export class TownSquare extends Scene {
     text.resolution = 2;
     text.position.set((WIDTH - text.width) / 2, 15);
 
-    text.eventMode = "static";
-    text.cursor = "pointer";
-    text.addEventListener("pointerdown", () => this.sceneComplete());
-
-    const navLeft = new Text({
-      text: "<",
-      style: {
-        fontFamily: FONT,
-        fontSize: 80,
-        fill: "white",
-      },
-    });
-
-    navLeft.position.set(navLeft.width, (HEIGHT - navLeft.height) / 2);
-    navLeft.eventMode = "static";
-    navLeft.cursor = "pointer";
-
-    const navRight = new Text({
-      text: ">",
-      style: {
-        fontFamily: FONT,
-        fontSize: 80,
-        fill: "white",
-      },
-    });
-    navRight.position.set(WIDTH - navRight.width * 2, (HEIGHT - navRight.height) / 2);
-    navRight.eventMode = "static";
-    navRight.cursor = "pointer";
-
     const concreteLayer = new BlockLayer(landingMap.terrain.layers[0]);
+    landingMap.buildings.forEach((buildingData) => {
+      concreteLayer.addBuilding(new BlockBuilding(buildingData), buildingData.position.x, buildingData.position.y);
+    });
+    concreteLayer.position.set(WIDTH / 2, HEIGHT);
 
-    concreteLayer.position.set(WIDTH / 2, concreteLayer.height / 2);
-
-    const building = new BlockBuilding(landingMap.buildings[0]);
-    building.position.set(WIDTH / 2, HEIGHT / 2);
-
-    this.addChild(concreteLayer, building, navLeft, navRight);
+    this.addChild(concreteLayer, text);
   }
 
   public override onAdded(app: Application): void {

@@ -3,11 +3,11 @@ import { Application, Container, Sprite } from "pixi.js";
 export abstract class Scene extends Container {
   protected _app: Application;
   protected backgroundImage: HTMLImageElement;
-  public onSceneComplete?: () => void;
+  public onSceneComplete?: (showNavigation: boolean) => void;
 
-  protected sceneComplete(): void {
+  protected sceneComplete(showNavigation: boolean = false): void {
     if (this.onSceneComplete) {
-      this.onSceneComplete();
+      this.onSceneComplete(showNavigation);
     }
   }
 

@@ -1,6 +1,5 @@
 import { BlockIndex } from "../data/blocks/blocks";
-import { TILE_COUNT_X, TILE_COUNT_Y } from "../types/constants";
-import { Building, Layer, Map } from "../types/map";
+import { Layer, Map } from "../types/map";
 import { Path, Waypoint } from "../types/path";
 import { Vector } from "../utilities/vector";
 
@@ -36,13 +35,6 @@ const baseLayer: Layer = {
   data: Array.from({ length: 30 }, () => Array.from({ length: 30 }, () => 0)),
 };
 
-const building1: Building = {
-  buildingName: "Building1",
-  position: Vector.from([16 * 32, 16 * 32]),
-  blockIds: [BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
-  data: Array.from({ length: Math.floor(3 + Math.random() * 10) }, () => Array.from({ length: 2 }, () => [Math.floor(Math.random() * 2), Math.floor(Math.random() * 2)])),
-};
-
 export const landingMap: Map = {
   width: 30,
   height: 30,
@@ -50,6 +42,14 @@ export const landingMap: Map = {
     layers: [baseLayer],
   },
   props: [],
-  buildings: [building1],
+  buildings: Array.from({ length: 64 }, (_x: number, index: number) => {
+    const buildingHeight = Math.floor(3 + Math.random() * 7);
+    return {
+      buildingName: "Building" + index,
+      position: Vector.from([(index % 8) * 4, Math.floor(index / 8) * 4 + 2]),
+      blockIds: [BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
+      data: Array.from({ length: buildingHeight }, () => Array.from({ length: 2 }, () => [Math.floor(Math.random() * 2), Math.floor(Math.random() * 2)])),
+    };
+  }),
   paths: landingPaths,
 };
