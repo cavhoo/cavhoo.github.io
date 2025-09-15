@@ -1,7 +1,7 @@
 import { Assets, Container, Sprite } from "pixi.js";
 import { GlowFilter } from "pixi-filters";
 import { Building } from "../types/map";
-import { BlockTextureIds } from "../data/blocks/blocks";
+import { BlockIndex, BlockTextureIds } from "../data/blocks/blocks";
 import { Tooltip } from "./ui/tooltip";
 import { Vector } from "../utilities/vector";
 
@@ -19,7 +19,12 @@ export class BlockBuilding extends Container {
         const storyRow = storyLayer[y];
         for (let x = 0; x < storyRow.length; x++) {
           const id = storyRow[x];
-          const textureId = BlockTextureIds[buildingData.blockIds[id]];
+          const blockId = buildingData.blockIds[id];
+
+          if (blockId === BlockIndex.Empty) {
+            continue;
+          }
+          const textureId = BlockTextureIds[blockId];
           const tile = new Sprite(Assets.get(textureId));
           tile.anchor.set(0.5, 0.5);
           tile.position.set(16 * (x - y), 8 * (x + y));

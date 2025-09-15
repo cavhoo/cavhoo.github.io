@@ -1,5 +1,4 @@
-import { Application, Assets, Container, Sprite, Text } from "pixi.js";
-import { GrassTileMap } from "../data/tilesets/grassTiles";
+import { Application, Container, Text } from "pixi.js";
 import { BlockBuilding } from "../entities/blockBuilding";
 import { BlockLayer } from "../entities/blockLayer";
 import { NPC } from "../entities/characters/npc";
@@ -17,7 +16,7 @@ export class TownSquare extends Scene {
     this.setBackgroundColor("#479757");
     this.label = "LandingScene";
     const text = new Text({
-      text: "Landing",
+      text: "Welcome",
       style: {
         fontFamily: FONT,
         fontSize: 80,
@@ -41,7 +40,6 @@ export class TownSquare extends Scene {
 
   public override onAdded(app: Application): void {
     super.onAdded(app);
-    void this.createBackgroundImage(new Sprite(Assets.get(GrassTileMap.get(22))));
   }
 
   public sceneDeactivated(): void {

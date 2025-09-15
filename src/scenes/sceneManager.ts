@@ -96,7 +96,7 @@ export class SceneManager extends Container {
   }
 
   public showNavigation(): void {
-    this._sceneNavigation.visible = true;
+    this._sceneNavigation.visible = false;
   }
 
   public addScene(sceneName: string, scene: Scene, index: number): void {

@@ -7,4 +7,6 @@ export enum BlockIndex {
   Dirt,
   BuildingWindow,
   BuildingDefault,
+
+  Empty = Number.MAX_SAFE_INTEGER,
 }

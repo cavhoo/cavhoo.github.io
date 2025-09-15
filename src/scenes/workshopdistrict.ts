@@ -1,5 +1,4 @@
-import { Application, Assets, Sprite, Text } from "pixi.js";
-import { CityTileMap } from "../data/tilesets/cityTiles";
+import { Application, Text } from "pixi.js";
 import { BlockBuilding } from "../entities/blockBuilding";
 import { BlockLayer } from "../entities/blockLayer";
 import { NPC } from "../entities/characters/npc";
@@ -33,7 +32,6 @@ export class WorkshopDistrict extends Scene {
 
   public override onAdded(app: Application): void {
     super.onAdded(app);
-    void this.createBackgroundImage(new Sprite(Assets.get(CityTileMap.get(1))));
   }
 
   public sceneActivated(): void {}
