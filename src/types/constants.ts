@@ -1,4 +1,4 @@
-export const FONT = "Jersey10 Regular";
+export const FONT = "Silkscreen Regular";
 export const WIDTH = 1536;
 export const HEIGHT = 864;
 

@@ -7,7 +7,6 @@ const baseLayer: Layer = {
   width: 30,
   height: 30,
   tileIds: [BlockIndex.Concrete, BlockIndex.Road],
-  //data: Array.from({ length: 30 }, () => Array.from({ length: 30 }, () => 0)),
   data: [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
@@ -51,7 +50,7 @@ export const landingMap: Map = {
   props: [],
   buildings: [
     {
-      buildingName: "BuildingA",
+      buildingName: "About Me",
       position: Vector.from([11, 12]),
       blockIds: [BlockIndex.Empty, BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
       data: [
@@ -84,6 +83,71 @@ export const landingMap: Map = {
           [0, 0, 1, 1, 1, 1, 0, 0],
           [0, 0, 0, 0, 0, 0, 0, 0],
           [0, 0, 0, 0, 0, 0, 0, 0],
+        ]),
+      ],
+    },
+    {
+      buildingName: "Quickspin",
+      position: Vector.from([24, 17]),
+      blockIds: [BlockIndex.Empty, BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
+      data: [
+        ...Array.from({ length: 4 }, () => [
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
+        ]),
+      ],
+    },
+    {
+      buildingName: "Gauselmann",
+      position: Vector.from([15, 26]),
+      blockIds: [BlockIndex.Empty, BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
+      data: [
+        ...Array.from({ length: 4 }, () => [
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
+        ]),
+      ],
+    },
+    {
+      buildingName: "Fitogram",
+      position: Vector.from([24, 26]),
+      blockIds: [BlockIndex.Empty, BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
+      data: [
+        ...Array.from({ length: 4 }, () => [
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
+        ]),
+      ],
+    },
+    {
+      buildingName: "PixiDust",
+      position: Vector.from([16, 4]),
+      blockIds: [BlockIndex.Empty, BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
+      data: [
+        ...Array.from({ length: 4 }, () => [
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
+        ]),
+      ],
+    },
+    {
+      buildingName: "RustScssModules",
+      position: Vector.from([24, 4]),
+      blockIds: [BlockIndex.Empty, BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
+      data: [
+        ...Array.from({ length: 4 }, () => [
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
+          [1, 1, 1, 1],
         ]),
       ],
     },

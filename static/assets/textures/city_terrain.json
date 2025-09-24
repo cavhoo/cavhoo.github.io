@@ -1,0 +1,7036 @@
+{
+  "frames": {
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_9.png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_8.png": {
+      "frame": {
+        "x": 36,
+        "y": 2,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_7.png": {
+      "frame": {
+        "x": 2,
+        "y": 36,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_6.png": {
+      "frame": {
+        "x": 36,
+        "y": 36,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_54.png": {
+      "frame": {
+        "x": 70,
+        "y": 2,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_53.png": {
+      "frame": {
+        "x": 2,
+        "y": 100,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_52.png": {
+      "frame": {
+        "x": 196,
+        "y": 100,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_51.png": {
+      "frame": {
+        "x": 2,
+        "y": 326,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_50.png": {
+      "frame": {
+        "x": 228,
+        "y": 326,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_5.png": {
+      "frame": {
+        "x": 200,
+        "y": 2,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_49.png": {
+      "frame": {
+        "x": 234,
+        "y": 2,
+        "w": 96,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_48.png": {
+      "frame": {
+        "x": 390,
+        "y": 100,
+        "w": 96,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_47.png": {
+      "frame": {
+        "x": 454,
+        "y": 198,
+        "w": 224,
+        "h": 96
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 96
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_46.png": {
+      "frame": {
+        "x": 454,
+        "y": 424,
+        "w": 160,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_45.png": {
+      "frame": {
+        "x": 520,
+        "y": 424,
+        "w": 160,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_44.png": {
+      "frame": {
+        "x": 2,
+        "y": 586,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_43.png": {
+      "frame": {
+        "x": 164,
+        "y": 586,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_42.png": {
+      "frame": {
+        "x": 326,
+        "y": 586,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_41.png": {
+      "frame": {
+        "x": 2,
+        "y": 520,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_40.png": {
+      "frame": {
+        "x": 132,
+        "y": 520,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_4.png": {
+      "frame": {
+        "x": 200,
+        "y": 36,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_39.png": {
+      "frame": {
+        "x": 262,
+        "y": 520,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_38.png": {
+      "frame": {
+        "x": 428,
+        "y": 2,
+        "w": 128,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_37.png": {
+      "frame": {
+        "x": 586,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_36.png": {
+      "frame": {
+        "x": 392,
+        "y": 520,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_35.png": {
+      "frame": {
+        "x": 390,
+        "y": 198,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_34.png": {
+      "frame": {
+        "x": 488,
+        "y": 586,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_33.png": {
+      "frame": {
+        "x": 522,
+        "y": 586,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_32.png": {
+      "frame": {
+        "x": 556,
+        "y": 586,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_31.png": {
+      "frame": {
+        "x": 590,
+        "y": 132,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_30.png": {
+      "frame": {
+        "x": 656,
+        "y": 132,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_3.png": {
+      "frame": {
+        "x": 390,
+        "y": 264,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_29.png": {
+      "frame": {
+        "x": 590,
+        "y": 166,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_28.png": {
+      "frame": {
+        "x": 590,
+        "y": 200,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_27.png": {
+      "frame": {
+        "x": 590,
+        "y": 266,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_26.png": {
+      "frame": {
+        "x": 552,
+        "y": 332,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_25.png": {
+      "frame": {
+        "x": 618,
+        "y": 332,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_24.png": {
+      "frame": {
+        "x": 684,
+        "y": 198,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_23.png": {
+      "frame": {
+        "x": 684,
+        "y": 264,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_22.png": {
+      "frame": {
+        "x": 684,
+        "y": 330,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_21.png": {
+      "frame": {
+        "x": 684,
+        "y": 396,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_20.png": {
+      "frame": {
+        "x": 552,
+        "y": 198,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_2.png": {
+      "frame": {
+        "x": 552,
+        "y": 232,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_19.png": {
+      "frame": {
+        "x": 552,
+        "y": 266,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_18.png": {
+      "frame": {
+        "x": 590,
+        "y": 398,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_17.png": {
+      "frame": {
+        "x": 624,
+        "y": 398,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_16.png": {
+      "frame": {
+        "x": 590,
+        "y": 432,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_15.png": {
+      "frame": {
+        "x": 624,
+        "y": 432,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_14.png": {
+      "frame": {
+        "x": 658,
+        "y": 462,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_13.png": {
+      "frame": {
+        "x": 590,
+        "y": 466,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_12.png": {
+      "frame": {
+        "x": 624,
+        "y": 466,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_11.png": {
+      "frame": {
+        "x": 658,
+        "y": 496,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_10.png": {
+      "frame": {
+        "x": 586,
+        "y": 530,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_6_1.png": {
+      "frame": {
+        "x": 620,
+        "y": 500,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_9.png": {
+      "frame": {
+        "x": 654,
+        "y": 530,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_8.png": {
+      "frame": {
+        "x": 620,
+        "y": 534,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_7.png": {
+      "frame": {
+        "x": 654,
+        "y": 564,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_6.png": {
+      "frame": {
+        "x": 590,
+        "y": 568,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_54.png": {
+      "frame": {
+        "x": 488,
+        "y": 652,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_53.png": {
+      "frame": {
+        "x": 718,
+        "y": 2,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_52.png": {
+      "frame": {
+        "x": 718,
+        "y": 228,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_51.png": {
+      "frame": {
+        "x": 718,
+        "y": 454,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_50.png": {
+      "frame": {
+        "x": 2,
+        "y": 782,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_5.png": {
+      "frame": {
+        "x": 624,
+        "y": 598,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_49.png": {
+      "frame": {
+        "x": 2,
+        "y": 684,
+        "w": 96,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_48.png": {
+      "frame": {
+        "x": 228,
+        "y": 782,
+        "w": 96,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_47.png": {
+      "frame": {
+        "x": 196,
+        "y": 684,
+        "w": 224,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 96
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_46.png": {
+      "frame": {
+        "x": 422,
+        "y": 684,
+        "w": 160,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_45.png": {
+      "frame": {
+        "x": 326,
+        "y": 782,
+        "w": 160,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_44.png": {
+      "frame": {
+        "x": 590,
+        "y": 632,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_43.png": {
+      "frame": {
+        "x": 488,
+        "y": 782,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_42.png": {
+      "frame": {
+        "x": 586,
+        "y": 794,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_41.png": {
+      "frame": {
+        "x": 392,
+        "y": 846,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_40.png": {
+      "frame": {
+        "x": 684,
+        "y": 794,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_4.png": {
+      "frame": {
+        "x": 658,
+        "y": 598,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_39.png": {
+      "frame": {
+        "x": 750,
+        "y": 680,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_38.png": {
+      "frame": {
+        "x": 750,
+        "y": 746,
+        "w": 128,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_37.png": {
+      "frame": {
+        "x": 750,
+        "y": 812,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_36.png": {
+      "frame": {
+        "x": 684,
+        "y": 942,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_35.png": {
+      "frame": {
+        "x": 750,
+        "y": 942,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_34.png": {
+      "frame": {
+        "x": 816,
+        "y": 942,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_33.png": {
+      "frame": {
+        "x": 688,
+        "y": 680,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_32.png": {
+      "frame": {
+        "x": 880,
+        "y": 680,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_31.png": {
+      "frame": {
+        "x": 880,
+        "y": 714,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_30.png": {
+      "frame": {
+        "x": 912,
+        "y": 2,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_3.png": {
+      "frame": {
+        "x": 912,
+        "y": 68,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_29.png": {
+      "frame": {
+        "x": 880,
+        "y": 748,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_28.png": {
+      "frame": {
+        "x": 880,
+        "y": 782,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_27.png": {
+      "frame": {
+        "x": 880,
+        "y": 848,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_26.png": {
+      "frame": {
+        "x": 946,
+        "y": 2,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_25.png": {
+      "frame": {
+        "x": 946,
+        "y": 68,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_24.png": {
+      "frame": {
+        "x": 912,
+        "y": 102,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_23.png": {
+      "frame": {
+        "x": 946,
+        "y": 134,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_22.png": {
+      "frame": {
+        "x": 946,
+        "y": 168,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_21.png": {
+      "frame": {
+        "x": 912,
+        "y": 168,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_20.png": {
+      "frame": {
+        "x": 688,
+        "y": 746,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_2.png": {
+      "frame": {
+        "x": 882,
+        "y": 914,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_19.png": {
+      "frame": {
+        "x": 916,
+        "y": 914,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_18.png": {
+      "frame": {
+        "x": 950,
+        "y": 202,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_17.png": {
+      "frame": {
+        "x": 912,
+        "y": 234,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_16.png": {
+      "frame": {
+        "x": 950,
+        "y": 236,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_15.png": {
+      "frame": {
+        "x": 912,
+        "y": 268,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_14.png": {
+      "frame": {
+        "x": 950,
+        "y": 270,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_13.png": {
+      "frame": {
+        "x": 912,
+        "y": 302,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_12.png": {
+      "frame": {
+        "x": 950,
+        "y": 304,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_11.png": {
+      "frame": {
+        "x": 912,
+        "y": 336,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_10.png": {
+      "frame": {
+        "x": 950,
+        "y": 338,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_5_1.png": {
+      "frame": {
+        "x": 912,
+        "y": 370,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_9.png": {
+      "frame": {
+        "x": 950,
+        "y": 372,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_8.png": {
+      "frame": {
+        "x": 912,
+        "y": 404,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_7.png": {
+      "frame": {
+        "x": 950,
+        "y": 406,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_6.png": {
+      "frame": {
+        "x": 912,
+        "y": 438,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_54.png": {
+      "frame": {
+        "x": 912,
+        "y": 472,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_53.png": {
+      "frame": {
+        "x": 458,
+        "y": 956,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_52.png": {
+      "frame": {
+        "x": 2,
+        "y": 976,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_51.png": {
+      "frame": {
+        "x": 684,
+        "y": 976,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_50.png": {
+      "frame": {
+        "x": 228,
+        "y": 976,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_5.png": {
+      "frame": {
+        "x": 950,
+        "y": 602,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_49.png": {
+      "frame": {
+        "x": 910,
+        "y": 948,
+        "w": 96,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_48.png": {
+      "frame": {
+        "x": 1012,
+        "y": 2,
+        "w": 96,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_47.png": {
+      "frame": {
+        "x": 1012,
+        "y": 196,
+        "w": 224,
+        "h": 96
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 96
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_46.png": {
+      "frame": {
+        "x": 946,
+        "y": 636,
+        "w": 160,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_45.png": {
+      "frame": {
+        "x": 946,
+        "y": 702,
+        "w": 160,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_44.png": {
+      "frame": {
+        "x": 1010,
+        "y": 422,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_43.png": {
+      "frame": {
+        "x": 946,
+        "y": 768,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_42.png": {
+      "frame": {
+        "x": 1008,
+        "y": 866,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_41.png": {
+      "frame": {
+        "x": 1008,
+        "y": 1028,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_40.png": {
+      "frame": {
+        "x": 1110,
+        "y": 2,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_4.png": {
+      "frame": {
+        "x": 912,
+        "y": 602,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_39.png": {
+      "frame": {
+        "x": 1110,
+        "y": 132,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_38.png": {
+      "frame": {
+        "x": 1110,
+        "y": 262,
+        "w": 128,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_37.png": {
+      "frame": {
+        "x": 2,
+        "y": 1170,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_36.png": {
+      "frame": {
+        "x": 984,
+        "y": 602,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_35.png": {
+      "frame": {
+        "x": 1110,
+        "y": 392,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_34.png": {
+      "frame": {
+        "x": 1108,
+        "y": 426,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_33.png": {
+      "frame": {
+        "x": 1108,
+        "y": 460,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_32.png": {
+      "frame": {
+        "x": 910,
+        "y": 1142,
+        "w": 96,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 48
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_31.png": {
+      "frame": {
+        "x": 1050,
+        "y": 584,
+        "w": 96,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 48
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_30.png": {
+      "frame": {
+        "x": 1074,
+        "y": 1028,
+        "w": 96,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 48
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_3.png": {
+      "frame": {
+        "x": 912,
+        "y": 636,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_29.png": {
+      "frame": {
+        "x": 1074,
+        "y": 1078,
+        "w": 96,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 48
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_28.png": {
+      "frame": {
+        "x": 1108,
+        "y": 494,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_27.png": {
+      "frame": {
+        "x": 1108,
+        "y": 634,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_26.png": {
+      "frame": {
+        "x": 1108,
+        "y": 700,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_25.png": {
+      "frame": {
+        "x": 1108,
+        "y": 766,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_24.png": {
+      "frame": {
+        "x": 1108,
+        "y": 832,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_23.png": {
+      "frame": {
+        "x": 1106,
+        "y": 866,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_22.png": {
+      "frame": {
+        "x": 1106,
+        "y": 900,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_21.png": {
+      "frame": {
+        "x": 1106,
+        "y": 934,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_20.png": {
+      "frame": {
+        "x": 946,
+        "y": 866,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_2.png": {
+      "frame": {
+        "x": 950,
+        "y": 900,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_19.png": {
+      "frame": {
+        "x": 1106,
+        "y": 968,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_18.png": {
+      "frame": {
+        "x": 1140,
+        "y": 968,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_17.png": {
+      "frame": {
+        "x": 1074,
+        "y": 1128,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_16.png": {
+      "frame": {
+        "x": 1008,
+        "y": 1158,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_15.png": {
+      "frame": {
+        "x": 1108,
+        "y": 1128,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_14.png": {
+      "frame": {
+        "x": 1142,
+        "y": 1128,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_13.png": {
+      "frame": {
+        "x": 132,
+        "y": 1192,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_12.png": {
+      "frame": {
+        "x": 132,
+        "y": 1226,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_11.png": {
+      "frame": {
+        "x": 132,
+        "y": 1260,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_10.png": {
+      "frame": {
+        "x": 166,
+        "y": 1192,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_4_1.png": {
+      "frame": {
+        "x": 166,
+        "y": 1226,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_9.png": {
+      "frame": {
+        "x": 166,
+        "y": 1260,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_8.png": {
+      "frame": {
+        "x": 200,
+        "y": 1192,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_7.png": {
+      "frame": {
+        "x": 200,
+        "y": 1226,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_6.png": {
+      "frame": {
+        "x": 200,
+        "y": 1260,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_54.png": {
+      "frame": {
+        "x": 234,
+        "y": 1170,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_53.png": {
+      "frame": {
+        "x": 1176,
+        "y": 2,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_52.png": {
+      "frame": {
+        "x": 1176,
+        "y": 228,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_51.png": {
+      "frame": {
+        "x": 1176,
+        "y": 454,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_50.png": {
+      "frame": {
+        "x": 1176,
+        "y": 680,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_5.png": {
+      "frame": {
+        "x": 1172,
+        "y": 906,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_49.png": {
+      "frame": {
+        "x": 1176,
+        "y": 940,
+        "w": 96,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_48.png": {
+      "frame": {
+        "x": 1176,
+        "y": 1038,
+        "w": 96,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_47.png": {
+      "frame": {
+        "x": 454,
+        "y": 1150,
+        "w": 224,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 96
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_46.png": {
+      "frame": {
+        "x": 1176,
+        "y": 1136,
+        "w": 160,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_45.png": {
+      "frame": {
+        "x": 1242,
+        "y": 1136,
+        "w": 160,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_44.png": {
+      "frame": {
+        "x": 680,
+        "y": 1192,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_43.png": {
+      "frame": {
+        "x": 842,
+        "y": 1192,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_42.png": {
+      "frame": {
+        "x": 1004,
+        "y": 1192,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_41.png": {
+      "frame": {
+        "x": 332,
+        "y": 1170,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_40.png": {
+      "frame": {
+        "x": 2,
+        "y": 1300,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_4.png": {
+      "frame": {
+        "x": 1206,
+        "y": 906,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_39.png": {
+      "frame": {
+        "x": 132,
+        "y": 1300,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_38.png": {
+      "frame": {
+        "x": 262,
+        "y": 1300,
+        "w": 128,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_37.png": {
+      "frame": {
+        "x": 2,
+        "y": 1366,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_36.png": {
+      "frame": {
+        "x": 1240,
+        "y": 906,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_35.png": {
+      "frame": {
+        "x": 398,
+        "y": 1170,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_34.png": {
+      "frame": {
+        "x": 398,
+        "y": 1236,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_33.png": {
+      "frame": {
+        "x": 1308,
+        "y": 1136,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_32.png": {
+      "frame": {
+        "x": 1308,
+        "y": 1202,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_31.png": {
+      "frame": {
+        "x": 1308,
+        "y": 1268,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_30.png": {
+      "frame": {
+        "x": 132,
+        "y": 1366,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_3.png": {
+      "frame": {
+        "x": 1306,
+        "y": 906,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_29.png": {
+      "frame": {
+        "x": 132,
+        "y": 1432,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_28.png": {
+      "frame": {
+        "x": 166,
+        "y": 1366,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_27.png": {
+      "frame": {
+        "x": 232,
+        "y": 1366,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_26.png": {
+      "frame": {
+        "x": 298,
+        "y": 1366,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_25.png": {
+      "frame": {
+        "x": 364,
+        "y": 1366,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_24.png": {
+      "frame": {
+        "x": 198,
+        "y": 1432,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_23.png": {
+      "frame": {
+        "x": 392,
+        "y": 1302,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_22.png": {
+      "frame": {
+        "x": 432,
+        "y": 1248,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_21.png": {
+      "frame": {
+        "x": 264,
+        "y": 1432,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_20.png": {
+      "frame": {
+        "x": 330,
+        "y": 1432,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_2.png": {
+      "frame": {
+        "x": 364,
+        "y": 1432,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_19.png": {
+      "frame": {
+        "x": 398,
+        "y": 1432,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_18.png": {
+      "frame": {
+        "x": 430,
+        "y": 1336,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_17.png": {
+      "frame": {
+        "x": 458,
+        "y": 1298,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_16.png": {
+      "frame": {
+        "x": 430,
+        "y": 1370,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_15.png": {
+      "frame": {
+        "x": 432,
+        "y": 1404,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_14.png": {
+      "frame": {
+        "x": 432,
+        "y": 1438,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_13.png": {
+      "frame": {
+        "x": 464,
+        "y": 1334,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_12.png": {
+      "frame": {
+        "x": 492,
+        "y": 1298,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_11.png": {
+      "frame": {
+        "x": 464,
+        "y": 1368,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_10.png": {
+      "frame": {
+        "x": 498,
+        "y": 1248,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_3_1.png": {
+      "frame": {
+        "x": 466,
+        "y": 1402,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_9.png": {
+      "frame": {
+        "x": 466,
+        "y": 1436,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_8.png": {
+      "frame": {
+        "x": 498,
+        "y": 1334,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_7.png": {
+      "frame": {
+        "x": 498,
+        "y": 1368,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_6.png": {
+      "frame": {
+        "x": 526,
+        "y": 1298,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_54.png": {
+      "frame": {
+        "x": 560,
+        "y": 1248,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_53.png": {
+      "frame": {
+        "x": 658,
+        "y": 1298,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_52.png": {
+      "frame": {
+        "x": 884,
+        "y": 1298,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_51.png": {
+      "frame": {
+        "x": 1370,
+        "y": 2,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_50.png": {
+      "frame": {
+        "x": 1370,
+        "y": 228,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_5.png": {
+      "frame": {
+        "x": 1340,
+        "y": 906,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_49.png": {
+      "frame": {
+        "x": 1370,
+        "y": 454,
+        "w": 96,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_48.png": {
+      "frame": {
+        "x": 1370,
+        "y": 940,
+        "w": 96,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_47.png": {
+      "frame": {
+        "x": 1110,
+        "y": 1334,
+        "w": 224,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 96
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_46.png": {
+      "frame": {
+        "x": 1336,
+        "y": 1334,
+        "w": 160,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_45.png": {
+      "frame": {
+        "x": 1402,
+        "y": 1038,
+        "w": 160,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_44.png": {
+      "frame": {
+        "x": 1402,
+        "y": 1104,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_43.png": {
+      "frame": {
+        "x": 1402,
+        "y": 1202,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_42.png": {
+      "frame": {
+        "x": 1402,
+        "y": 1300,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_41.png": {
+      "frame": {
+        "x": 500,
+        "y": 1402,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_40.png": {
+      "frame": {
+        "x": 1402,
+        "y": 1398,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_4.png": {
+      "frame": {
+        "x": 1110,
+        "y": 1298,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_39.png": {
+      "frame": {
+        "x": 1374,
+        "y": 552,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_38.png": {
+      "frame": {
+        "x": 1374,
+        "y": 618,
+        "w": 128,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_37.png": {
+      "frame": {
+        "x": 1374,
+        "y": 684,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_36.png": {
+      "frame": {
+        "x": 1144,
+        "y": 1298,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_35.png": {
+      "frame": {
+        "x": 1210,
+        "y": 1298,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_34.png": {
+      "frame": {
+        "x": 1342,
+        "y": 1136,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_33.png": {
+      "frame": {
+        "x": 1504,
+        "y": 552,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_32.png": {
+      "frame": {
+        "x": 1370,
+        "y": 814,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_31.png": {
+      "frame": {
+        "x": 1342,
+        "y": 1202,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_30.png": {
+      "frame": {
+        "x": 1342,
+        "y": 1268,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_3.png": {
+      "frame": {
+        "x": 1504,
+        "y": 618,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_29.png": {
+      "frame": {
+        "x": 1374,
+        "y": 880,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_28.png": {
+      "frame": {
+        "x": 1404,
+        "y": 814,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_27.png": {
+      "frame": {
+        "x": 1470,
+        "y": 814,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_26.png": {
+      "frame": {
+        "x": 2,
+        "y": 1496,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_25.png": {
+      "frame": {
+        "x": 68,
+        "y": 1496,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_24.png": {
+      "frame": {
+        "x": 134,
+        "y": 1496,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_23.png": {
+      "frame": {
+        "x": 168,
+        "y": 1496,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_22.png": {
+      "frame": {
+        "x": 202,
+        "y": 1496,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_21.png": {
+      "frame": {
+        "x": 236,
+        "y": 1496,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_20.png": {
+      "frame": {
+        "x": 1440,
+        "y": 880,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_2.png": {
+      "frame": {
+        "x": 1504,
+        "y": 652,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_19.png": {
+      "frame": {
+        "x": 1474,
+        "y": 880,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_18.png": {
+      "frame": {
+        "x": 1508,
+        "y": 880,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_17.png": {
+      "frame": {
+        "x": 1504,
+        "y": 686,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_16.png": {
+      "frame": {
+        "x": 1504,
+        "y": 720,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_15.png": {
+      "frame": {
+        "x": 1504,
+        "y": 754,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_14.png": {
+      "frame": {
+        "x": 270,
+        "y": 1496,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_13.png": {
+      "frame": {
+        "x": 304,
+        "y": 1496,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_12.png": {
+      "frame": {
+        "x": 338,
+        "y": 1496,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_11.png": {
+      "frame": {
+        "x": 372,
+        "y": 1466,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_10.png": {
+      "frame": {
+        "x": 372,
+        "y": 1500,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_2_1.png": {
+      "frame": {
+        "x": 406,
+        "y": 1496,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_9.png": {
+      "frame": {
+        "x": 440,
+        "y": 1496,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_8.png": {
+      "frame": {
+        "x": 474,
+        "y": 1496,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_7.png": {
+      "frame": {
+        "x": 508,
+        "y": 1496,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_6.png": {
+      "frame": {
+        "x": 542,
+        "y": 1496,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_54.png": {
+      "frame": {
+        "x": 1110,
+        "y": 1432,
+        "w": 96,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_53.png": {
+      "frame": {
+        "x": 406,
+        "y": 1530,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_52.png": {
+      "frame": {
+        "x": 2,
+        "y": 1562,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_51.png": {
+      "frame": {
+        "x": 600,
+        "y": 1562,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_50.png": {
+      "frame": {
+        "x": 826,
+        "y": 1562,
+        "w": 224,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_5.png": {
+      "frame": {
+        "x": 576,
+        "y": 1492,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_49.png": {
+      "frame": {
+        "x": 228,
+        "y": 1562,
+        "w": 96,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_48.png": {
+      "frame": {
+        "x": 1052,
+        "y": 1562,
+        "w": 96,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 192
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_47.png": {
+      "frame": {
+        "x": 1208,
+        "y": 1432,
+        "w": 224,
+        "h": 96
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 96
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_46.png": {
+      "frame": {
+        "x": 1402,
+        "y": 1464,
+        "w": 160,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_45.png": {
+      "frame": {
+        "x": 610,
+        "y": 1492,
+        "w": 160,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_44.png": {
+      "frame": {
+        "x": 1150,
+        "y": 1658,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_43.png": {
+      "frame": {
+        "x": 1306,
+        "y": 1530,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_42.png": {
+      "frame": {
+        "x": 1312,
+        "y": 1628,
+        "w": 96,
+        "h": 160
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 160
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_41.png": {
+      "frame": {
+        "x": 772,
+        "y": 1492,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_40.png": {
+      "frame": {
+        "x": 902,
+        "y": 1492,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_4.png": {
+      "frame": {
+        "x": 1306,
+        "y": 1496,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_39.png": {
+      "frame": {
+        "x": 326,
+        "y": 1534,
+        "w": 64,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_38.png": {
+      "frame": {
+        "x": 1474,
+        "y": 1530,
+        "w": 128,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_37.png": {
+      "frame": {
+        "x": 1564,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_36.png": {
+      "frame": {
+        "x": 1532,
+        "y": 1398,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_35.png": {
+      "frame": {
+        "x": 1032,
+        "y": 1492,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_34.png": {
+      "frame": {
+        "x": 1066,
+        "y": 1492,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_33.png": {
+      "frame": {
+        "x": 326,
+        "y": 1664,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_32.png": {
+      "frame": {
+        "x": 326,
+        "y": 1698,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_31.png": {
+      "frame": {
+        "x": 1150,
+        "y": 1562,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_30.png": {
+      "frame": {
+        "x": 1536,
+        "y": 788,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_3.png": {
+      "frame": {
+        "x": 1340,
+        "y": 1496,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_29.png": {
+      "frame": {
+        "x": 1542,
+        "y": 854,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_28.png": {
+      "frame": {
+        "x": 1474,
+        "y": 1660,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_27.png": {
+      "frame": {
+        "x": 1576,
+        "y": 132,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_26.png": {
+      "frame": {
+        "x": 1576,
+        "y": 198,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_25.png": {
+      "frame": {
+        "x": 1576,
+        "y": 264,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_24.png": {
+      "frame": {
+        "x": 1642,
+        "y": 132,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_23.png": {
+      "frame": {
+        "x": 1642,
+        "y": 198,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_22.png": {
+      "frame": {
+        "x": 1642,
+        "y": 264,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_21.png": {
+      "frame": {
+        "x": 1576,
+        "y": 330,
+        "w": 32,
+        "h": 64
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_20.png": {
+      "frame": {
+        "x": 1642,
+        "y": 330,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_2.png": {
+      "frame": {
+        "x": 1576,
+        "y": 364,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_19.png": {
+      "frame": {
+        "x": 1610,
+        "y": 364,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_18.png": {
+      "frame": {
+        "x": 1644,
+        "y": 364,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_17.png": {
+      "frame": {
+        "x": 1576,
+        "y": 398,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_16.png": {
+      "frame": {
+        "x": 1610,
+        "y": 398,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_15.png": {
+      "frame": {
+        "x": 1644,
+        "y": 398,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_14.png": {
+      "frame": {
+        "x": 1576,
+        "y": 432,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_13.png": {
+      "frame": {
+        "x": 1610,
+        "y": 432,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_12.png": {
+      "frame": {
+        "x": 1644,
+        "y": 432,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_11.png": {
+      "frame": {
+        "x": 1576,
+        "y": 466,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_10.png": {
+      "frame": {
+        "x": 1610,
+        "y": 466,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Sidewalk_1_1.png": {
+      "frame": {
+        "x": 1644,
+        "y": 466,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_9.png": {
+      "frame": {
+        "x": 1576,
+        "y": 500,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_8.png": {
+      "frame": {
+        "x": 1610,
+        "y": 500,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_7.png": {
+      "frame": {
+        "x": 1644,
+        "y": 500,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_6.png": {
+      "frame": {
+        "x": 1576,
+        "y": 534,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_5.png": {
+      "frame": {
+        "x": 1538,
+        "y": 552,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_4.png": {
+      "frame": {
+        "x": 1610,
+        "y": 534,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_3.png": {
+      "frame": {
+        "x": 1644,
+        "y": 534,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_27.png": {
+      "frame": {
+        "x": 1576,
+        "y": 568,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_26.png": {
+      "frame": {
+        "x": 1538,
+        "y": 586,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_25.png": {
+      "frame": {
+        "x": 1576,
+        "y": 602,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_24.png": {
+      "frame": {
+        "x": 1576,
+        "y": 668,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_23.png": {
+      "frame": {
+        "x": 1538,
+        "y": 652,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_22.png": {
+      "frame": {
+        "x": 1538,
+        "y": 686,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_21.png": {
+      "frame": {
+        "x": 1538,
+        "y": 720,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_20.png": {
+      "frame": {
+        "x": 1538,
+        "y": 754,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_2.png": {
+      "frame": {
+        "x": 1642,
+        "y": 568,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_19.png": {
+      "frame": {
+        "x": 1642,
+        "y": 602,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_18.png": {
+      "frame": {
+        "x": 1642,
+        "y": 636,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_17.png": {
+      "frame": {
+        "x": 1642,
+        "y": 670,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_16.png": {
+      "frame": {
+        "x": 1642,
+        "y": 704,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_15.png": {
+      "frame": {
+        "x": 1570,
+        "y": 788,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_14.png": {
+      "frame": {
+        "x": 1604,
+        "y": 734,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_13.png": {
+      "frame": {
+        "x": 1638,
+        "y": 738,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_12.png": {
+      "frame": {
+        "x": 1604,
+        "y": 768,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_11.png": {
+      "frame": {
+        "x": 1638,
+        "y": 772,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_10.png": {
+      "frame": {
+        "x": 1604,
+        "y": 802,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "ME_Singles_City_Terrains_32x32_Asphalt_1_Variation_1.png": {
+      "frame": {
+        "x": 1638,
+        "y": 806,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/pixijs/assetpack",
+    "version": "1.0",
+    "image": "city_terrain.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1694,
+      "h": 1756
+    },
+    "scale": 1,
+    "related_multi_packs": []
+  }
+}

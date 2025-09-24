@@ -99,10 +99,10 @@ export class SceneManager extends Container {
     this._sceneNavigation.visible = false;
   }
 
-  public addScene(sceneName: string, scene: Scene, index: number): void {
+  public addScene(sceneName: string, scene: Scene): void {
+    scene.position.set(WIDTH * this._sceneList.size, 0);
     this._sceneList.set(sceneName, scene);
     scene.onAdded(this._app);
-    scene.position.set(WIDTH * index, 0);
     this._sceneContainer.addChild(scene);
   }
 
@@ -118,13 +118,18 @@ export class SceneManager extends Container {
   public setSceneActive(sceneName: string): void {
     if (this._sceneList.has(sceneName)) {
       const scene = this._sceneList.get(sceneName);
-      if (!this._activeScene) {
-        scene.visible = true;
-        scene.alpha = 1;
-        this._activeScene = scene;
-        return;
-      }
-      this._nextScene = scene;
+      const index = [...this._sceneList.entries()].findIndex(([name]) => name === sceneName);
+      const targetPositon = index * WIDTH * -1;
+
+      gsap.to(this._sceneContainer.position, {
+        duration: 1.5,
+        x: targetPositon,
+        ease: SceneManager.MOVE_EASE,
+        onComplete: () => {
+          console.log("Scene move complete");
+          scene.sceneActivated?.();
+        },
+      });
     }
   }
 

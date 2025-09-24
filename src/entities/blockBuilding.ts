@@ -34,26 +34,6 @@ export class BlockBuilding extends Container {
       }
     }
 
-    const tooltip = new Tooltip({ text: this.label, size: new Vector(200, 50) });
-    tooltip.visible = false;
-    this.addChild(tooltip);
-    if (onClick) {
-      this.hoverGlow = new GlowFilter({ distance: 15, outerStrength: 2, color: 0xffff99 });
-      this.hoverGlow.enabled = false;
-      this.buildingLayer.filters = [this.hoverGlow];
-      this.eventMode = "static";
-      this.cursor = "pointer";
-      this.on("pointerover", () => {
-        this.hoverGlow.enabled = true;
-        tooltip.visible = true;
-      });
-
-      this.on("pointerleave", () => {
-        tooltip.visible = false;
-        this.hoverGlow.enabled = false;
-      });
-    }
-
     this.pivot.set(-32, 16);
   }
 }

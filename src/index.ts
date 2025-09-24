@@ -5,6 +5,8 @@ import { HEIGHT, WIDTH } from "./types/constants";
 import { SceneNames, sceneSetup } from "./sceneSetup";
 import { assetManifest } from "./data/assets/manifest";
 import { registerGSAP } from "./utilities/gsap";
+import { UiLayer } from "./ui/uilayer";
+import { Sidebar } from "./ui/sidebar";
 
 const start = async (): Promise<void> => {
   TextureStyle.defaultOptions.scaleMode = "nearest";
@@ -48,13 +50,30 @@ const start = async (): Promise<void> => {
   const scenemanager = new SceneManager(app);
 
   const loadingScene = new LoadingScene();
-  scenemanager.addScene(SceneNames.Loading, loadingScene, 0);
   app.stage.addChild(scenemanager);
+  app.stage.addChild(loadingScene);
+
+  // Create UI Layer
+
+  const uiLayer = new UiLayer();
+  uiLayer.visible = false;
+  app.stage.addChild(uiLayer);
+
+  const sidebar = new Sidebar();
+  sidebar.position.set(0, (HEIGHT - sidebar.height) / 2);
+  sidebar.onMenuItemClick = (item: string) => {
+    scenemanager.setSceneActive(item);
+  };
+  uiLayer.addChild(sidebar);
 
   scenemanager.setSceneActive(SceneNames.Loading);
   await Assets.loadBundle(["tiles", "props", "characters"], (progress: number) => {
     loadingScene.updateProgress(progress);
-    loadingScene.onSceneComplete = () => sceneSetup(scenemanager);
+    loadingScene.onSceneComplete = () => {
+      sceneSetup(scenemanager);
+      loadingScene.visible = false;
+      uiLayer.visible = true;
+    };
   });
   // Make sure the whole canvas area is interactive, not just the circle.
   app.stage.hitArea = app.screen;

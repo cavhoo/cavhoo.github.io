@@ -13,6 +13,11 @@ export const assetManifest = {
           src: "/assets/fonts/Tiny5-Regular.woff2",
           data: { scaleMode: "nearest" },
         },
+        {
+          alias: "Silkscreen",
+          src: "/assets/fonts/Silkscreen-Regular.woff2",
+          data: { scaleMode: "nearest" },
+        },
       ],
     },
     {
