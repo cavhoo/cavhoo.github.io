@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import { Application, Container, Graphics, Ticker } from "pixi.js";
 import { Scene } from "./scene";
-import { Navigation, NavigationDirection } from "../entities/ui/navigation";
+import { NavigationDirection } from "../entities/ui/navigation";
 import { HEIGHT, WIDTH } from "../types/constants";
 
 enum TransitionState {
@@ -24,7 +24,6 @@ export class SceneManager extends Container {
   protected _app: Application;
   protected _time: number = 0;
   protected _sceneContainer: Container;
-  protected _sceneNavigation: Navigation;
 
   protected sceneIndex: number = 2;
 
@@ -34,11 +33,9 @@ export class SceneManager extends Container {
     this._app = app;
     Ticker.shared.add(this.update, this);
     this._sceneContainer = new Container();
-    this._sceneNavigation = new Navigation((direction) => this.handleNavigation(direction));
-    this._sceneNavigation.visible = false;
     const mask = new Graphics();
     mask.rect(0, 0, WIDTH, HEIGHT).fill({ color: 0x000000 });
-    this.addChild(this._sceneContainer, this._sceneNavigation, mask);
+    this.addChild(this._sceneContainer, mask);
     this.mask = mask;
   }
 
@@ -95,10 +92,6 @@ export class SceneManager extends Container {
     }
   }
 
-  public showNavigation(): void {
-    this._sceneNavigation.visible = false;
-  }
-
   public addScene(sceneName: string, scene: Scene): void {
     scene.position.set(WIDTH * this._sceneList.size, 0);
     this._sceneList.set(sceneName, scene);
@@ -120,6 +113,10 @@ export class SceneManager extends Container {
       const scene = this._sceneList.get(sceneName);
       const index = [...this._sceneList.entries()].findIndex(([name]) => name === sceneName);
       const targetPositon = index * WIDTH * -1;
+      if (this._sceneContainer.position.x === targetPositon) {
+        scene.sceneActivated?.();
+        return;
+      }
 
       gsap.to(this._sceneContainer.position, {
         duration: 1.5,

@@ -1,6 +1,6 @@
+import { Sprite } from "pixi.js";
 import { BlockIndex } from "../data/blocks/blocks";
 import { Layer, Map } from "../types/map";
-import { step } from "../utilities/math";
 import { Vector } from "../utilities/vector";
 
 const baseLayer: Layer = {
@@ -87,7 +87,8 @@ export const landingMap: Map = {
       ],
     },
     {
-      buildingName: "Quickspin",
+      buildingName: "LinkedIn",
+      icon: { baseTextureName: "linkedin{frame}.png", frameCount: 18 },
       position: Vector.from([24, 17]),
       blockIds: [BlockIndex.Empty, BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
       data: [
@@ -100,7 +101,8 @@ export const landingMap: Map = {
       ],
     },
     {
-      buildingName: "Gauselmann",
+      buildingName: "Instagram",
+      icon: { baseTextureName: "instagramColored{frame}.png", frameCount: 18 },
       position: Vector.from([15, 26]),
       blockIds: [BlockIndex.Empty, BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
       data: [
@@ -113,34 +115,9 @@ export const landingMap: Map = {
       ],
     },
     {
-      buildingName: "Fitogram",
+      buildingName: "Github",
+      icon: { baseTextureName: "github{frame}.png", frameCount: 18, tint: "black" },
       position: Vector.from([24, 26]),
-      blockIds: [BlockIndex.Empty, BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
-      data: [
-        ...Array.from({ length: 4 }, () => [
-          [1, 1, 1, 1],
-          [1, 1, 1, 1],
-          [1, 1, 1, 1],
-          [1, 1, 1, 1],
-        ]),
-      ],
-    },
-    {
-      buildingName: "PixiDust",
-      position: Vector.from([16, 4]),
-      blockIds: [BlockIndex.Empty, BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
-      data: [
-        ...Array.from({ length: 4 }, () => [
-          [1, 1, 1, 1],
-          [1, 1, 1, 1],
-          [1, 1, 1, 1],
-          [1, 1, 1, 1],
-        ]),
-      ],
-    },
-    {
-      buildingName: "RustScssModules",
-      position: Vector.from([24, 4]),
       blockIds: [BlockIndex.Empty, BlockIndex.BuildingDefault, BlockIndex.BuildingWindow],
       data: [
         ...Array.from({ length: 4 }, () => [

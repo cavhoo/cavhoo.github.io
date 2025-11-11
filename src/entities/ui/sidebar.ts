@@ -1,12 +1,13 @@
 import { Container, Graphics } from "pixi.js";
+import { gsap } from "gsap";
+import { SceneNames } from "../../sceneSetup";
 import { Menu } from "./components/menu";
 import { MenuItem } from "./components/menuItem";
-import { gsap } from "gsap";
-import { SceneNames } from "../sceneSetup";
 
 export class Sidebar extends Container {
   protected menu: Menu;
   protected _onMenuitemClick: (name: string) => void;
+
   constructor() {
     super();
 
@@ -25,7 +26,7 @@ export class Sidebar extends Container {
     this.menu.position.set(10, 5);
     this.addChild(this.menu);
 
-    backgroundGraphics.roundRect(-20, 0, this.width + 60, this.height + 20, 15).fill({ color: "rgba(255,255,255, 0.5)" });
+    backgroundGraphics.roundRect(-20, 0, this.width + 80, this.height + 20, 15).fill({ color: "rgba(255,255,255, 0.5)" });
   }
 
   public show(): void {

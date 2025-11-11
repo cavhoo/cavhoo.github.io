@@ -1,5 +1,5 @@
 import { Container, Text } from "pixi.js";
-import { FONT } from "../../types/constants";
+import { FONT } from "../../../types/constants";
 
 export class MenuItem extends Container {
   constructor(protected title: string, onClick: () => void) {

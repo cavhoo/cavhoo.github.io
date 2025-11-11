@@ -1,4 +1,4 @@
-import { Application, Container, Graphics, Text } from "pixi.js";
+import { Application, Container, Text } from "pixi.js";
 import { BlockBuilding } from "../entities/blockBuilding";
 import { BlockLayer } from "../entities/blockLayer";
 import { NPC } from "../entities/characters/npc";
@@ -11,7 +11,6 @@ export class TownSquare extends Scene {
   protected _paths: Waypoint[] = [];
   protected _npcs: NPC[] = [];
   protected _tiles: Container;
-  protected _textOverlay: Container;
   constructor() {
     super();
     this.label = "LandingScene";
@@ -35,28 +34,16 @@ export class TownSquare extends Scene {
     });
     concreteLayer.position.set(WIDTH / 2, HEIGHT);
 
-    this._textOverlay = new Container();
-    const background = new Graphics();
-    background.roundRect(0, 0, WIDTH * 0.6, HEIGHT * 0.8).fill("rgba(80,80,80, 0.7)");
-    background.position.set((WIDTH - background.width) / 2, (HEIGHT - background.height) / 2 + 30);
-    this._textOverlay.addChild(background);
-    this._textOverlay.visible = false;
-
-    this.addChild(concreteLayer, text, this._textOverlay);
+    this.addChild(concreteLayer, text);
   }
 
   public override onAdded(app: Application): void {
     super.onAdded(app);
   }
 
-  public sceneActivated(): void {
-    this._textOverlay.visible = true;
-  }
+  public sceneActivated(): void {}
 
-  public sceneDeactivated(): void {
-    this._npcs.forEach((npc) => npc.stop());
-    this._textOverlay.visible = false;
-  }
+  public sceneDeactivated(): void {}
 
   protected onBuildingClicked(name: string): void {
     console.log(`Clicked on building: ${name}`);

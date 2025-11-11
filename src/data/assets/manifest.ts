@@ -30,5 +30,35 @@ export const assetManifest = {
         },
       ],
     },
+    {
+      name: "icons",
+      assets: [
+        {
+          alias: "icons",
+          src: "/assets/textures/icons.json",
+          data: { scaleMode: "nearest" },
+        },
+      ],
+    },
+    {
+      name: "buildingprops",
+      assets: [
+        {
+          alias: "buildingprops",
+          src: "/assets/textures/buildingprops.json",
+          data: { scaleMode: "nearest" },
+        },
+      ],
+    },
+    {
+      name: "environment",
+      assets: [
+        {
+          alias: "environment",
+          src: "/assets/textures/environment.json",
+          data: { scaleMode: "nearest" },
+        },
+      ],
+    },
   ],
 };

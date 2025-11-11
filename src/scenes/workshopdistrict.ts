@@ -1,4 +1,4 @@
-import { Application, Text } from "pixi.js";
+import { Application, Sprite, Text } from "pixi.js";
 import { BlockBuilding } from "../entities/blockBuilding";
 import { BlockLayer } from "../entities/blockLayer";
 import { NPC } from "../entities/characters/npc";

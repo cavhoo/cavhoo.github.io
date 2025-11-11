@@ -5,8 +5,9 @@ import { HEIGHT, WIDTH } from "./types/constants";
 import { SceneNames, sceneSetup } from "./sceneSetup";
 import { assetManifest } from "./data/assets/manifest";
 import { registerGSAP } from "./utilities/gsap";
-import { UiLayer } from "./ui/uilayer";
-import { Sidebar } from "./ui/sidebar";
+import { Sidebar } from "./entities/ui/sidebar";
+import { UiLayer } from "./entities/ui/uilayer";
+import { Skybox } from "./entities/skybox";
 
 const start = async (): Promise<void> => {
   TextureStyle.defaultOptions.scaleMode = "nearest";
@@ -17,7 +18,6 @@ const start = async (): Promise<void> => {
   // Create new PIXI Canvas App
   const app = new Application();
   const container = document.querySelector("#app");
-  // Ugly hack to set nearest neighbour scaling globally;
   await app.init({ background: "black", width: WIDTH, height: HEIGHT });
   globalThis.__PIXI_APP__ = app;
   if (container) {
@@ -67,10 +67,11 @@ const start = async (): Promise<void> => {
   uiLayer.addChild(sidebar);
 
   scenemanager.setSceneActive(SceneNames.Loading);
-  await Assets.loadBundle(["tiles", "props", "characters"], (progress: number) => {
+  await Assets.loadBundle(["tiles", "icons", "buildingprops", "environment"], (progress: number) => {
     loadingScene.updateProgress(progress);
     loadingScene.onSceneComplete = () => {
       sceneSetup(scenemanager);
+      app.stage.addChildAt(new Skybox(), 0);
       loadingScene.visible = false;
       uiLayer.visible = true;
     };

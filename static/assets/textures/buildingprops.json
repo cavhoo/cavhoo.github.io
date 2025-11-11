@@ -1,0 +1,56 @@
+{
+  "frames": {
+    "holocone2.png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 28,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    },
+    "holocone1.png": {
+      "frame": {
+        "x": 27,
+        "y": 2,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 28,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/pixijs/assetpack",
+    "version": "1.0",
+    "image": "buildingprops.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 52,
+      "h": 28
+    },
+    "scale": 1,
+    "related_multi_packs": []
+  }
+}

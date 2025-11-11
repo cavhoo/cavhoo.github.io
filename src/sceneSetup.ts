@@ -19,8 +19,7 @@ export const sceneSetup = (sceneManager: SceneManager) => {
   const residentialScene = new ResidentialArea();
 
   sceneManager.addScene(SceneNames.TownSquare, townSquareScene);
-  sceneManager.addScene(SceneNames.ResidentialArea, residentialScene);
   sceneManager.addScene(SceneNames.WorkshopDistrict, workshopDistrictScene);
+  sceneManager.addScene(SceneNames.ResidentialArea, residentialScene);
   sceneManager.setSceneActive(SceneNames.TownSquare);
-  sceneManager.showNavigation();
 };

@@ -1,0 +1,36 @@
+{
+  "frames": {
+    "sun.png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 44,
+        "h": 45
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 8,
+        "w": 44,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/pixijs/assetpack",
+    "version": "1.0",
+    "image": "environment.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 48,
+      "h": 49
+    },
+    "scale": 1,
+    "related_multi_packs": []
+  }
+}

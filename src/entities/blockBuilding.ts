@@ -1,9 +1,8 @@
-import { Assets, Container, Sprite } from "pixi.js";
 import { GlowFilter } from "pixi-filters";
-import { Building } from "../types/map";
+import { Assets, Container, Sprite } from "pixi.js";
 import { BlockIndex, BlockTextureIds } from "../data/blocks/blocks";
-import { Tooltip } from "./ui/tooltip";
-import { Vector } from "../utilities/vector";
+import { Building } from "../types/map";
+import { HoloIcon } from "./props/holoicon";
 
 export class BlockBuilding extends Container {
   protected buildingLayer: Container;
@@ -13,6 +12,8 @@ export class BlockBuilding extends Container {
     this.buildingLayer = new Container();
     this.addChild(this.buildingLayer);
     this.label = buildingData.buildingName;
+    this.eventMode = "static";
+    this.cursor = "pointer";
     for (let z = 0; z < buildingData.data.length; z++) {
       const storyLayer = buildingData.data[z];
       for (let y = 0; y < storyLayer.length; y++) {
@@ -35,5 +36,14 @@ export class BlockBuilding extends Container {
     }
 
     this.pivot.set(-32, 16);
+    if (buildingData.icon) {
+      const holoCone = new HoloIcon({
+        frames: Array.from({ length: buildingData.icon.frameCount }, (_, frame) => buildingData.icon.baseTextureName.replace("{frame}", `${frame + 1}`)),
+        tint: buildingData.icon.tint,
+      });
+
+      holoCone.position.set(0, 0);
+      this.addChild(holoCone);
+    }
   }
 }

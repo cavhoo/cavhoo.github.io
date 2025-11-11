@@ -1,8 +1,15 @@
+import { Sprite } from "pixi.js";
 import { Vector } from "../utilities/vector";
 import { Path } from "./path";
 
 export class Range {
   constructor(public start: number, public end: number) {}
+}
+
+export interface AnimatedIcon {
+  baseTextureName: string;
+  frameCount: number;
+  tint?: string;
 }
 
 export type Prop = {
@@ -17,6 +24,7 @@ export type Building = {
   buildingName: string;
   position: Vector;
   data: number[][][];
+  icon?: AnimatedIcon;
 };
 
 export type Layer = {
