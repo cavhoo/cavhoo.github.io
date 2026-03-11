@@ -1,15 +1,12 @@
-import { AbstractRenderer, Application, Assets, TextureStyle } from "pixi.js";
-import { LoadingScene } from "./scenes/loading";
-import { SceneManager } from "./scenes/sceneManager";
-import { HEIGHT, WIDTH } from "./types/constants";
-import { SceneNames, sceneSetup } from "./sceneSetup";
-import { assetManifest } from "./data/assets/manifest";
+import { AbstractRenderer, Application, Assets, Container, TextureStyle } from "pixi.js";
 import { registerGSAP } from "./utilities/gsap";
-import { Sidebar } from "./entities/ui/sidebar";
-import { UiLayer } from "./entities/ui/uilayer";
-import { Skybox } from "./entities/skybox";
-
+import { TILE_SIZE, WORLD_CENTER_X, WORLD_CENTER_Y, WORLD_HEIGHT, WORLD_WIDTH } from "./types/constants";
+import { Camera } from "./camera/camera";
+import { World } from "./world/world";
+import { assetManifest } from "./assets/manifest";
 const start = async (): Promise<void> => {
+  let touched = false;
+
   TextureStyle.defaultOptions.scaleMode = "nearest";
   AbstractRenderer.defaultOptions.roundPixels = false;
   AbstractRenderer.defaultOptions.resolution = 1;
@@ -18,7 +15,7 @@ const start = async (): Promise<void> => {
   // Create new PIXI Canvas App
   const app = new Application();
   const container = document.querySelector("#app");
-  await app.init({ background: "black", width: WIDTH, height: HEIGHT });
+  await app.init({ background: "black", resizeTo: window, antialias: false, roundPixels: true });
   globalThis.__PIXI_APP__ = app;
   if (container) {
     container.appendChild(app.canvas);
@@ -29,55 +26,50 @@ const start = async (): Promise<void> => {
   await Assets.init({
     manifest: assetManifest,
   });
+
   await Assets.loadBundle("base");
-  const canvas = document.querySelector("canvas");
 
-  const resizeCanvas = () => {
-    const canvasWidth = WIDTH * AbstractRenderer.defaultOptions.resolution;
-    const canvasHeight = HEIGHT * AbstractRenderer.defaultOptions.resolution;
-    let scale = window.innerWidth / canvasWidth;
-    if (scale * canvasHeight > window.innerHeight) {
-      scale = window.innerHeight / canvasHeight;
-    }
-    document.body.style.backgroundSize = `${64 * scale}px ${64 * scale}px`;
-    canvas.style.transform = `matrix3d(calc(1*calc(${scale})),0,0,0, 0,calc(1*calc(${scale})),0,0, 0,0,1,0, 0,0,1,1)`;
-  };
+  const world = new World();
+  // Base scale so world is zoomed in (viewport smaller than full world)
+  const BASE_SCALE = Math.min(app.screen.width / WORLD_WIDTH, app.screen.height / WORLD_HEIGHT) * 1;
 
-  window.addEventListener("resize", () => resizeCanvas());
+  const camera = new Camera(app, world, WORLD_WIDTH, WORLD_HEIGHT, BASE_SCALE);
 
-  // Stretch canvass onto the window size
-  resizeCanvas();
-  const scenemanager = new SceneManager(app);
+  app.stage.addChild(world);
 
-  const loadingScene = new LoadingScene();
-  app.stage.addChild(scenemanager);
-  app.stage.addChild(loadingScene);
+  camera.follow(WORLD_CENTER_X, WORLD_CENTER_Y);
 
-  // Create UI Layer
+  let viewportScale = 1;
+  function resize() {
+    viewportScale = app.screen.width / (20 * TILE_SIZE);
+    camera.setZoom(viewportScale);
+    // app.stage.scale = viewportScale;
+  }
 
-  const uiLayer = new UiLayer();
-  uiLayer.visible = false;
-  app.stage.addChild(uiLayer);
+  resize();
+  window.addEventListener("resize", resize);
 
-  const sidebar = new Sidebar();
-  sidebar.position.set(0, (HEIGHT - sidebar.height) / 2);
-  sidebar.onMenuItemClick = (item: string) => {
-    scenemanager.setSceneActive(item);
-  };
-  uiLayer.addChild(sidebar);
+  app.stage.eventMode = "dynamic";
+  app.stage.cursor = "pointer";
 
-  scenemanager.setSceneActive(SceneNames.Loading);
-  await Assets.loadBundle(["tiles", "icons", "buildingprops", "environment"], (progress: number) => {
-    loadingScene.updateProgress(progress);
-    loadingScene.onSceneComplete = () => {
-      sceneSetup(scenemanager);
-      app.stage.addChildAt(new Skybox(), 0);
-      loadingScene.visible = false;
-      uiLayer.visible = true;
-    };
+  app.stage.on("pointerdown", () => {
+    touched = true;
   });
+  app.stage.on("pointerup", () => {
+    touched = false;
+  });
+
+  app.stage.on("pointermove", (event) => {
+    if (touched) {
+      camera.follow(event.global.x, event.global.y);
+    }
+  });
+
   // Make sure the whole canvas area is interactive, not just the circle.
   app.stage.hitArea = app.screen;
+  app.ticker.add(() => {
+    camera.update();
+  });
 };
 
 start();

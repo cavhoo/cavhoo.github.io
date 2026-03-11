@@ -18,6 +18,11 @@ export const assetManifest = {
           src: "/assets/fonts/Silkscreen-Regular.woff2",
           data: { scaleMode: "nearest" },
         },
+        {
+          alias: "GroundTiles",
+          src: "/assets/textures/grounds.png",
+          data: { scaleMode: "nearest" },
+        },
       ],
     },
     {
