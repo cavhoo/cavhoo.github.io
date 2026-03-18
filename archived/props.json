@@ -1,0 +1,116 @@
+{
+  "frames": {
+    "Tree_159.png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 150,
+        "h": 167
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 23,
+        "w": 150,
+        "h": 167
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 192
+      }
+    },
+    "Tree_145.png": {
+      "frame": {
+        "x": 154,
+        "y": 2,
+        "w": 96,
+        "h": 89
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 5,
+        "w": 96,
+        "h": 89
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 96
+      }
+    },
+    "Sign_3.png": {
+      "frame": {
+        "x": 154,
+        "y": 100,
+        "w": 26,
+        "h": 26
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 6,
+        "w": 26,
+        "h": 26
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "Sign_2.png": {
+      "frame": {
+        "x": 154,
+        "y": 128,
+        "w": 24,
+        "h": 26
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 6,
+        "w": 24,
+        "h": 26
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "Sign_1.png": {
+      "frame": {
+        "x": 180,
+        "y": 128,
+        "w": 26,
+        "h": 26
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 6,
+        "w": 26,
+        "h": 26
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/pixijs/assetpack",
+    "version": "1.0",
+    "image": "props.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 245,
+      "h": 171
+    },
+    "scale": 1,
+    "related_multi_packs": []
+  }
+}

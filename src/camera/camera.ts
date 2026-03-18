@@ -1,21 +1,32 @@
 import { Application, Container } from "pixi.js";
 
 export class Camera {
-  container: Container;
-  app: Application;
+  protected container: Container;
+  protected app: Application;
 
-  x = 0;
-  y = 0;
-  targetX = 0;
-  targetY = 0;
+  protected x = 0;
+  protected y = 0;
+  protected targetX = 0;
+  protected targetY = 0;
 
-  zoom = 1;
-  targetZoom = 1;
+  protected zoom = 1;
+  protected targetZoom = 1;
+  protected baseScale = 1;
+  protected zoomLevels: number[] = [];
+  protected zoomLevelIndex = 1; // Start at default (index 1)
 
-  worldWidth: number;
-  worldHeight: number;
+  protected worldWidth: number;
+  protected worldHeight: number;
 
-  shake = 0;
+  protected shake = 0;
+  protected pointerX = 0;
+  protected pointerY = 0;
+  protected pointerInside = false;
+  protected edgeScrollEnabled = true;
+  protected edgeMargin = 48;
+  protected edgeSpeed = 500;
+
+  public paused = false;
 
   constructor(app: Application, container: Container, worldWidth: number, worldHeight: number, baseScale: number) {
     this.app = app;
@@ -23,8 +34,32 @@ export class Camera {
     this.worldWidth = worldWidth;
     this.worldHeight = worldHeight;
 
-    this.zoom = baseScale;
-    this.targetZoom = baseScale;
+    this.setBaseScale(baseScale);
+    this.zoom = this.zoomLevels[this.zoomLevelIndex];
+    this.targetZoom = this.zoom;
+  }
+
+  public setBaseScale(baseScale: number) {
+    this.baseScale = baseScale;
+    // Level 0: Fully zoomed out (baseScale)
+    // Level 1: Default/Medium (baseScale * 1.5)
+    // Level 2: Zoomed in (baseScale * 2.5)
+    this.zoomLevels = [baseScale, baseScale * 1.5, baseScale * 2.5];
+    this.targetZoom = this.zoomLevels[this.zoomLevelIndex];
+  }
+
+  public zoomIn() {
+    this.zoomLevelIndex = Math.min(this.zoomLevelIndex + 1, this.zoomLevels.length - 1);
+    this.targetZoom = this.zoomLevels[this.zoomLevelIndex];
+  }
+
+  public zoomOut() {
+    this.zoomLevelIndex = Math.max(this.zoomLevelIndex - 1, 0);
+    this.targetZoom = this.zoomLevels[this.zoomLevelIndex];
+  }
+
+  currentLocation(): [number, number] {
+    return [this.targetX, this.targetY];
   }
 
   follow(x: number, y: number) {
@@ -40,8 +75,42 @@ export class Camera {
     this.shake = amount;
   }
 
-  update() {
+  setPointerPosition(x: number, y: number) {
+    this.pointerX = x;
+    this.pointerY = y;
+  }
+
+  setPointerInside(inside: boolean) {
+    this.pointerInside = inside;
+  }
+
+  setEdgeScrollEnabled(enabled: boolean) {
+    this.edgeScrollEnabled = enabled;
+  }
+
+  update(deltaMS: number) {
     const { width: screenW, height: screenH } = this.app.screen;
+    const deltaSeconds = deltaMS / 1000;
+
+    if (this.edgeScrollEnabled && this.pointerInside) {
+      let dirX = 0;
+      let dirY = 0;
+
+      if (this.pointerX < this.edgeMargin) {
+        dirX = -(1 - this.pointerX / this.edgeMargin);
+      } else if (this.pointerX > screenW - this.edgeMargin) {
+        dirX = (this.pointerX - (screenW - this.edgeMargin)) / this.edgeMargin;
+      }
+
+      if (this.pointerY < this.edgeMargin) {
+        dirY = -(1 - this.pointerY / this.edgeMargin);
+      } else if (this.pointerY > screenH - this.edgeMargin) {
+        dirY = (this.pointerY - (screenH - this.edgeMargin)) / this.edgeMargin;
+      }
+
+      this.targetX += dirX * this.edgeSpeed * deltaSeconds;
+      this.targetY += dirY * this.edgeSpeed * deltaSeconds;
+    }
 
     // Smooth zoom
     this.zoom += (this.targetZoom - this.zoom) * 0.1;
@@ -53,6 +122,8 @@ export class Camera {
     // Compute half-screen in world coordinates
     const halfW = screenW / 2 / this.zoom;
     const halfH = screenH / 2 / this.zoom;
+    this.targetX = Math.max(halfW, Math.min(this.worldWidth - halfW, this.targetX));
+    this.targetY = Math.max(halfH, Math.min(this.worldHeight - halfH, this.targetY));
 
     // Clamp camera inside world bounds
     this.x = Math.max(halfW, Math.min(this.worldWidth - halfW, this.x));
@@ -69,11 +140,12 @@ export class Camera {
       this.shake = 0;
     }
 
-    // Pixel-perfect positioning
     const camX = Math.round(-this.x * this.zoom + screenW / 2 + shakeX);
     const camY = Math.round(-this.y * this.zoom + screenH / 2 + shakeY);
 
-    this.container.scale.set(this.zoom);
-    this.container.position.set(camX, camY);
+    if (!this.paused) {
+      this.container.scale.set(this.zoom);
+      this.container.position.set(camX, camY);
+    }
   }
 }

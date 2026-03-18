@@ -18,49 +18,14 @@ export const assetManifest = {
           src: "/assets/fonts/Silkscreen-Regular.woff2",
           data: { scaleMode: "nearest" },
         },
-        {
-          alias: "GroundTiles",
-          src: "/assets/textures/grounds.png",
-          data: { scaleMode: "nearest" },
-        },
       ],
     },
     {
       name: "tiles",
       assets: [
         {
-          alias: "block",
-          src: "/assets/textures/block.json",
-          data: { scaleMode: "nearest" },
-        },
-      ],
-    },
-    {
-      name: "icons",
-      assets: [
-        {
-          alias: "icons",
-          src: "/assets/textures/icons.json",
-          data: { scaleMode: "nearest" },
-        },
-      ],
-    },
-    {
-      name: "buildingprops",
-      assets: [
-        {
-          alias: "buildingprops",
-          src: "/assets/textures/buildingprops.json",
-          data: { scaleMode: "nearest" },
-        },
-      ],
-    },
-    {
-      name: "environment",
-      assets: [
-        {
-          alias: "environment",
-          src: "/assets/textures/environment.json",
+          alias: "town",
+          src: "/assets/mapdata/town.tmx",
           data: { scaleMode: "nearest" },
         },
       ],
