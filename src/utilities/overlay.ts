@@ -27,10 +27,11 @@ class OverlayManager {
     this.overlayElement.style.display = "none";
     this.overlayElement.style.zIndex = "1000";
     this.overlayElement.style.pointerEvents = "none";
-    this.overlayElement.style.backgroundColor = "white";
-    this.overlayElement.style.border = "4px solid black";
+    this.overlayElement.style.backgroundColor = "var(--bg-overlay, white)";
+    this.overlayElement.style.color = "var(--primary, black)";
+    this.overlayElement.style.border = "4px solid var(--primary, black)";
     this.overlayElement.style.padding = "10px";
-    this.overlayElement.style.boxShadow = "8px 8px 0px rgba(0, 0, 0, 1)";
+    this.overlayElement.style.boxShadow = "8px 8px 0px var(--primary, black)";
     this.overlayElement.style.fontFamily = "'JetBrains Mono', monospace";
     this.overlayElement.style.maxWidth = "300px";
     this.overlayElement.style.minWidth = "150px";
@@ -42,7 +43,7 @@ class OverlayManager {
     if (!this.overlayElement) return;
 
     this.overlayElement.innerHTML = `
-      <div style="font-weight: 800; text-transform: uppercase; border-bottom: 2px solid black; margin-bottom: 8px; padding-bottom: 4px; font-size: 1.1rem;">
+      <div style="font-weight: 800; text-transform: uppercase; border-bottom: 2px solid var(--primary, black); margin-bottom: 8px; padding-bottom: 4px; font-size: 1.1rem;">
         ${title}
       </div>
       <div style="font-size: 0.9rem; line-height: 1.4;">

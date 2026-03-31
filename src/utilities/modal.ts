@@ -27,13 +27,14 @@ export class ModalManager {
     this.backdrop.style.backdropFilter = "blur(4px)";
 
     this.modalContainer = document.createElement("div");
-    this.modalContainer.style.backgroundColor = "white";
-    this.modalContainer.style.border = "6px solid black";
+    this.modalContainer.style.backgroundColor = "var(--secondary, white)";
+    this.modalContainer.style.color = "var(--primary, black)";
+    this.modalContainer.style.border = "6px solid var(--primary, black)";
     this.modalContainer.style.padding = "40px";
     this.modalContainer.style.maxWidth = "600px";
     this.modalContainer.style.width = "90%";
     this.modalContainer.style.position = "relative";
-    this.modalContainer.style.boxShadow = "15px 15px 0px #FF0000";
+    this.modalContainer.style.boxShadow = "15px 15px 0px var(--accent, #FF0000)";
     this.modalContainer.style.fontFamily = "'JetBrains Mono', monospace";
 
     const closeButton = document.createElement("button");
@@ -41,20 +42,20 @@ export class ModalManager {
     closeButton.style.position = "absolute";
     closeButton.style.top = "10px";
     closeButton.style.right = "10px";
-    closeButton.style.border = "4px solid black";
-    closeButton.style.backgroundColor = "black";
-    closeButton.style.color = "white";
+    closeButton.style.border = "4px solid var(--primary, black)";
+    closeButton.style.backgroundColor = "var(--primary, black)";
+    closeButton.style.color = "var(--secondary, white)";
     closeButton.style.padding = "5px 12px";
     closeButton.style.cursor = "pointer";
     closeButton.style.fontWeight = "800";
     closeButton.style.fontSize = "1.2rem";
     closeButton.onmouseover = () => {
-      closeButton.style.backgroundColor = "white";
-      closeButton.style.color = "black";
+      closeButton.style.backgroundColor = "var(--secondary, white)";
+      closeButton.style.color = "var(--primary, black)";
     };
     closeButton.onmouseout = () => {
-      closeButton.style.backgroundColor = "black";
-      closeButton.style.color = "white";
+      closeButton.style.backgroundColor = "var(--primary, black)";
+      closeButton.style.color = "var(--secondary, white)";
     };
     closeButton.onclick = (e) => {
       e.stopPropagation();
@@ -89,7 +90,7 @@ export class ModalManager {
     titleEl.style.textTransform = "uppercase";
     titleEl.style.fontSize = "2.5rem";
     titleEl.style.marginBottom = "20px";
-    titleEl.style.borderBottom = "8px solid black";
+    titleEl.style.borderBottom = "8px solid var(--primary, black)";
     titleEl.style.paddingBottom = "10px";
 
     const contentEl = document.createElement("div");
