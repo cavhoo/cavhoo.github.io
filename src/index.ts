@@ -126,6 +126,7 @@ const start = async (): Promise<void> => {
 
   app.stage.on("pointertap", (event) => {
     if (world.isInteriorActive) return;
+    camera.setFollowingCharacter(true);
     const target = world.toLocal(event.global);
     const clampedX = Math.max(0, Math.min(WORLD_WIDTH, target.x));
     const clampedY = Math.max(0, Math.min(WORLD_HEIGHT, target.y));
@@ -136,6 +137,8 @@ const start = async (): Promise<void> => {
     const key = event.key;
     if (key !== "ArrowUp" && key !== "ArrowDown" && key !== "ArrowLeft" && key !== "ArrowRight") return;
     event.preventDefault();
+
+    camera.setFollowingCharacter(true);
 
     if (!pressedKeys.has(key)) {
       pressedKeys.add(key);
@@ -186,7 +189,7 @@ const start = async (): Promise<void> => {
     userCharacter.setInputDirection(dx, dy);
 
     userCharacter.update(ticker.deltaMS);
-    //camera.follow(userCharacter.x, userCharacter.y);
+    camera.followCharacter(userCharacter.x, userCharacter.y);
     camera.update(ticker.deltaMS);
   });
 };

@@ -46,7 +46,7 @@ export class World extends Container {
 
     const components: MapComponent[] = [
       {
-        name: "Library",
+        name: ["Library", "LibraryAbove"],
         title: "The Library",
         content: "A quiet place filled with ancient knowledge and digital archives.",
         hasInterior: true,
@@ -54,23 +54,27 @@ export class World extends Container {
         target: { x: 166, y: 666 },
       },
       {
-        name: "House",
+        name: ["House", "HouseAbove"],
         title: "The Workshop",
         content: "Sparks fly as new ideas are forged here. This is where most of the projects were born.",
         hasInterior: true,
         interiorClass: HomeInterior,
         target: { x: 656, y: 542 },
       },
-      { name: "Architecture", title: "Architecture", content: "Creating designs that last, scale and are robust. Always having the big picture in front of me." },
+      {
+        name: ["Architecture", "ArchitectureAbove"],
+        title: "Architecture",
+        content: "Creating designs that last, scale and are robust. Always having the big picture in front of me.",
+      },
       { name: "Rust", title: "Rust", content: "Learning Rust has been an incredible journey. There is one test project that you can view in the library." },
       { name: "C++", title: "C++", content: "This is where my initial journey as a developer started, and I still love the language to this day." },
       {
-        name: "Typescript",
+        name: ["Typescript", "TypescriptAbove"],
         title: "TypeScript",
         content: "My main language for the past decade of creating casino games, it's versatile, it's typed and my TypeFu is pretty good.",
       },
       {
-        name: "Pipelines",
+        name: ["Pipelines", "PipelinesAbove"],
         title: "CI/CD Pipelines",
         content:
           "Since my career start I have also been maintaining and managing anything that comes in the shape of CI/CD. Be it managing a Jenkins instance, automating whole test systems that are spawned on the fly, nothing that i won't learn to make my CI/CD experience better.",
@@ -82,39 +86,41 @@ export class World extends Container {
     };
 
     components.forEach((comp) => {
-      const el = SceneGraph.GetComponent(comp.name, this);
-      if (el) {
-        el.eventMode = "dynamic";
-        el.cursor = "pointer";
+      const el = SceneGraph.GetComponents(comp.name, this);
+      if (el.length > 0) {
+        el.forEach((el) => {
+          el.eventMode = "dynamic";
+          el.cursor = "pointer";
 
-        const onHover = (event: FederatedPointerEvent) => {
-          if (this.isTransitioning || this.interiorContainer) return;
-          if (isTouchDevice()) return;
-          showOverlay(comp.title, comp.content, { x: event.client.x, y: event.client.y });
-        };
+          const onHover = (event: FederatedPointerEvent) => {
+            if (this.isTransitioning || this.interiorContainer) return;
+            if (isTouchDevice()) return;
+            showOverlay(comp.title, comp.content, { x: event.client.x, y: event.client.y });
+          };
 
-        const onClick = async () => {
-          if (this.isTransitioning) return;
+          const onClick = async () => {
+            if (this.isTransitioning) return;
 
-          if (comp.hasInterior && comp.interiorClass) {
-            this.isTransitioning = true;
-            hideOverlay();
-            if (this.userCharacter && comp.target) {
-              const target = comp.target;
-              await this.userCharacter.moveTo(target.x, target.y);
+            if (comp.hasInterior && comp.interiorClass) {
+              this.isTransitioning = true;
+              hideOverlay();
+              if (this.userCharacter && comp.target) {
+                const target = comp.target;
+                await this.userCharacter.moveTo(target.x, target.y);
+              }
+              this.enterInterior(comp.interiorClass);
+            } else {
+              showModal(comp.title, comp.content);
+              hideOverlay();
             }
-            this.enterInterior(comp.interiorClass);
-          } else {
-            showModal(comp.title, comp.content);
-            hideOverlay();
-          }
-        };
+          };
 
-        el.on("pointerover", onHover);
-        el.on("pointermove", onHover);
-        el.on("pointerout", hideOverlay);
-        el.on("pointertap", onClick);
-        el.on("mousedown", onClick);
+          el.on("pointerover", onHover);
+          el.on("pointermove", onHover);
+          el.on("pointerout", hideOverlay);
+          el.on("pointertap", onClick);
+          el.on("mousedown", onClick);
+        });
       }
     });
 
@@ -129,8 +135,10 @@ export class World extends Container {
 
   public set userCharacter(character: UserCharacter) {
     this._userCharacter = character;
-    this.addChild(this._userCharacter);
-    this.swapChildren(this._userCharacter, this.nightOverlay as Container);
+    const characterLayer = SceneGraph.GetComponent("Character", this);
+    if (characterLayer) {
+      characterLayer.addChild(this._userCharacter);
+    }
   }
 
   public updateTime(hour: number, theme: "auto" | "light" | "dark") {

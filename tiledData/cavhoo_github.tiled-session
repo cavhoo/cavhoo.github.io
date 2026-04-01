@@ -22,16 +22,11 @@
             "scaleInEditor": 1
         },
         "/Users/hendrik/workspace/repos/personal/cavhoo.github.io/static/assets/mapdata/town.tmx": {
-            "expandedGroupLayers": [
-                10,
-                22,
-                17
-            ],
             "scale": 2,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 334.5,
-                "y": 337.5
+                "x": 1039.5,
+                "y": 600.5
             }
         },
         "/Users/hendrik/workspace/repos/personal/cavhoo.github.io/static/assets/mapdata/villas.tsx": {
@@ -64,11 +59,11 @@
     ],
     "project": "cavhoo_github.tiled-project",
     "recentFiles": [
+        "/Users/hendrik/workspace/repos/personal/cavhoo.github.io/static/assets/mapdata/town.tmx",
         "/Users/hendrik/workspace/repos/personal/cavhoo.github.io/static/assets/mapdata/grounds.tsx",
         "/Users/hendrik/workspace/repos/personal/cavhoo.github.io/static/assets/mapdata/camping.tsx",
         "/Users/hendrik/workspace/repos/personal/cavhoo.github.io/static/assets/mapdata/villas.tsx",
         "/Users/hendrik/workspace/repos/personal/cavhoo.github.io/static/assets/mapdata/citytiles.tsx",
-        "/Users/hendrik/workspace/repos/personal/cavhoo.github.io/static/assets/mapdata/town.tmx",
         "town.tmx",
         "grounds.tsx"
     ],

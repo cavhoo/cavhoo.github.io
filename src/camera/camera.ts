@@ -27,6 +27,7 @@ export class Camera {
   protected edgeSpeed = 500;
 
   public paused = false;
+  protected followingCharacter = true;
 
   constructor(app: Application, container: Container, worldWidth: number, worldHeight: number, baseScale: number) {
     this.app = app;
@@ -67,6 +68,40 @@ export class Camera {
     this.targetY = y;
   }
 
+  followCharacter(x: number, y: number) {
+    if (this.paused || !this.followingCharacter) return;
+
+    const { width: screenW, height: screenH } = this.app.screen;
+
+    // Define a deadzone in screen coordinates (e.g., 30% from edges)
+    const horizontalMargin = screenW * 0.3;
+    const verticalMargin = screenH * 0.3;
+
+    // Convert character world position to screen position
+    const screenX = (x - this.x) * this.zoom + screenW / 2;
+    const screenY = (y - this.y) * this.zoom + screenH / 2;
+
+    let moveX = 0;
+    let moveY = 0;
+
+    if (screenX < horizontalMargin) {
+      moveX = screenX - horizontalMargin;
+    } else if (screenX > screenW - horizontalMargin) {
+      moveX = screenX - (screenW - horizontalMargin);
+    }
+
+    if (screenY < verticalMargin) {
+      moveY = screenY - verticalMargin;
+    } else if (screenY > screenH - verticalMargin) {
+      moveY = screenY - (screenH - verticalMargin);
+    }
+
+    if (moveX !== 0 || moveY !== 0) {
+      this.targetX += moveX / this.zoom;
+      this.targetY += moveY / this.zoom;
+    }
+  }
+
   setZoom(z: number) {
     this.targetZoom = z;
   }
@@ -86,6 +121,10 @@ export class Camera {
 
   setEdgeScrollEnabled(enabled: boolean) {
     this.edgeScrollEnabled = enabled;
+  }
+
+  public setFollowingCharacter(following: boolean) {
+    this.followingCharacter = following;
   }
 
   update(deltaMS: number) {
@@ -108,8 +147,11 @@ export class Camera {
         dirY = (this.pointerY - (screenH - this.edgeMargin)) / this.edgeMargin;
       }
 
-      this.targetX += dirX * this.edgeSpeed * deltaSeconds;
-      this.targetY += dirY * this.edgeSpeed * deltaSeconds;
+      if (dirX !== 0 || dirY !== 0) {
+        this.targetX += dirX * this.edgeSpeed * deltaSeconds;
+        this.targetY += dirY * this.edgeSpeed * deltaSeconds;
+        this.followingCharacter = false;
+      }
     }
 
     // Smooth zoom

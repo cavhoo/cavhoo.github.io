@@ -4,7 +4,7 @@ import { Constructable } from "./common";
 export type Coord = { x: number; y: number };
 
 export interface MapComponent {
-  name: string;
+  name: string | string[];
   title: string;
   content: string;
   hasInterior?: boolean;

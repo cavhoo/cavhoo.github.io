@@ -11,6 +11,21 @@ export class SceneGraph {
     return this.search(name, this.stage.children) as T;
   }
 
+  public static GetComponents<T extends Container>(name: string | string[], startContainer?: T): T[] {
+    const found: T[] = [];
+    const names = Array.isArray(name) ? name : [name];
+    if (startContainer) {
+      for (let i = 0; i < names.length; i++) {
+        const name = names[i];
+        const component = this.search(name, startContainer ? startContainer.children : this.stage.children) as T;
+        if (component) {
+          found.push(component);
+        }
+      }
+    }
+    return found;
+  }
+
   protected static search<T extends Container>(name: string, children: T[]): T {
     let found: T;
 

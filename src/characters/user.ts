@@ -12,6 +12,7 @@ export class UserCharacter extends Character {
 
   constructor(private readonly collisionMap: CollisionMap, animations: Map<string, AnimatedSprite>) {
     super(animations);
+    this.pivot.set(TILE_SIZE / 2, 48);
   }
 
   async moveTo(worldX: number, worldY: number): Promise<void> {
