@@ -1,6 +1,7 @@
 import { AnimatedSprite } from "pixi.js";
 import { Character } from "./character";
 import { Direction } from "../types/common";
+import { TILE_SIZE } from "../types/constants";
 import { CollisionMap, Point } from "../utilities/collisionMap";
 
 export class UserCharacter extends Character {
@@ -46,7 +47,17 @@ export class UserCharacter extends Character {
   }
 
   override update(deltaMS: number) {
+    const lookAhead = TILE_SIZE * 0.4;
+
     if (this.inputX !== 0 || this.inputY !== 0) {
+      const checkX = this.x + this.inputX * lookAhead;
+      const checkY = this.y + this.inputY * lookAhead;
+
+      if (!this.collisionMap.isWalkableWorld(checkX, checkY)) {
+        this.updateAnimation(Direction.SouthIdle);
+        return;
+      }
+
       const maxStep = this.moveSpeed * (deltaMS / 1000);
       const target = {
         x: this.x + this.inputX * maxStep,
@@ -65,6 +76,11 @@ export class UserCharacter extends Character {
       } else {
         // Not walkable
         this.updateAnimation(Direction.SouthIdle);
+        this.path.length = 0;
+        if (this.moveResolve) {
+          this.moveResolve();
+          this.moveResolve = null;
+        }
       }
       return;
     }
@@ -78,6 +94,21 @@ export class UserCharacter extends Character {
     const dx = target.x - this.x;
     const dy = target.y - this.y;
     const distance = Math.hypot(dx, dy);
+
+    if (distance > 0) {
+      const checkX = this.x + (dx / distance) * lookAhead;
+      const checkY = this.y + (dy / distance) * lookAhead;
+
+      if (!this.collisionMap.isWalkableWorld(checkX, checkY)) {
+        this.path = [];
+        if (this.moveResolve) {
+          this.moveResolve();
+          this.moveResolve = null;
+        }
+        this.updateAnimation(Direction.SouthIdle);
+        return;
+      }
+    }
 
     // Update direction based on movement
     if (Math.abs(dx) > Math.abs(dy)) {
