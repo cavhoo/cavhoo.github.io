@@ -5,10 +5,32 @@ import { TILE_SIZE } from "../types/constants";
 import { CollisionMap, Point } from "../utilities/collisionMap";
 
 export class UserCharacter extends Character {
+  private static readonly IDLE_SPEECH_DELAY_MS = 30000;
+
   private inputX = 0;
   private inputY = 0;
+  private idleSpeechElapsedMs = 0;
+  private speechPaused = false;
+  private lastIdlePhrase: string | null = null;
+  private lastMovePhrase: string | null = null;
 
   protected mouseMovement: boolean;
+
+  private readonly idlePhrases = [
+    "Idle mode. Still compiling thoughts.",
+    "No bugs spotted. Suspicious.",
+    "Standing by. Pixels stable.",
+    "Quiet moment. Good time to explore.",
+    "All systems nominal. More or less.",
+  ];
+
+  private readonly movePhrases = [
+    "On my way.",
+    "Path locked in.",
+    "Moving out.",
+    "Marching toward click.",
+    "Heading there now.",
+  ];
 
   constructor(private readonly collisionMap: CollisionMap, animations: Map<string, AnimatedSprite>) {
     super(animations);
@@ -17,12 +39,18 @@ export class UserCharacter extends Character {
 
   async moveTo(worldX: number, worldY: number): Promise<void> {
     this.mouseMovement = true;
+    this.idleSpeechElapsedMs = 0;
     const safeTarget = this.collisionMap.clampToNearestWalkable(worldX, worldY);
     if (!safeTarget) {
+      this.hideSpeechBubble();
       return this.setPath([]).then(() => {
         this.mouseMovement = false;
       });
     }
+
+    const movePhrase = this.pickPhrase(this.movePhrases, this.lastMovePhrase);
+    this.lastMovePhrase = movePhrase;
+    this.showSpeechBubble(movePhrase, 2600);
 
     return this.setPath([safeTarget]).then(() => {
       this.mouseMovement = false;
@@ -37,6 +65,8 @@ export class UserCharacter extends Character {
     this.inputY = y;
 
     if (x !== 0 || y !== 0) {
+      this.idleSpeechElapsedMs = 0;
+      this.hideSpeechBubble();
       this.path = [];
       if (this.moveResolve) {
         this.moveResolve();
@@ -145,5 +175,40 @@ export class UserCharacter extends Character {
     }
 
     this.position.set(nextPos.x, nextPos.y);
+  }
+
+  public setSpeechPaused(paused: boolean) {
+    if (this.speechPaused === paused) return;
+
+    this.speechPaused = paused;
+    if (paused) {
+      this.idleSpeechElapsedMs = 0;
+      this.hideSpeechBubble();
+    }
+  }
+
+  public updateSpeech(deltaMS: number) {
+    if (this.speechPaused) return;
+
+    this.updateSpeechBubble(deltaMS);
+
+    if (this.inputX !== 0 || this.inputY !== 0 || this.path.length > 0 || this.mouseMovement) {
+      this.idleSpeechElapsedMs = 0;
+      return;
+    }
+
+    this.idleSpeechElapsedMs += deltaMS;
+    if (this.idleSpeechElapsedMs < UserCharacter.IDLE_SPEECH_DELAY_MS) return;
+
+    this.idleSpeechElapsedMs = 0;
+    const idlePhrase = this.pickPhrase(this.idlePhrases, this.lastIdlePhrase);
+    this.lastIdlePhrase = idlePhrase;
+    this.showSpeechBubble(idlePhrase, 4200);
+  }
+
+  private pickPhrase(phrases: string[], lastPhrase: string | null): string {
+    const availablePhrases = phrases.length > 1 && lastPhrase ? phrases.filter((phrase) => phrase !== lastPhrase) : phrases;
+    const index = Math.floor(Math.random() * availablePhrases.length);
+    return availablePhrases[index] || phrases[0];
   }
 }

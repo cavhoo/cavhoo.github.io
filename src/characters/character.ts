@@ -1,6 +1,6 @@
-import { Container, AnimatedSprite, Graphics, RAD_TO_DEG, DEG_TO_RAD } from "pixi.js";
+import { Container, AnimatedSprite, Graphics, RAD_TO_DEG, DEG_TO_RAD, Text } from "pixi.js";
 import { Direction } from "../types/common";
-import { TILE_SIZE } from "../types/constants";
+import { FONT, TILE_SIZE } from "../types/constants";
 import { isBetween } from "../utilities/math";
 
 /**
@@ -15,6 +15,11 @@ export class Character extends Container {
   private currentState: Direction = Direction.SouthIdle;
   private currentAnimation: AnimatedSprite | null = null;
   private fallbackGraphics: Graphics | null = null;
+  private speechBubble: Container;
+  private speechBubbleBox: Graphics;
+  private speechBubbleTail: Graphics;
+  private speechBubbleText: Text;
+  private speechBubbleTimerMs = 0;
 
   constructor(animations: Map<string, AnimatedSprite>) {
     super();
@@ -27,6 +32,34 @@ export class Character extends Container {
       this.fallbackGraphics.fill({ color: 0x2f6bff, alpha: 0.8 });
       this.addChild(this.fallbackGraphics);
     }
+
+    this.speechBubble = new Container();
+    this.speechBubble.visible = false;
+    this.speechBubble.eventMode = "none";
+
+    this.speechBubbleBox = new Graphics();
+    this.speechBubbleTail = new Graphics();
+    this.speechBubbleText = new Text({
+      text: "",
+      resolution: typeof window !== "undefined" ? Math.max(1, Math.ceil(window.devicePixelRatio || 1)) : 1,
+      roundPixels: true,
+      textureStyle: {
+        scaleMode: "nearest",
+      },
+      style: {
+        fontFamily: FONT,
+        fontSize: 12,
+        fontWeight: "700",
+        fill: "black",
+        align: "center",
+        wordWrap: true,
+        wordWrapWidth: 180,
+        lineHeight: 18,
+      },
+    });
+
+    this.speechBubble.addChild(this.speechBubbleBox, this.speechBubbleTail, this.speechBubbleText);
+    this.addChild(this.speechBubble);
 
     // Set initial idle animation
     this.updateAnimation(Direction.SouthIdle);
@@ -58,9 +91,85 @@ export class Character extends Container {
         this.fallbackGraphics = null;
       }
       this.addChild(this.currentAnimation);
+      this.addChild(this.speechBubble);
       this.currentAnimation.animationSpeed = this.currentState.toLowerCase().includes("idle") ? 0.09 : 0.13;
       this.currentAnimation.play();
     }
+  }
+
+  protected showSpeechBubble(text: string, durationMs: number = 3000) {
+    const paddingX = 12;
+    const paddingY = 10;
+    const tailHeight = 10;
+    const minBubbleWidth = 92;
+
+    this.speechBubbleText.text = text;
+
+    const textWidth = Math.ceil(this.speechBubbleText.width);
+    const textHeight = Math.ceil(this.speechBubbleText.height);
+    const bubbleWidth = Math.max(minBubbleWidth, textWidth + paddingX * 2);
+    const bubbleHeight = textHeight + paddingY * 2;
+    const tailCenter = bubbleWidth / 2;
+
+    this.speechBubbleText.position.set((bubbleWidth - textWidth) / 2, paddingY);
+
+    this.speechBubbleBox
+      .clear()
+      .roundRect(0, 0, bubbleWidth, bubbleHeight, 10)
+      .fill("white")
+      .stroke({ width: 3, color: "black" });
+
+    this.speechBubbleTail
+      .clear()
+      .poly([tailCenter - 12, bubbleHeight, tailCenter + 12, bubbleHeight, tailCenter, bubbleHeight + tailHeight], true)
+      .fill("white")
+      .stroke({ width: 3, color: "black" });
+
+    this.speechBubble.pivot.set(bubbleWidth / 2, bubbleHeight + tailHeight);
+    this.speechBubble.position.set(TILE_SIZE / 2, -8);
+    this.speechBubble.visible = true;
+    this.speechBubbleTimerMs = durationMs;
+    this.syncSpeechBubbleTransform();
+    this.addChild(this.speechBubble);
+  }
+
+  protected hideSpeechBubble() {
+    this.speechBubble.visible = false;
+    this.speechBubbleTimerMs = 0;
+  }
+
+  protected updateSpeechBubble(deltaMs: number) {
+    if (!this.speechBubble.visible) return;
+
+    this.syncSpeechBubbleTransform();
+
+    this.speechBubbleTimerMs -= deltaMs;
+    if (this.speechBubbleTimerMs <= 0) {
+      this.hideSpeechBubble();
+    }
+  }
+
+  private syncSpeechBubbleTransform() {
+    const worldScale = this.getAccumulatedScale();
+    this.speechBubble.scale.set(1 / worldScale.x, 1 / worldScale.y);
+    this.speechBubble.position.set(Math.round(TILE_SIZE / 2), -8);
+  }
+
+  private getAccumulatedScale() {
+    let scaleX = 1;
+    let scaleY = 1;
+    let current: Container | null = this;
+
+    while (current) {
+      scaleX *= current.scale.x;
+      scaleY *= current.scale.y;
+      current = current.parent as Container | null;
+    }
+
+    return {
+      x: Math.max(Math.abs(scaleX), 0.0001),
+      y: Math.max(Math.abs(scaleY), 0.0001),
+    };
   }
 
   setPath(path: { x: number; y: number }[]): Promise<void> {

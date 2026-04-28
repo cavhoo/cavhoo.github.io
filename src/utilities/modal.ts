@@ -1,6 +1,7 @@
 export class ModalManager {
   private modalContainer: HTMLDivElement | null = null;
   private backdrop: HTMLDivElement | null = null;
+  private isVisible = false;
 
   constructor() {
     this.createModalElements();
@@ -102,11 +103,17 @@ export class ModalManager {
     this.modalContainer.appendChild(contentEl);
 
     this.backdrop.style.display = "flex";
+    this.isVisible = true;
   }
 
   public hide(): void {
     const backdrop = document.getElementById("modal-backdrop");
     if (backdrop) backdrop.style.display = "none";
+    this.isVisible = false;
+  }
+
+  public get visible(): boolean {
+    return this.isVisible;
   }
 }
 
@@ -118,4 +125,8 @@ export const showModal = (title: string, content: string) => {
 
 export const hideModal = () => {
   modalManager.hide();
+};
+
+export const isModalVisible = (): boolean => {
+  return modalManager.visible;
 };

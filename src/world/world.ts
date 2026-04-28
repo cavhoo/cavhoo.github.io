@@ -1,4 +1,4 @@
-import { Assets, Container, Texture, FederatedPointerEvent, Graphics } from "pixi.js";
+import { Assets, Container, Texture, FederatedPointerEvent, Graphics, Text } from "pixi.js";
 import { SceneGraph } from "../utilities/sceneGraph";
 import { showOverlay, hideOverlay } from "../utilities/overlay";
 import { showModal } from "../utilities/modal";
@@ -9,6 +9,7 @@ import { HomeInterior } from "./interiors/homeInterior";
 import { UserCharacter } from "../characters/user";
 import { WORLD_HEIGHT, WORLD_WIDTH } from "../types/constants";
 import { MapComponent } from "../types/map";
+import { SkillForest } from "./signs/skillForest";
 
 export class World extends Container {
   protected groundTileTexture: Texture;
@@ -20,6 +21,10 @@ export class World extends Container {
 
   public get isInteriorActive(): boolean {
     return this.interiorContainer !== null || this.isTransitioning || (this.userCharacter?.isMoving ?? false);
+  }
+
+  public get isSceneOverlayActive(): boolean {
+    return this.interiorContainer !== null || this.isTransitioning;
   }
 
   constructor() {
@@ -48,23 +53,28 @@ export class World extends Container {
       {
         name: ["Library", "LibraryAbove"],
         title: "The Library",
-        content: "A quiet place filled with ancient knowledge and digital archives.",
+        content: "Thoughts, notes and cheat sheets. This place has it all.",
         hasInterior: true,
         interiorClass: LibraryInterior,
         target: { x: 166, y: 666 },
       },
       {
         name: ["House", "HouseAbove"],
-        title: "The Workshop",
-        content: "Sparks fly as new ideas are forged here. This is where most of the projects were born.",
+        title: "Home",
+        content: "Step into my humble dwelling, here you can discover more about myself and my passion for code and games.",
         hasInterior: true,
         interiorClass: HomeInterior,
-        target: { x: 656, y: 542 },
+        target: { x: 656, y: 474 },
       },
       {
         name: ["Architecture", "ArchitectureAbove"],
         title: "Architecture",
         content: "Creating designs that last, scale and are robust. Always having the big picture in front of me.",
+      },
+      {
+        name: "SkillsForest",
+        title: "Skilltrees",
+        content: "Each tree represents a skill I have acquired, or I am acquiring right now. The larger a tree has grown the stronger and tested the knowledge.",
       },
       { name: "Rust", title: "Rust", content: "Learning Rust has been an incredible journey. There is one test project that you can view in the library." },
       { name: "C++", title: "C++", content: "This is where my initial journey as a developer started, and I still love the language to this day." },

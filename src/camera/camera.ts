@@ -127,6 +127,14 @@ export class Camera {
     this.followingCharacter = following;
   }
 
+  public panByScreenDelta(deltaX: number, deltaY: number) {
+    if (this.paused) return;
+
+    this.targetX -= deltaX / this.zoom;
+    this.targetY -= deltaY / this.zoom;
+    this.followingCharacter = false;
+  }
+
   update(deltaMS: number) {
     const { width: screenW, height: screenH } = this.app.screen;
     const deltaSeconds = deltaMS / 1000;

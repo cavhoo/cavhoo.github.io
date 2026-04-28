@@ -11,8 +11,15 @@ import { SceneGraph } from "./utilities/sceneGraph";
 import { UserCharacter } from "./characters/user";
 import { CollisionMap } from "./utilities/collisionMap";
 import { Direction } from "./types/common";
+import { isIntroOverlayVisible, showIntroOverlay } from "./utilities/introOverlay";
+import { isModalVisible } from "./utilities/modal";
 const start = async (): Promise<void> => {
   let touched = false;
+  let isTouchDragging = false;
+  let touchDragMoved = false;
+  let lastTouchX = 0;
+  let lastTouchY = 0;
+  const TOUCH_DRAG_THRESHOLD = 4;
   const pressedKeys = new Set<string>();
   const keyOrder: string[] = [];
 
@@ -106,7 +113,7 @@ const start = async (): Promise<void> => {
 
   let viewportScale = 1;
   function resize() {
-    viewportScale = app.screen.width / (35 * TILE_SIZE);
+    viewportScale = (app.screen.width * window.devicePixelRatio) / (35 * TILE_SIZE);
     camera.setZoom(viewportScale);
   }
 
@@ -115,17 +122,37 @@ const start = async (): Promise<void> => {
 
   app.stage.eventMode = "dynamic";
 
-  app.stage.on("pointerdown", () => {
+  app.stage.on("pointerdown", (event) => {
     touched = true;
     camera.setEdgeScrollEnabled(false);
+
+    if (event.pointerType === "touch") {
+      isTouchDragging = true;
+      touchDragMoved = false;
+      lastTouchX = event.global.x;
+      lastTouchY = event.global.y;
+      camera.setFollowingCharacter(false);
+    }
   });
   app.stage.on("pointerup", () => {
     touched = false;
     camera.setEdgeScrollEnabled(true);
+    isTouchDragging = false;
+  });
+  app.stage.on("pointerupoutside", () => {
+    touched = false;
+    camera.setEdgeScrollEnabled(true);
+    isTouchDragging = false;
   });
 
   app.stage.on("pointertap", (event) => {
+    if (isIntroOverlayVisible()) return;
     if (world.isInteriorActive) return;
+    if (event.pointerType === "touch" && touchDragMoved) {
+      touchDragMoved = false;
+      return;
+    }
+
     camera.setFollowingCharacter(true);
     const target = world.toLocal(event.global);
     const clampedX = Math.max(0, Math.min(WORLD_WIDTH, target.x));
@@ -136,6 +163,10 @@ const start = async (): Promise<void> => {
   window.addEventListener("keydown", (event) => {
     const key = event.key;
     if (key !== "ArrowUp" && key !== "ArrowDown" && key !== "ArrowLeft" && key !== "ArrowRight") return;
+    if (isIntroOverlayVisible()) {
+      event.preventDefault();
+      return;
+    }
     event.preventDefault();
 
     camera.setFollowingCharacter(true);
@@ -149,6 +180,10 @@ const start = async (): Promise<void> => {
   window.addEventListener("keyup", (event) => {
     const key = event.key;
     if (key !== "ArrowUp" && key !== "ArrowDown" && key !== "ArrowLeft" && key !== "ArrowRight") return;
+    if (isIntroOverlayVisible()) {
+      event.preventDefault();
+      return;
+    }
     event.preventDefault();
 
     pressedKeys.delete(key);
@@ -157,6 +192,19 @@ const start = async (): Promise<void> => {
   });
 
   app.stage.on("pointermove", (event) => {
+    if (event.pointerType === "touch" && isTouchDragging) {
+      const deltaX = event.global.x - lastTouchX;
+      const deltaY = event.global.y - lastTouchY;
+
+      if (Math.abs(deltaX) > TOUCH_DRAG_THRESHOLD || Math.abs(deltaY) > TOUCH_DRAG_THRESHOLD) {
+        touchDragMoved = true;
+      }
+
+      camera.panByScreenDelta(deltaX, deltaY);
+      lastTouchX = event.global.x;
+      lastTouchY = event.global.y;
+    }
+
     camera.setPointerPosition(event.global.x, event.global.y);
     camera.setPointerInside(true);
     debugManager.updateMousePosition(event.global);
@@ -175,6 +223,19 @@ const start = async (): Promise<void> => {
   // Make sure the whole canvas area is interactive, not just the circle.
   app.stage.hitArea = app.screen;
   app.ticker.add((ticker) => {
+    userCharacter.setSpeechPaused(isIntroOverlayVisible() || isModalVisible() || world.isSceneOverlayActive);
+
+    if (isIntroOverlayVisible()) {
+      pressedKeys.clear();
+      keyOrder.length = 0;
+      userCharacter.setInputDirection(0, 0);
+      userCharacter.update(ticker.deltaMS);
+      camera.followCharacter(userCharacter.x, userCharacter.y);
+      camera.update(ticker.deltaMS);
+      userCharacter.updateSpeech(ticker.deltaMS);
+      return;
+    }
+
     let dx = 0;
     let dy = 0;
     for (let i = keyOrder.length - 1; i >= 0; i--) {
@@ -191,6 +252,13 @@ const start = async (): Promise<void> => {
     userCharacter.update(ticker.deltaMS);
     camera.followCharacter(userCharacter.x, userCharacter.y);
     camera.update(ticker.deltaMS);
+    userCharacter.updateSpeech(ticker.deltaMS);
+  });
+
+  showIntroOverlay(() => {
+    pressedKeys.clear();
+    keyOrder.length = 0;
+    userCharacter.setInputDirection(0, 0);
   });
 };
 
