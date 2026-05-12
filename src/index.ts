@@ -147,6 +147,7 @@ const start = async (): Promise<void> => {
 
   app.stage.on("pointertap", (event) => {
     if (isIntroOverlayVisible()) return;
+    if (isModalVisible()) return;
     if (world.isInteriorActive) return;
     if (event.pointerType === "touch" && touchDragMoved) {
       touchDragMoved = false;
@@ -167,6 +168,10 @@ const start = async (): Promise<void> => {
       event.preventDefault();
       return;
     }
+    if (isModalVisible() || world.isSceneOverlayActive) {
+      event.preventDefault();
+      return;
+    }
     event.preventDefault();
 
     camera.setFollowingCharacter(true);
@@ -181,6 +186,10 @@ const start = async (): Promise<void> => {
     const key = event.key;
     if (key !== "ArrowUp" && key !== "ArrowDown" && key !== "ArrowLeft" && key !== "ArrowRight") return;
     if (isIntroOverlayVisible()) {
+      event.preventDefault();
+      return;
+    }
+    if (isModalVisible() || world.isSceneOverlayActive) {
       event.preventDefault();
       return;
     }
@@ -222,13 +231,17 @@ const start = async (): Promise<void> => {
 
   // Make sure the whole canvas area is interactive, not just the circle.
   app.stage.hitArea = app.screen;
+  const stopKeyboardMovement = () => {
+    pressedKeys.clear();
+    keyOrder.length = 0;
+    userCharacter.setInputDirection(0, 0);
+  };
+
   app.ticker.add((ticker) => {
     userCharacter.setSpeechPaused(isIntroOverlayVisible() || isModalVisible() || world.isSceneOverlayActive);
 
-    if (isIntroOverlayVisible()) {
-      pressedKeys.clear();
-      keyOrder.length = 0;
-      userCharacter.setInputDirection(0, 0);
+    if (isIntroOverlayVisible() || isModalVisible() || world.isSceneOverlayActive) {
+      stopKeyboardMovement();
       userCharacter.update(ticker.deltaMS);
       camera.followCharacter(userCharacter.x, userCharacter.y);
       camera.update(ticker.deltaMS);
@@ -250,15 +263,14 @@ const start = async (): Promise<void> => {
     userCharacter.setInputDirection(dx, dy);
 
     userCharacter.update(ticker.deltaMS);
+    world.updateEntryInteractions();
     camera.followCharacter(userCharacter.x, userCharacter.y);
     camera.update(ticker.deltaMS);
     userCharacter.updateSpeech(ticker.deltaMS);
   });
 
   showIntroOverlay(() => {
-    pressedKeys.clear();
-    keyOrder.length = 0;
-    userCharacter.setInputDirection(0, 0);
+    stopKeyboardMovement();
   });
 };
 

@@ -1,3 +1,12 @@
+export interface ModalEntry {
+  title: string;
+  subtitle?: string;
+  meta?: string;
+  description: string;
+}
+
+export type ModalContent = string | ModalEntry[];
+
 export class ModalManager {
   private modalContainer: HTMLDivElement | null = null;
   private backdrop: HTMLDivElement | null = null;
@@ -32,7 +41,10 @@ export class ModalManager {
     this.modalContainer.style.color = "var(--primary, black)";
     this.modalContainer.style.border = "6px solid var(--primary, black)";
     this.modalContainer.style.padding = "40px";
-    this.modalContainer.style.maxWidth = "600px";
+    this.modalContainer.style.boxSizing = "border-box";
+    this.modalContainer.style.maxHeight = "calc(100vh - 48px)";
+    this.modalContainer.style.maxWidth = "760px";
+    this.modalContainer.style.overflowY = "auto";
     this.modalContainer.style.width = "90%";
     this.modalContainer.style.position = "relative";
     this.modalContainer.style.boxShadow = "15px 15px 0px var(--accent, #FF0000)";
@@ -71,14 +83,71 @@ export class ModalManager {
     this.modalContainer.onclick = (e) => e.stopPropagation();
   }
 
-  public show(title: string, content: string): void {
+  private createEntryList(entries: ModalEntry[]): HTMLDivElement {
+    const listEl = document.createElement("div");
+    listEl.style.display = "flex";
+    listEl.style.flexDirection = "column";
+    listEl.style.gap = "18px";
+
+    entries.forEach((entry) => {
+      const entryEl = document.createElement("article");
+      entryEl.style.border = "4px solid var(--primary, black)";
+      entryEl.style.padding = "18px";
+      entryEl.style.boxShadow = "6px 6px 0px var(--primary, black)";
+
+      const titleEl = document.createElement("h3");
+      titleEl.innerText = entry.title;
+      titleEl.style.fontSize = "1.25rem";
+      titleEl.style.margin = "0 0 8px";
+      titleEl.style.textTransform = "uppercase";
+
+      entryEl.appendChild(titleEl);
+
+      if (entry.subtitle || entry.meta) {
+        const metaEl = document.createElement("div");
+        metaEl.style.display = "flex";
+        metaEl.style.flexWrap = "wrap";
+        metaEl.style.gap = "8px 16px";
+        metaEl.style.marginBottom = "12px";
+        metaEl.style.fontSize = "0.95rem";
+        metaEl.style.fontWeight = "800";
+
+        if (entry.subtitle) {
+          const subtitleEl = document.createElement("span");
+          subtitleEl.innerText = entry.subtitle;
+          metaEl.appendChild(subtitleEl);
+        }
+
+        if (entry.meta) {
+          const durationEl = document.createElement("span");
+          durationEl.innerText = entry.meta;
+          durationEl.style.color = "var(--accent, #FF0000)";
+          metaEl.appendChild(durationEl);
+        }
+
+        entryEl.appendChild(metaEl);
+      }
+
+      const descriptionEl = document.createElement("p");
+      descriptionEl.innerText = entry.description;
+      descriptionEl.style.margin = "0";
+      descriptionEl.style.lineHeight = "1.6";
+      entryEl.appendChild(descriptionEl);
+
+      listEl.appendChild(entryEl);
+    });
+
+    return listEl;
+  }
+
+  public show(title: string, content: ModalContent): void {
     if (!this.modalContainer || !this.backdrop) {
-        this.createModalElements();
-        // Re-check
-        this.backdrop = document.getElementById("modal-backdrop") as HTMLDivElement;
-        this.modalContainer = this.backdrop?.firstChild as HTMLDivElement;
+      this.createModalElements();
+      // Re-check
+      this.backdrop = document.getElementById("modal-backdrop") as HTMLDivElement;
+      this.modalContainer = this.backdrop?.firstChild as HTMLDivElement;
     }
-    
+
     if (!this.modalContainer || !this.backdrop) return;
 
     // Clear previous content (except close button)
@@ -95,9 +164,13 @@ export class ModalManager {
     titleEl.style.paddingBottom = "10px";
 
     const contentEl = document.createElement("div");
-    contentEl.innerHTML = content;
     contentEl.style.fontSize = "1.1rem";
     contentEl.style.lineHeight = "1.6";
+    if (Array.isArray(content)) {
+      contentEl.appendChild(this.createEntryList(content));
+    } else {
+      contentEl.innerHTML = content;
+    }
 
     this.modalContainer.appendChild(titleEl);
     this.modalContainer.appendChild(contentEl);
@@ -119,7 +192,7 @@ export class ModalManager {
 
 export const modalManager = new ModalManager();
 
-export const showModal = (title: string, content: string) => {
+export const showModal = (title: string, content: ModalContent) => {
   modalManager.show(title, content);
 };
 

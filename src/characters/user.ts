@@ -39,6 +39,8 @@ export class UserCharacter extends Character {
 
   async moveTo(worldX: number, worldY: number): Promise<void> {
     this.mouseMovement = true;
+    this.inputX = 0;
+    this.inputY = 0;
     this.idleSpeechElapsedMs = 0;
     const safeTarget = this.collisionMap.clampToNearestWalkable(worldX, worldY);
     if (!safeTarget) {
@@ -58,7 +60,7 @@ export class UserCharacter extends Character {
   }
 
   public setInputDirection(x: number, y: number) {
-    if (this.mouseMovement) {
+    if (this.mouseMovement && (x !== 0 || y !== 0)) {
       return;
     }
     this.inputX = x;

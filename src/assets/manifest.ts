@@ -48,6 +48,11 @@ export const assetManifest = {
           src: "/assets/animations/scout1walking.json",
           data: { scaleMode: "nearest" },
         },
+        {
+          alias: "campfire",
+          src: "/assets/animations/campfire.json",
+          data: { scaleMode: "nearest" },
+        },
       ],
     },
   ],
