@@ -1,0 +1,71 @@
+{
+  "frames": {
+    "fire1": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "fire2": {
+      "frame": {
+        "x": 32,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "fire3": {
+      "frame": {
+        "x": 64,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "fire4": {
+      "frame": {
+        "x": 96,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "fire5": {
+      "frame": {
+        "x": 128,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "fire6": {
+      "frame": {
+        "x": 160,
+        "y": 0,
+        "w": 32,
+        "h": 64
+      },
+      "trimmed": true
+    }
+  },
+  "animations": { "fire": ["fire1", "fire2", "fire3", "fire4", "fire5", "fire6"] },
+  "meta": {
+    "app": "http://github.com/pixijs/assetpack",
+    "version": "1.0",
+    "image": "campfire.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 192,
+      "h": 64
+    },
+    "scale": 1,
+    "related_multi_packs": []
+  }
+}

@@ -1,666 +1,702 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HENDRIK (Excyl) | WEB DEVELOPER</title>
+  <head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Hendrik Müller-Röhr</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
-        
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      #app {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        place-items: center;
+      }
+
+      canvas {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+      }
+    </style>
+    <noscript>
+      <style>
+        @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap");
+
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
         }
-        
+
         :root {
-            --primary: #000000;
-            --secondary: #FFFFFF;
-            --accent: #FF0000;
-            --yellow: #FFFF00;
-            --blue: #0066FF;
-            --green: #00FF00;
-            --pink: #FF00FF;
+          --primary: #000000;
+          --secondary: #ffffff;
+          --accent: #ff0000;
+          --yellow: #ffff00;
+          --blue: #0066ff;
+          --green: #00ff00;
+          --pink: #ff00ff;
+          --bg-overlay: rgba(255, 255, 255, 0.9);
         }
-        
+
+        body.dark-mode {
+          --primary: #ffffff;
+          --secondary: #1a1a1a;
+          --accent: #ff4d4d;
+          --bg-overlay: rgba(26, 26, 26, 0.9);
+        }
+
         body {
-            font-family: 'JetBrains Mono', monospace;
-            background: var(--secondary);
-            color: var(--primary);
-            line-height: 1.2;
-            overflow-x: hidden;
+          font-family: "JetBrains Mono", monospace;
+          background: var(--secondary);
+          color: var(--primary);
+          line-height: 1.2;
+          overflow: unset;
+          overflow-x: hidden;
+          transition: background-color 0.3s, color 0.3s;
         }
-        
+
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
         }
-        
+
         /* HEADER SECTION */
         .header {
-            background: var(--primary);
-            color: var(--secondary);
-            padding: 40px 0;
-            position: relative;
-            overflow: hidden;
+          background: var(--primary);
+          color: var(--secondary);
+          padding: 40px 0;
+          position: relative;
+          overflow: hidden;
         }
-        
+
         .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 200px;
-            height: 200px;
-            background: var(--accent);
-            transform: rotate(45deg);
-            border: 8px solid var(--secondary);
+          content: "";
+          position: absolute;
+          top: -50%;
+          right: -20%;
+          width: 200px;
+          height: 200px;
+          background: var(--accent);
+          transform: rotate(45deg);
+          border: 8px solid var(--secondary);
         }
-        
+
         .header-content {
-            position: relative;
-            z-index: 2;
+          position: relative;
+          z-index: 2;
         }
-        
+
         .name {
-            font-size: clamp(2.5rem, 8vw, 6rem);
-            font-weight: 800;
-            letter-spacing: -0.05em;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            text-shadow: 4px 4px 0px var(--accent);
+          font-size: clamp(2.5rem, 8vw, 6rem);
+          font-weight: 800;
+          letter-spacing: -0.05em;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+          text-shadow: 4px 4px 0px var(--accent);
         }
-        
+
         .title {
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            font-weight: 400;
-            background: var(--yellow);
-            color: var(--primary);
-            padding: 10px 20px;
-            display: inline-block;
-            border: 4px solid var(--primary);
-            transform: rotate(-2deg);
-            margin-bottom: 20px;
+          font-size: clamp(1rem, 3vw, 1.5rem);
+          font-weight: 400;
+          background: var(--yellow);
+          color: var(--primary);
+          padding: 10px 20px;
+          display: inline-block;
+          border: 4px solid var(--primary);
+          transform: rotate(-2deg);
+          margin-bottom: 20px;
         }
-        
+
         .bio {
-            font-size: 1.1rem;
-            max-width: 600px;
-            background: var(--secondary);
-            color: var(--primary);
-            padding: 20px;
-            border: 4px solid var(--secondary);
-            box-shadow: 8px 8px 0px var(--blue);
+          font-size: 1.1rem;
+          max-width: 600px;
+          background: var(--secondary);
+          color: var(--primary);
+          padding: 20px;
+          border: 4px solid var(--secondary);
+          box-shadow: 8px 8px 0px var(--blue);
         }
-        
+
         /* NAVIGATION */
         .nav {
-            background: var(--yellow);
-            padding: 20px 0;
-            border-top: 8px solid var(--primary);
-            border-bottom: 8px solid var(--primary);
+          background: var(--yellow);
+          padding: 20px 0;
+          border-top: 8px solid var(--primary);
+          border-bottom: 8px solid var(--primary);
         }
-        
+
         .nav-list {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-            flex-wrap: wrap;
+          display: flex;
+          gap: 40px;
+          list-style: none;
+          flex-wrap: wrap;
         }
-        
+
         .nav-item {
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            cursor: pointer;
-            padding: 10px 20px;
-            background: var(--primary);
-            color: var(--secondary);
-            border: 4px solid var(--primary);
-            transition: all 0.2s ease;
+          font-size: 1.2rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          cursor: pointer;
+          padding: 10px 20px;
+          background: var(--primary);
+          color: var(--secondary);
+          border: 4px solid var(--primary);
+          transition: all 0.2s ease;
         }
-        
+
         .nav-item:hover {
-            background: var(--secondary);
-            color: var(--primary);
-            transform: translate(-4px, -4px);
-            box-shadow: 4px 4px 0px var(--primary);
+          background: var(--secondary);
+          color: var(--primary);
+          transform: translate(-4px, -4px);
+          box-shadow: 4px 4px 0px var(--primary);
         }
-        
+
         /* SECTIONS */
         .section {
-            padding: 80px 0;
-            position: relative;
+          padding: 80px 0;
+          position: relative;
         }
-        
+
         .section:nth-child(even) {
-            background: #f8f8f8;
+          background: #f8f8f8;
         }
-        
+
         .section-title {
-            font-size: clamp(2rem, 5vw, 4rem);
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 40px;
-            position: relative;
-            display: inline-block;
+          font-size: clamp(2rem, 5vw, 4rem);
+          font-weight: 800;
+          text-transform: uppercase;
+          margin-bottom: 40px;
+          position: relative;
+          display: inline-block;
         }
-        
+
         .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
-            height: 8px;
-            background: var(--accent);
-            transform: skew(-20deg);
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 100%;
+          height: 8px;
+          background: var(--accent);
+          transform: skew(-20deg);
         }
-        
+
         /* SKILLS SECTION */
         .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+          margin-top: 40px;
         }
-        
+
         .skill-card {
-            background: var(--secondary);
-            border: 6px solid var(--primary);
-            padding: 30px;
-            position: relative;
-            transition: all 0.3s ease;
-            transform: translate(-8px, -8px);
-            box-shadow: 8px 8px 0px var(--primary);
+          background: var(--secondary);
+          border: 6px solid var(--primary);
+          padding: 30px;
+          position: relative;
+          transition: all 0.3s ease;
+          transform: translate(-8px, -8px);
+          box-shadow: 8px 8px 0px var(--primary);
         }
-        
+
         .skill-card::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            width: 30px;
-            height: 30px;
-            background: var(--blue);
-            border: 4px solid var(--primary);
+          content: "";
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          width: 30px;
+          height: 30px;
+          background: var(--blue);
+          border: 4px solid var(--primary);
         }
-        
+
         .skill-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            text-transform: uppercase;
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 15px;
+          text-transform: uppercase;
         }
-        
+
         .experience-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-            gap: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 15px;
+          flex-wrap: wrap;
+          gap: 10px;
         }
-        
+
         .company {
-            background: var(--blue);
-            color: var(--secondary);
-            padding: 5px 10px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            border: 2px solid var(--primary);
+          background: var(--blue);
+          color: var(--secondary);
+          padding: 5px 10px;
+          font-size: 0.8rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          border: 2px solid var(--primary);
         }
-        
+
         .duration {
-            background: var(--green);
-            color: var(--primary);
-            padding: 5px 10px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            border: 2px solid var(--primary);
+          background: var(--green);
+          color: var(--primary);
+          padding: 5px 10px;
+          font-size: 0.8rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          border: 2px solid var(--primary);
         }
-        
+
         .skill-desc {
-            font-size: 1rem;
-            line-height: 1.4;
+          font-size: 1rem;
+          line-height: 1.4;
         }
-        
+
         /* PROJECTS SECTION */
         .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 40px;
+          margin-top: 40px;
         }
-        
+
         .project-card {
-            background: var(--primary);
-            color: var(--secondary);
-            border: 6px solid var(--primary);
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
+          background: var(--primary);
+          color: var(--secondary);
+          border: 6px solid var(--primary);
+          position: relative;
+          overflow: hidden;
+          transition: all 0.3s ease;
         }
-        
+
         .project-card:hover {
-            transform: rotate(1deg) scale(1.02);
+          transform: rotate(1deg) scale(1.02);
         }
-        
+
         .project-header {
-            background: var(--pink);
-            color: var(--primary);
-            padding: 20px;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 1.2rem;
+          background: var(--pink);
+          color: var(--primary);
+          padding: 20px;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 1.2rem;
         }
-        
+
         .project-content {
-            padding: 30px;
+          padding: 30px;
         }
-        
+
         .project-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            text-transform: uppercase;
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 15px;
+          text-transform: uppercase;
         }
-        
+
         .project-desc {
-            margin-bottom: 20px;
-            line-height: 1.4;
+          margin-bottom: 20px;
+          line-height: 1.4;
         }
-        
+
         .project-tech {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
+          margin-bottom: 20px;
         }
-        
+
         .tech-tag {
-            background: var(--green);
-            color: var(--primary);
-            padding: 5px 10px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            border: 2px solid var(--secondary);
+          background: var(--green);
+          color: var(--primary);
+          padding: 5px 10px;
+          font-size: 0.8rem;
+          font-weight: 700;
+          border: 2px solid var(--secondary);
         }
-        
+
         .project-link {
-            background: var(--accent);
-            color: var(--secondary);
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: 700;
-            text-transform: uppercase;
-            border: 4px solid var(--secondary);
-            display: inline-block;
-            transition: all 0.2s ease;
+          background: var(--accent);
+          color: var(--secondary);
+          padding: 10px 20px;
+          text-decoration: none;
+          font-weight: 700;
+          text-transform: uppercase;
+          border: 4px solid var(--secondary);
+          display: inline-block;
+          transition: all 0.2s ease;
         }
-        
+
         .project-link:hover {
-            background: var(--secondary);
-            color: var(--primary);
-            transform: translate(-3px, -3px);
-            box-shadow: 3px 3px 0px var(--accent);
+          background: var(--secondary);
+          color: var(--primary);
+          transform: translate(-3px, -3px);
+          box-shadow: 3px 3px 0px var(--accent);
         }
-        
+
         /* CONTACT SECTION */
         .contact {
-            background: var(--primary);
-            color: var(--secondary);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+          background: var(--primary);
+          color: var(--secondary);
+          text-align: center;
+          position: relative;
+          overflow: hidden;
         }
-        
+
         /* IMPRESSUM SECTION */
         .imprint-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 30px;
+          margin-top: 40px;
         }
-        
+
         .imprint-card {
-            background: var(--secondary);
-            border: 6px solid var(--primary);
-            padding: 30px;
-            position: relative;
-            transition: all 0.3s ease;
+          background: var(--secondary);
+          border: 6px solid var(--primary);
+          padding: 30px;
+          position: relative;
+          transition: all 0.3s ease;
         }
-        
+
         .imprint-card:hover {
-            transform: translate(-5px, -5px);
-            box-shadow: 5px 5px 0px var(--primary);
+          transform: translate(-5px, -5px);
+          box-shadow: 5px 5px 0px var(--primary);
         }
-        
+
         .imprint-card::before {
-            content: '';
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            width: 25px;
-            height: 25px;
-            background: var(--accent);
-            border: 4px solid var(--primary);
+          content: "";
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          width: 25px;
+          height: 25px;
+          background: var(--accent);
+          border: 4px solid var(--primary);
         }
-        
+
         .imprint-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            color: var(--primary);
-            border-bottom: 4px solid var(--blue);
-            padding-bottom: 10px;
+          font-size: 1.3rem;
+          font-weight: 700;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+          color: var(--primary);
+          border-bottom: 4px solid var(--blue);
+          padding-bottom: 10px;
         }
-        
+
         .imprint-info p {
-            margin-bottom: 15px;
-            line-height: 1.5;
-            font-size: 0.95rem;
+          margin-bottom: 15px;
+          line-height: 1.5;
+          font-size: 0.95rem;
         }
-        
+
         .imprint-info strong {
-            color: var(--accent);
-            font-weight: 700;
+          color: var(--accent);
+          font-weight: 700;
         }
-        
+
         .contact::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            left: -100px;
-            width: 200px;
-            height: 200px;
-            background: var(--blue);
-            border-radius: 50%;
-            border: 8px solid var(--secondary);
+          content: "";
+          position: absolute;
+          top: -100px;
+          left: -100px;
+          width: 200px;
+          height: 200px;
+          background: var(--blue);
+          border-radius: 50%;
+          border: 8px solid var(--secondary);
         }
-        
+
         .contact::after {
-            content: '';
-            position: absolute;
-            bottom: -150px;
-            right: -150px;
-            width: 300px;
-            height: 300px;
-            background: var(--pink);
-            transform: rotate(45deg);
-            border: 8px solid var(--secondary);
+          content: "";
+          position: absolute;
+          bottom: -150px;
+          right: -150px;
+          width: 300px;
+          height: 300px;
+          background: var(--pink);
+          transform: rotate(45deg);
+          border: 8px solid var(--secondary);
         }
-        
+
         .contact-content {
-            position: relative;
-            z-index: 2;
+          position: relative;
+          z-index: 2;
         }
-        
+
         .contact-title {
-            color: var(--primary);
+          color: var(--primary);
         }
-        
+
         .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
-            flex-wrap: wrap;
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+          margin-top: 40px;
+          flex-wrap: wrap;
         }
-        
+
         .contact-link {
-            background: var(--yellow);
-            color: var(--primary);
-            padding: 20px 30px;
-            text-decoration: none;
-            font-weight: 700;
-            text-transform: uppercase;
-            border: 4px solid var(--secondary);
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
+          background: var(--yellow);
+          color: var(--primary);
+          padding: 20px 30px;
+          text-decoration: none;
+          font-weight: 700;
+          text-transform: uppercase;
+          border: 4px solid var(--secondary);
+          transition: all 0.3s ease;
+          font-size: 1.1rem;
         }
-        
+
         .contact-link:hover {
-            background: var(--secondary);
-            transform: translate(-5px, -5px);
-            box-shadow: 5px 5px 0px var(--yellow);
+          background: var(--secondary);
+          transform: translate(-5px, -5px);
+          box-shadow: 5px 5px 0px var(--yellow);
         }
-        
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .nav-list {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-links {
-                flex-direction: column;
-                align-items: center;
-            }
+          .nav-list {
+            flex-direction: column;
+            gap: 15px;
+          }
+
+          .projects-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .contact-links {
+            flex-direction: column;
+            align-items: center;
+          }
         }
-        
+
         /* GLITCH ANIMATION */
         @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-            100% { transform: translate(0); }
+          0% {
+            transform: translate(0);
+          }
+          20% {
+            transform: translate(-2px, 2px);
+          }
+          40% {
+            transform: translate(-2px, -2px);
+          }
+          60% {
+            transform: translate(2px, 2px);
+          }
+          80% {
+            transform: translate(2px, -2px);
+          }
+          100% {
+            transform: translate(0);
+          }
         }
-        
+
         .glitch:hover {
-            animation: glitch 0.3s ease-in-out;
-        }
-    </style>
-</head>
-<body>
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <h1 class="name glitch">Hendrik<br>(Excyl)</h1>
-                <div class="title">SENIOR SOFTWARE ENGINEER / GAME ENGINE DEVELOPER</div>
-                <div class="bio">
-                    Senior Software Engineer specialized in casino game development and high-performance web applications. Expert in building game engines with Pixi.js, WebGL, and TypeScript. Experience spans from mobile slot games to SaaS platforms, always focused on cutting-edge technology and user experience.
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- NAVIGATION -->
-    <nav class="nav">
-        <div class="container">
-            <ul class="nav-list">
-                <li class="nav-item" onclick="scrollToSection('skills')">SKILLS</li>
-                <li class="nav-item" onclick="scrollToSection('projects')">PROJECTS</li>
-                <li class="nav-item" onclick="scrollToSection('experience')">EXPERIENCE</li>
-                <li class="nav-item" onclick="scrollToSection('contact')">CONTACT</li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- SKILLS SECTION -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">SKILLS & TECH</h2>
-            <div class="skills-grid">
-                <div class="skill-card glitch">
-                    <h3 class="skill-title">CORE TECHNOLOGIES</h3>
-                    <p class="skill-desc">TypeScript/JavaScript, C#, C++, and currently learning Rust. Expert in Pixi.js, WebGL, and OpenGL Shading Language (GLSL) for high-performance graphics programming.</p>
-                </div>
-                <div class="skill-card glitch">
-                    <h3 class="skill-title">GAME DEVELOPMENT</h3>
-                    <p class="skill-desc">Specialized in casino games, slot machines, and interactive gaming systems. Experience with game engines, WebGL rendering, and mobile-first game optimization.</p>
-                </div>
-                <div class="skill-card glitch">
-                    <h3 class="skill-title">FRONTEND & ARCHITECTURE</h3>
-                    <p class="skill-desc">ReactJS, modern web frameworks, and software architecture. Expert in building SaaS solutions, API integration, and scalable frontend systems.</p>
-                </div>
-                <div class="skill-card glitch">
-                    <h3 class="skill-title">TOOLS & WORKFLOW</h3>
-                    <p class="skill-desc">Webpack, GitLab, Jenkins, Travis CI, and modern development workflows. Passionate about creating developer tools and build systems that improve productivity.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">PROJECTS & WORK</h2>
-            <div class="projects-grid">
-                <div class="project-card glitch">
-                    <div class="project-header">CASINO GAMES</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Web Casino Games</h3>
-                        <p class="project-desc">Specialized development of casino games for web platforms using advanced JavaScript/TypeScript frameworks and game engines.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">TYPESCRIPT</span>
-                            <span class="tech-tag">JAVASCRIPT</span>
-                            <span class="tech-tag">PIXI.JS</span>
-                            <span class="tech-tag">CI/CD</span>
-                            <span class="tech-tag">ARCHITECTURE</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card glitch">
-                    <div class="project-header">RUST-TS-SCSS-MODULES</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Productivity Tools</h3>
-                        <p class="project-desc">CLI written in Rust to generate d.ts files from .scss files in order to use the module system. Inspired by the npm package <a href="https://www.npmjs.com/package/typed-scss-modules" class="tech-tag">typed-scss-modules</a></p>
-                        <div class="project-tech">
-                            <span class="tech-tag">RUST</span>
-                            <span class="tech-tag">CONCURRENCY</span>
-                            <span class="tech-tag">TOOLS</span>
-                        </div>
-                        <a href="https://github.com/cavhoo/rust-ts-scss-modules" class="project-link">CHECK OUT</a>
-                    </div>
-                </div>
-                
-                <div class="project-card glitch">
-                    <div class="project-header">PIXIDUST</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Effects library</h3>
-                        <p class="project-desc">Library that experiments with creating a particle system with pixi.js to learn how to animate and move thousands of elements per frame.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">TYPESCRIPT</span>
-                            <span class="tech-tag">LEARNING</span>
-                            <span class="tech-tag">EXPERIMENTAL</span>
-                            <span class="tech-tag">PIXI.JS</span>
-                        </div>
-                        <a href="https://github.com/cavhoo/pixidust" class="project-link">CHECK OUT</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPERIENCE SECTION -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title">EXPERIENCE</h2>
-            <div class="skills-grid">
-                <div class="skill-card glitch">
-                    <h3 class="skill-title">SENIOR SOFTWARE ENGINEER</h3>
-                    <div class="experience-meta">
-                        <span class="company">GAMOMAT Development GmbH</span>
-                        <span class="duration">4 years 5 months</span>
-                    </div>
-                    <p class="skill-desc">Developed in-house game engines for next-generation slot games using Pixi.js, WebGL, TypeScript, and Webpack. Specialized in high-performance casino gaming solutions with advanced graphics and shader programming.</p>
-                </div>
-                <div class="skill-card glitch">
-                    <h3 class="skill-title">FRONTEND ENGINEER</h3>
-                    <div class="experience-meta">
-                        <span class="company">Fitogram</span>
-                        <span class="duration">2 years 6 months</span>
-                    </div>
-                    <p class="skill-desc">Built and maintained SaaS solutions for studio management with online booking and accounting systems. Led architectural upgrades using ReactJS and TypeScript with mobile-first, UX-focused approach.</p>
-                </div>
-                <div class="skill-card glitch">
-                    <h3 class="skill-title">CLIENT DEVELOPER</h3>
-                    <div class="experience-meta">
-                        <span class="company">QuickSpin</span>
-                        <span class="duration">1 year 8 months</span>
-                    </div>
-                    <p class="skill-desc">Created interactive side games within slot games including achievement systems and tournaments. Developed on-demand loaded modules using WebGL/Pixi.js with API communication frameworks.</p>
-                </div>
-                <div class="skill-card glitch">
-                    <h3 class="skill-title">FRONT END DEVELOPER</h3>
-                    <div class="experience-meta">
-                        <span class="company">adp Gauselmann</span>
-                        <span class="duration">4 years 3 months</span>
-                    </div>
-                    <p class="skill-desc">Delivered high-performance mobile slot games for browsers using JavaScript, CSS3, and custom game engine frameworks. Specialized in WebGL-based gaming solutions and mobile optimization.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <div class="contact-content">
-                <h2 class="section-title contact-title">LET'S CONNECT</h2>
-                <div class="contact-links">
-                    <a href="https://github.com/cavhoo" class="contact-link glitch">GITHUB</a>
-                    <a href="https://www.linkedin.com/in/hendrikmuellerroehr/" class="contact-link glitch">LINKEDIN</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- IMPRESSUM SECTION -->
-    </section>
-
-    <script>
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({
-                behavior: 'smooth'
-            });
+          animation: glitch 0.3s ease-in-out;
         }
 
-        // Add some interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
-            // Random color changes for accent elements
-            const colors = ['#FF0000', '#00FF00', '#0066FF', '#FF00FF'];
-            
-            setInterval(() => {
-                const randomColor = colors[Math.floor(Math.random() * colors.length)];
-                document.documentElement.style.setProperty('--accent', randomColor);
-            }, 5000);
+        #app {
+          display: none;
+        }
+      </style>
+    </noscript>
+  </head>
 
-            // Add scroll animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
+  <body>
+    <noscript>
+      <!-- HEADER -->
+      <header class="header">
+        <div class="container">
+          <div class="header-content">
+            <h1 class="name glitch">Hendrik<br />(Excyl)</h1>
+            <div class="title">SENIOR SOFTWARE ENGINEER / GAME ENGINE DEVELOPER</div>
+            <div class="bio">
+              Senior Software Engineer specialized in casino game development and high-performance web applications. Expert in building game engines with Pixi.js, WebGL, and
+              TypeScript. Experience spans from mobile slot games to SaaS platforms, always focused on cutting-edge technology and user experience.
+            </div>
+          </div>
+        </div>
+      </header>
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
+      <!-- NAVIGATION -->
+      <nav class="nav">
+        <div class="container">
+          <ul class="nav-list">
+            <li class="nav-item" onclick="scrollToSection('skills')">SKILLS</li>
+            <li class="nav-item" onclick="scrollToSection('projects')">PROJECTS</li>
+            <li class="nav-item" onclick="scrollToSection('experience')">EXPERIENCE</li>
+            <li class="nav-item" onclick="scrollToSection('contact')">CONTACT</li>
+          </ul>
+        </div>
+      </nav>
 
-            document.querySelectorAll('.skill-card, .project-card, .imprint-card').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
-            });
-        });
-    </script>
-</body>
+      <!-- SKILLS SECTION -->
+      <section id="skills" class="section">
+        <div class="container">
+          <h2 class="section-title">SKILLS & TECH</h2>
+          <div class="skills-grid">
+            <div class="skill-card glitch">
+              <h3 class="skill-title">CORE TECHNOLOGIES</h3>
+              <p class="skill-desc">
+                TypeScript/JavaScript, C#, C++, and currently learning Rust. Expert in Pixi.js, WebGL, and OpenGL Shading Language (GLSL) for high-performance graphics programming.
+              </p>
+            </div>
+            <div class="skill-card glitch">
+              <h3 class="skill-title">GAME DEVELOPMENT</h3>
+              <p class="skill-desc">
+                Specialized in casino games, slot machines, and interactive gaming systems. Experience with game engines, WebGL rendering, and mobile-first game optimization.
+              </p>
+            </div>
+            <div class="skill-card glitch">
+              <h3 class="skill-title">FRONTEND & ARCHITECTURE</h3>
+              <p class="skill-desc">
+                ReactJS, modern web frameworks, and software architecture. Expert in building SaaS solutions, API integration, and scalable frontend systems.
+              </p>
+            </div>
+            <div class="skill-card glitch">
+              <h3 class="skill-title">TOOLS & WORKFLOW</h3>
+              <p class="skill-desc">
+                Webpack, GitLab, Jenkins, Travis CI, and modern development workflows. Passionate about creating developer tools and build systems that improve productivity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section id="projects" class="section">
+        <div class="container">
+          <h2 class="section-title">PROJECTS & WORK</h2>
+          <div class="projects-grid">
+            <div class="project-card glitch">
+              <div class="project-header">CASINO GAMES</div>
+              <div class="project-content">
+                <h3 class="project-title">Web Casino Games</h3>
+                <p class="project-desc">Specialized development of casino games for web platforms using advanced JavaScript/TypeScript frameworks and game engines.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">TYPESCRIPT</span>
+                  <span class="tech-tag">JAVASCRIPT</span>
+                  <span class="tech-tag">PIXI.JS</span>
+                  <span class="tech-tag">CI/CD</span>
+                  <span class="tech-tag">ARCHITECTURE</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card glitch">
+              <div class="project-header">RUST-TS-SCSS-MODULES</div>
+              <div class="project-content">
+                <h3 class="project-title">Productivity Tools</h3>
+                <p class="project-desc">
+                  CLI written in Rust to generate d.ts files from .scss files in order to use the module system. Inspired by the npm package
+                  <a href="https://www.npmjs.com/package/typed-scss-modules" class="tech-tag">typed-scss-modules</a>
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">RUST</span>
+                  <span class="tech-tag">CONCURRENCY</span>
+                  <span class="tech-tag">TOOLS</span>
+                </div>
+                <a href="https://github.com/cavhoo/rust-ts-scss-modules" class="project-link">CHECK OUT</a>
+              </div>
+            </div>
+
+            <div class="project-card glitch">
+              <div class="project-header">PIXIDUST</div>
+              <div class="project-content">
+                <h3 class="project-title">Effects library</h3>
+                <p class="project-desc">Library that experiments with creating a particle system with pixi.js to learn how to animate and move thousands of elements per frame.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">TYPESCRIPT</span>
+                  <span class="tech-tag">LEARNING</span>
+                  <span class="tech-tag">EXPERIMENTAL</span>
+                  <span class="tech-tag">PIXI.JS</span>
+                </div>
+                <a href="https://github.com/cavhoo/pixidust" class="project-link">CHECK OUT</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE SECTION -->
+      <section id="experience" class="section">
+        <div class="container">
+          <h2 class="section-title">EXPERIENCE</h2>
+          <div class="skills-grid">
+            <div class="skill-card glitch">
+              <h3 class="skill-title">SENIOR SOFTWARE ENGINEER</h3>
+              <div class="experience-meta">
+                <span class="company">GAMOMAT Development GmbH</span>
+                <span class="duration">4 years 5 months</span>
+              </div>
+              <p class="skill-desc">
+                Developed in-house game engines for next-generation slot games using Pixi.js, WebGL, TypeScript, and Webpack. Specialized in high-performance casino gaming
+                solutions with advanced graphics and shader programming.
+              </p>
+            </div>
+            <div class="skill-card glitch">
+              <h3 class="skill-title">FRONTEND ENGINEER</h3>
+              <div class="experience-meta">
+                <span class="company">Fitogram</span>
+                <span class="duration">2 years 6 months</span>
+              </div>
+              <p class="skill-desc">
+                Built and maintained SaaS solutions for studio management with online booking and accounting systems. Led architectural upgrades using ReactJS and TypeScript with
+                mobile-first, UX-focused approach.
+              </p>
+            </div>
+            <div class="skill-card glitch">
+              <h3 class="skill-title">CLIENT DEVELOPER</h3>
+              <div class="experience-meta">
+                <span class="company">QuickSpin</span>
+                <span class="duration">1 year 8 months</span>
+              </div>
+              <p class="skill-desc">
+                Created interactive side games within slot games including achievement systems and tournaments. Developed on-demand loaded modules using WebGL/Pixi.js with API
+                communication frameworks.
+              </p>
+            </div>
+            <div class="skill-card glitch">
+              <h3 class="skill-title">FRONT END DEVELOPER</h3>
+              <div class="experience-meta">
+                <span class="company">adp Gauselmann</span>
+                <span class="duration">4 years 3 months</span>
+              </div>
+              <p class="skill-desc">
+                Delivered high-performance mobile slot games for browsers using JavaScript, CSS3, and custom game engine frameworks. Specialized in WebGL-based gaming solutions and
+                mobile optimization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section contact">
+        <div class="container">
+          <div class="contact-content">
+            <h2 class="section-title contact-title">LET'S CONNECT</h2>
+            <div class="contact-links">
+              <a href="https://github.com/cavhoo" class="contact-link glitch">GITHUB</a>
+              <a href="https://www.linkedin.com/in/hendrikmuellerroehr/" class="contact-link glitch">LINKEDIN</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </noscript>
+    <div id="app"></div>
+    <script src="./main.js"></script>
+  </body>
 </html>
